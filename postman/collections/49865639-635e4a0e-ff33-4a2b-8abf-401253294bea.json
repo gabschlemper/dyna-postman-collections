@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "49865639-635e4a0e-ff33-4a2b-8abf-401253294bea",
+		"name": "PSCA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Routes",
+			"item": [],
+			"id": "49865639-77b6241e-3c95-4092-9116-dc4b40f28bba"
+		},
+		{
+			"name": "Answers",
+			"item": [],
+			"id": "49865639-63d63d20-c7ec-4288-ac9b-25fdd0b9ca56"
+		},
+		{
+			"name": "Save many",
+			"id": "49865639-af01995f-edd5-4f70-adcb-896f9740af76",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"answers\": [\n    {\n      \"routeId\": \"958afd6d-f5a9-4a9f-9801-714bba73c52e\",\n      \"checklistId\": \"558e8fd5-5228-463b-9906-877fb9933cab\",\n      \"quizId\": \"273aae95-ad5b-4809-9fe6-8e3843b5ea44\",\n      \"questionId\": \"c6cf007f-e855-42dd-898b-0c4c3e39a652\",\n      \"alternativeId\": \"828db3fe-55a2-4c69-9bd9-e57bffe51691\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sandbox.predict.dynamox.solutions/psca/v4/answers/save-many",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"predict",
+						"dynamox",
+						"solutions"
+					],
+					"path": [
+						"psca",
+						"v4",
+						"answers",
+						"save-many"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Routes by ID PSCA",
+			"id": "49865639-fa0e184a-9926-488d-b7be-9599b23438a3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "user@example.dynamox.net"
+					}
+				],
+				"url": {
+					"raw": "https://sandbox.predict.dynamox.solutions/psca/v4/routes/:id",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"predict",
+						"dynamox",
+						"solutions"
+					],
+					"path": [
+						"psca",
+						"v4",
+						"routes",
+						":id"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "PatchUpdate",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"id": "35271682-af2f-4f6e-8529-0c4b37e18efc",
+							"key": "id",
+							"value": "958afd6d-f5a9-4a9f-9801-714bba73c52e"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{authToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "0aaba071-f1b7-4628-a4ff-41c381c956ef",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					"function isTokenExpired(exp) {",
+					"    const now = Math.floor(Date.now() / 1000);",
+					"    return exp < now;",
+					"}",
+					"",
+					"const token = pm.collectionVariables.get(\"authToken\");",
+					"const exp = parseInt(pm.collectionVariables.get(\"authTokenExp\"));",
+					"",
+					"if (!token || !exp || isTokenExpired(exp)) {",
+					"    console.log(\"Token ausente ou expirado. Requisitando novo token...\");",
+					"",
+					"    pm.sendRequest({",
+					"        url: 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCbgUaYoVbBUTy3RN2rJrfhmvdZW5G5f7k',",
+					"        method: 'POST',",
+					"        header: {",
+					"            'Content-Type': 'application/json'",
+					"        },",
+					"        body: {",
+					"            mode: 'raw',",
+					"            raw: JSON.stringify({",
+					"                email: pm.globals.get(\"email\"),",
+					"                password:  pm.globals.get(\"password\"),",
+					"                returnSecureToken: true",
+					"            })",
+					"        }",
+					"    }, function (err, res) {",
+					"        if (err) {",
+					"            console.log(\"Erro ao obter novo token:\", err);",
+					"        } else {",
+					"            const jsonResponse = res.json();",
+					"            const newToken = jsonResponse.idToken;",
+					"            const newExp = JSON.parse(atob(newToken.split('.')[1])).exp;",
+					"",
+					"            pm.collectionVariables.set(\"authToken\", newToken);",
+					"            pm.collectionVariables.set(\"authTokenExp\", newExp);",
+					"            console.log(\"Novo token armazenado com expiração:\", newExp);",
+					"        }",
+					"    });",
+					"} else {",
+					"    console.log(\"Token ainda válido. Usando token existente.\", token);",
+					"}",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1400cda7-892d-44ce-82d0-eefe849731b2",
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "authToken",
+			"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjU0NTEzMjA5OWFkNmJmNjEzODJiNmI0Y2RlOWEyZGZlZDhjYjMwZjAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiR2FicmllbGEgU2NobGVtcGVyIERhIFNpbHZhIiwibGdwZCI6IjciLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcHJlZGljdC1zdGFnaW5nLXBsYXRmb3JtIiwiYXVkIjoicHJlZGljdC1zdGFnaW5nLXBsYXRmb3JtIiwiYXV0aF90aW1lIjoxNzYyNDUzMzk2LCJ1c2VyX2lkIjoicUxGSmRHUmdiTmdJcmlXSWpmZERoNnlTUG10MSIsInN1YiI6InFMRkpkR1JnYk5nSXJpV0lqZmREaDZ5U1BtdDEiLCJpYXQiOjE3NjI0NTMzOTYsImV4cCI6MTc2MjQ1Njk5NiwiZW1haWwiOiJnYWJyaWVsYS5zaWx2YUBkeW5hbW94Lm5ldCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJtaWNyb3NvZnQuY29tIjpbIjZlMDhiZGVkLWZjYjItNDQyMi1hNjA4LTUxNTJiMTI3YTI4ZiJdLCJlbWFpbCI6WyJnYWJyaWVsYS5zaWx2YUBkeW5hbW94Lm5ldCJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.movCLYssJCtaK9ByMd73prS5Z4a_pO-44g0KV0lPIijdxQ4HuXo2LLjHpv9sI0BSQhAO5Fo_Tn08BciH_UcP8Xhp1I6b623QyRGTSYLDc368mxO52Lm_g1q_1-S21oMbLDDf33N6QMXk68mLogivKG46Qh-XDOeb-KPy4u9YTVQcZUQEtspdo-d6vRaJXNEGNcNNd2rhO7Prb2BtXuoj6f4bO7O5qF_uYr_O7ihf2v32RX9rGq-63YKNosaH0Ca-3BFiDol7gEL44Rjm2ynhiFXYtYmIuYw0dCHijUG5uitb6pOQkYj-5sni0BKd0onM5rDbrnnvVflISHJlGXcW4g"
+		},
+		{
+			"key": "authTokenExp",
+			"value": "1762456996"
+		}
+	]
+}
