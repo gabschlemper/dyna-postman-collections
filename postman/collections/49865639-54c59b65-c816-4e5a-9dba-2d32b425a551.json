@@ -7092,7 +7092,7 @@
 									"response": []
 								},
 								{
-									"name": "CT009 - Answers justified - Missing justiedAt",
+									"name": "CT009 - Answers justified - Missing justifiedAt",
 									"event": [
 										{
 											"listen": "test",
