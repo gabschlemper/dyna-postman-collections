@@ -6395,7 +6395,7 @@
 									"response": []
 								},
 								{
-									"name": "CT008 - Invalid number types Copy",
+									"name": "CT009 - Invalid string types",
 									"event": [
 										{
 											"listen": "test",
@@ -6426,7 +6426,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"latitude\": \"not-a-number\",\n            \"longitude\": \"invalid\",\n            \"manualMeasurementValue\": \"text\",\n            \"roll\": \"abc\"\n        }\n    ]\n}",
+											"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"criticality\": 123,\n            \"reason\": true,\n            \"note\": [\"array\"],\n            \"otherNote\": { \"object\": \"value\" }\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
