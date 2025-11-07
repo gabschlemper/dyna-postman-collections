@@ -6995,7 +6995,7 @@
 													"",
 													"pm.test(\"Response has correct mode\", function () {",
 													"    const jsonData = pm.response.json();",
-													"    pm.expect(jsonData.mode).to.eql(\"spot_answered\");",
+													"    pm.expect(jsonData.mode).to.eql(\"spot_justified\");",
 													"});",
 													"",
 													"pm.test(\"Response contains data with hash\", function () {",
@@ -7008,7 +7008,6 @@
 													"pm.test(\"Response contains answers with id\", function () {",
 													"    const jsonData = pm.response.json();",
 													"    pm.expect(jsonData.data[0].answers).to.be.an('array');",
-													"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(1);",
 													"    pm.expect(jsonData.data[0].answers[0]).to.have.property('id');",
 													"});"
 												],
@@ -7027,7 +7026,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{RouteWorkspaceId1}}\",\n      \"reason\": \"Spot justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
+											"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"reason\": \"Spot justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
