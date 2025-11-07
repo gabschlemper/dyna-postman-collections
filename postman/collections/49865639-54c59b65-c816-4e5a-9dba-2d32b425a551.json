@@ -7130,7 +7130,7 @@
 													"",
 													"pm.test(\"Response should not contain the valid ID\", function () {",
 													"    const responseText = pm.response.text();",
-													"    const validId = pm.environment.get(\"validRouteWorkspaceId\");",
+													"    const validId = pm.environment.get(\"routeWorkspaceId1\");",
 													"    if (validId) {",
 													"        pm.expect(responseText).to.not.include(validId);",
 													"    }",
