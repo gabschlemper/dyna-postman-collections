@@ -9,7 +9,7 @@
 			"name": "Routes",
 			"item": [
 				{
-					"name": "Patch Update Route",
+					"name": "Patch Route",
 					"item": [
 						{
 							"name": "Update Route: Nome, Identificador, Tipo de Rota, Ciclos, Periodicidades",
