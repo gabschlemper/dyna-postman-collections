@@ -6846,7 +6846,7 @@
 									"response": []
 								},
 								{
-									"name": "CT003 - Checklist without answer Copy",
+									"name": "CT005 -Spot answered",
 									"event": [
 										{
 											"listen": "test",
