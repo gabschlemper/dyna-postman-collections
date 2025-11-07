@@ -6064,6 +6064,59 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "CT002 - Answers Vazia Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Response body contains error message\", function () {",
+											"    pm.expect(pm.response.json().message).to.eql(\"answers should not be empty\");",
+											"})"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "49865639-d0ea44c8-69d2-4058-a0da-4303181c3475",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": []\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+									"host": [
+										"{{urlpss}}"
+									],
+									"path": [
+										"v1",
+										"workspaces",
+										"{{WKDyna}}",
+										"answers"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "49865639-33e2d2aa-ca29-47e3-80da-040c0023cf90"
