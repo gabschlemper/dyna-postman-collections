@@ -6122,6 +6122,59 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "CT003 - Missing mode field Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Response body contains error message\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"mode should not be empty\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "49865639-f162e7cf-373b-4adb-abfc-3db52285d98e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+									"host": [
+										"{{urlpss}}"
+									],
+									"path": [
+										"v1",
+										"workspaces",
+										"{{WKDyna}}",
+										"answers"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "49865639-33e2d2aa-ca29-47e3-80da-040c0023cf90"
