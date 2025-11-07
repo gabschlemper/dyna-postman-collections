@@ -6708,7 +6708,7 @@
 									"response": []
 								},
 								{
-									"name": "CT003 - Checklist answered (2 equal)",
+									"name": "CT003 - Checklist answered - Duplicate Answers",
 									"event": [
 										{
 											"listen": "test",
