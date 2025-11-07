@@ -6380,14 +6380,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKDyna}}",
+												"{{WKid}}",
 												"answers"
 											]
 										}
@@ -6510,12 +6510,13 @@
 											"script": {
 												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
 												"exec": [
-													"pm.test(\"Status code is 200 or 201\", function () {",
-													"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
 													"});",
 													"",
-													"pm.test(\"Response is successful\", function () {",
-													"    pm.response.to.be.success;",
+													"pm.test(\"Response body contains string validation errors\", function () {",
+													"    const responseText = pm.response.text();",
+													"    pm.expect(responseText).to.include(\"must be a string\");",
 													"});"
 												],
 												"type": "text/javascript",
@@ -6533,7 +6534,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"routeWorkspaceId\": \"223e4567-e89b-12d3-a456-426614174001\",\n            \"checklistId\": \"323e4567-e89b-12d3-a456-426614174002\",\n            \"spotId\": \"spot-123\",\n            \"quizId\": \"423e4567-e89b-12d3-a456-426614174003\",\n            \"questionId\": \"523e4567-e89b-12d3-a456-426614174004\",\n            \"alternativeId\": \"623e4567-e89b-12d3-a456-426614174005\",\n            \"criticality\": \"high\",\n            \"criticalityLevelId\": \"723e4567-e89b-12d3-a456-426614174006\",\n            \"answeredStartAt\": \"2024-01-15T10:30:00.000Z\",\n            \"answeredAt\": \"2024-01-15T10:35:00.000Z\",\n            \"justifiedAt\": \"2024-01-15T10:40:00.000Z\",\n            \"latitude\": -23.5505,\n            \"longitude\": -46.6333,\n            \"reason\": \"Equipment malfunction detected\",\n            \"note\": \"Requires immediate attention\",\n            \"otherNote\": \"Additional observations\",\n            \"answerLevel\": \"critical\",\n            \"answerLevelId\": \"823e4567-e89b-12d3-a456-426614174007\",\n            \"questions\": [\n                \"923e4567-e89b-12d3-a456-426614174008\",\n                \"a23e4567-e89b-12d3-a456-426614174009\"\n            ],\n            \"images\": [\n                {\n                    \"id\": \"b23e4567-e89b-12d3-a456-426614174010\"\n                },\n                {\n                    \"id\": \"c23e4567-e89b-12d3-a456-426614174011\"\n                }\n            ],\n            \"audios\": [\n                {\n                    \"id\": \"d23e4567-e89b-12d3-a456-426614174012\"\n                }\n            ],\n            \"manualMeasurementValue\": 75.5,\n            \"manualMeasurementUnit\": \"dB\",\n            \"rollerFailureMode\": \"bearing\",\n            \"roll\": 3,\n            \"alert\": \"warning\",\n            \"sync\": \"pending\",\n            \"inspectorId\": \"e23e4567-e89b-12d3-a456-426614174013\",\n            \"localId\": \"local-123\",\n            \"deleted\": \"false\"\n        }\n    ],\n    \"client\": \"mobile-app\",\n    \"version\": \"1.0.0\",\n    \"contextId\": \"context-abc-123\"\n}",
+											"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"c900961a-6be8-4bcb-b472-a5ad166be940\",\n      \"checklistId\": \"d8f38542-dacd-43f7-bbd8-2edf5b5164be\",\n      \"quizId\": \"1c7b3319-3ef4-42af-8aef-2298e456b154\",\n      \"questionId\": \"3dd21c32-f9a0-4d2a-a007-9e3a890a2666\",\n      \"alternativeId\": \"e8676c2c-09d0-4fdd-a747-2a9fca0e667a\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6541,14 +6542,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKDyna}}",
+												"{{WKid}}",
 												"answers"
 											]
 										}
