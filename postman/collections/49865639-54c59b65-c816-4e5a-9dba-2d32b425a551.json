@@ -7214,6 +7214,56 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "CT008 - Answers justified - Mixed reason existence Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-9ba4b72d-2af7-4d84-a554-1d3ba3600736",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"reason\": \"Valid checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    },\n    {\n      \"routeWorkspaceId\": \"00000000-0000-0000-0000-000000000000\",\n      \"reason\": \"Invalid checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "49865639-754a1e12-535a-4a0f-98f7-0ec1dcfbfa6a"
