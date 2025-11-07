@@ -6823,7 +6823,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"mode\": \"checklist_without_answer\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId}}\",\n      \"routeWorkspaceId\": \"{{routeWorkspaceId}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+											"raw": "{\n  \"mode\": \"checklist_without_answer\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6890,7 +6890,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"mode\": \"spot_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId}}\",\n      \"spotId\": \"{{spotId}}\",\n      \"quizId\": \"{{quizId}}\",\n      \"questionId\": \"{{questionId}}\",\n      \"alternativeId\": \"{{alternativeId}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+											"raw": "{\n  \"mode\": \"spot_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"spotId\": \"{{spotId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
