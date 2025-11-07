@@ -6326,14 +6326,14 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKDyna}}",
+												"{{WKid}}",
 												"answers"
 											]
 										}
