@@ -6708,7 +6708,7 @@
 									"response": []
 								},
 								{
-									"name": "CT002 - Checklist answered (2 equal))",
+									"name": "CT002 - Checklist answered (2 equal)",
 									"event": [
 										{
 											"listen": "test",
