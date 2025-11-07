@@ -6615,6 +6615,60 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "CT001 - Checklist answered Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Response body contains string validation errors\", function () {",
+													"    const responseText = pm.response.text();",
+													"    pm.expect(responseText).to.include(\"must be a string\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-35c3d94c-3563-450d-b33b-f448392f98e2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId}}\",\n      \"checklistId\": \"{{checklistId}}\",\n      \"quizId\": \"{{quizId}}\",\n      \"questionId\": \"{{questionId}}\",\n      \"alternativeId\": \"{{alternativeId}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "49865639-754a1e12-535a-4a0f-98f7-0ec1dcfbfa6a"
