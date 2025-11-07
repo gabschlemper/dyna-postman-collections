@@ -6563,7 +6563,7 @@
 							"name": "Business Rules",
 							"item": [
 								{
-									"name": "CT001 -",
+									"name": "CT001 - Checklist answered",
 									"event": [
 										{
 											"listen": "test",
@@ -6594,7 +6594,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"c900961a-6be8-4bcb-b472-a5ad166be940\",\n      \"checklistId\": \"d8f38542-dacd-43f7-bbd8-2edf5b5164be\",\n      \"quizId\": \"1c7b3319-3ef4-42af-8aef-2298e456b154\",\n      \"questionId\": \"3dd21c32-f9a0-4d2a-a007-9e3a890a2666\",\n      \"alternativeId\": \"e8676c2c-09d0-4fdd-a747-2a9fca0e667a\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
+											"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId}}\",\n      \"checklistId\": \"{{checklistId}}\",\n      \"quizId\": \"{{quizId}}\",\n      \"questionId\": \"{{questionId}}\",\n      \"alternativeId\": \"{{alternativeId}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
