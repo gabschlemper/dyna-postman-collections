@@ -7120,7 +7120,7 @@
 													"",
 													"pm.test(\"Response contains error message about missing reason\", function () {",
 													"    const responseText = pm.response.text();",
-													"    pm.expect(responseText).to.include(\"reason\");",
+													"    pm.expect(responseText).to.include(\"justifiedAt\");",
 													"});",
 													"",
 													"pm.test(\"Response has error structure\", function () {",
