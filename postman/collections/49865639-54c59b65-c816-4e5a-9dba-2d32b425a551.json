@@ -5964,6 +5964,11 @@
 					"name": "Post Answer",
 					"item": [
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "49865639-0df11570-354c-4aa8-b8cb-f1389aa1eda4"
+						},
+						{
 							"name": "CT001 - Invalid mode enum",
 							"event": [
 								{
@@ -6231,7 +6236,7 @@
 							"response": []
 						},
 						{
-							"name": "CT005 -  Invalid audio reference UUID",
+							"name": "CT006 -  Invalid audio reference UUID",
 							"event": [
 								{
 									"listen": "test",
