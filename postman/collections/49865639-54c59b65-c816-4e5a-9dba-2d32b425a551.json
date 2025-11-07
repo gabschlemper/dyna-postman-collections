@@ -6706,6 +6706,77 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "CT002 - Checklist answered (2 same group) Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {",
+													"    pm.response.to.have.status(201);",
+													"});",
+													"",
+													"pm.test(\"Response has correct mode\", function () {",
+													"    const jsonData = pm.response.json();",
+													"    pm.expect(jsonData.mode).to.eql(\"checklist_answered\");",
+													"});",
+													"",
+													"pm.test(\"Response contains single group (same route)\", function () {",
+													"    const jsonData = pm.response.json();",
+													"    pm.expect(jsonData.data).to.be.an('array');",
+													"    pm.expect(jsonData.data.length).to.be.greaterThanOrEqual(1);",
+													"});",
+													"",
+													"pm.test(\"Group contains 2 answers\", function () {",
+													"    const jsonData = pm.response.json();",
+													"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(2);",
+													"});",
+													"",
+													"pm.test(\"Both answers have unique IDs\", function () {",
+													"    const jsonData = pm.response.json();",
+													"    const ids = jsonData.data[0].answers.map(a => a.id);",
+													"    pm.expect(ids[0]).to.not.equal(ids[1]);",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-d76e9046-a2b5-463a-9486-13c4256aceb8",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    },\n    {\n      \"routeId\": \"{{routeId}}\",\n      \"checklistId\": \"{{checklistId2}}\",\n      \"quizId\": \"{{quizId2}}\",\n      \"questionId\": \"{{questionId2}}\",\n      \"alternativeId\": \"{{alternativeId2}}\",\n      \"answeredAt\": \"2024-10-16T10:05:00Z\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "49865639-754a1e12-535a-4a0f-98f7-0ec1dcfbfa6a"
