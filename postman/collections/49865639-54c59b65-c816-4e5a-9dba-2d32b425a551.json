@@ -7048,7 +7048,7 @@
 									"response": []
 								},
 								{
-									"name": "CT008 - Missing reason",
+									"name": "CT008 - Answers justified - Missing reason",
 									"event": [
 										{
 											"listen": "test",
@@ -7107,7 +7107,7 @@
 									"response": []
 								},
 								{
-									"name": "CT008 - Missing justiedAt",
+									"name": "CT008 - Answers justified - Missing justiedAt",
 									"event": [
 										{
 											"listen": "test",
