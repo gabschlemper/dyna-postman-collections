@@ -6285,6 +6285,59 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "CT006 -  Invalid audio reference UUID Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Response body contains error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Audio reference id must be a valid UUID\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-165ed8c9-9f03-4826-8509-a12d0c3ff10a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"audios\": [\n                {\n                    \"id\": \"invalid-audio-uuid\"\n                }\n            ]\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKDyna}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "49865639-0df11570-354c-4aa8-b8cb-f1389aa1eda4"
