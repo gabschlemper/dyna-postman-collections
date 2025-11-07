@@ -5967,7 +5967,7 @@
 							"name": "DTO Validation Tests",
 							"item": [
 								{
-									"name": "CT001 - Invalid mode enum",
+									"name": "CT001 - Invalid mode",
 									"event": [
 										{
 											"listen": "test",
