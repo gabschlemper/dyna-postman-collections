@@ -7216,7 +7216,7 @@
 									"response": []
 								},
 								{
-									"name": "CT011 - Answers justified - Mixed reason existence Copy",
+									"name": "CT011 - Answers justified - Mixed spot e checklist",
 									"event": [
 										{
 											"listen": "test",
@@ -7243,7 +7243,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"reason\": \"Valid checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    },\n    {\n      \"routeWorkspaceId\": \"00000000-0000-0000-0000-000000000000\",\n      \"reason\": \"Invalid checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+											"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"reason\": \"Spot justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    },\n    {\n      \"routeWorkspaceId\": \"15f90695-a954-4ddc-832a-2fa021a2c699\",\n      \"reason\": \"Checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
