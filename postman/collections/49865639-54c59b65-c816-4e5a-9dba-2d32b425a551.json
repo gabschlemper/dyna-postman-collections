@@ -6287,7 +6287,7 @@
 									"response": []
 								},
 								{
-									"name": "CT006 -  Invalid audio reference UUID Copy",
+									"name": "CT007 -  Invalid date string formats",
 									"event": [
 										{
 											"listen": "test",
