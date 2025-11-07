@@ -6231,7 +6231,7 @@
 							"response": []
 						},
 						{
-							"name": "CT004 -  Invalid image reference UUID Copy",
+							"name": "CT005 -  Invalid audio reference UUID",
 							"event": [
 								{
 									"listen": "test",
@@ -6261,7 +6261,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"images\": [\n                {\n                    \"id\": \"invalid-image-uuid\"\n                }\n            ]\n        }\n    ]\n}",
+									"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"audios\": [\n                {\n                    \"id\": \"invalid-audio-uuid\"\n                }\n            ]\n        }\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
