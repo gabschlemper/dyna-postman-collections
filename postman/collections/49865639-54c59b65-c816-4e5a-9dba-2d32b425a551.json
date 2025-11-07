@@ -5962,20 +5962,21 @@
 			"item": [
 				{
 					"name": "New Folder",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "49865639-5cd0978e-ee26-43c6-ae77-5e9dc2fcae33",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "49865639-33e2d2aa-ca29-47e3-80da-040c0023cf90"
-				},
-				{
-					"name": "New Request",
-					"id": "49865639-5cd0978e-ee26-43c6-ae77-5e9dc2fcae33",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
 				}
 			],
 			"id": "49865639-a957ed38-8898-4091-856e-0d8c54b7a232"
