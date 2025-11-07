@@ -6154,7 +6154,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\"\n        }\n    ]\n}",
+									"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"invalid-uuid\",\n            \"routeWorkspaceId\": \"not-a-uuid\",\n            \"checklistId\": \"123\",\n            \"quizId\": \"abc-def\",\n            \"questionId\": \"12345678\",\n            \"alternativeId\": \"wrong-format\",\n            \"criticalityLevelId\": \"bad-uuid\",\n            \"answerLevelId\": \"invalid\",\n            \"inspectorId\": \"not-valid\"\n        }\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
