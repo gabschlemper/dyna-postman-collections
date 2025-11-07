@@ -6767,22 +6767,19 @@
 											"response": []
 										},
 										{
-											"name": "CT003 - Checklist answered - Invalid RouteId",
+											"name": "CT004 - Checklist answered - Invalid RouteId",
 											"event": [
 												{
 													"listen": "test",
 													"script": {
 														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
 														"exec": [
-															"pm.test(\"Status code is 201\", function () {",
-															"    pm.response.to.have.status(201);",
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
 															"});",
 															"",
-															"pm.test(\"Both answers are created with different IDs\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(2);",
-															"    const ids = jsonData.data[0].answers.map(a => a.id);",
-															"    pm.expect(ids[0]).to.not.equal(ids[1]); // Different IDs even if content is same",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"Routes not found: c900961a-6be8-4bcb-b472-a5ad166be945\");",
 															"});"
 														],
 														"type": "text/javascript",
@@ -6801,6 +6798,59 @@
 												"body": {
 													"mode": "raw",
 													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"c900961a-6be8-4bcb-b472-a5ad166be945\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT005 - Checklist answered - Invalid ChecklistId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"Checklists not found: d8f38542-dacd-43f7-bbd8-2edf5b5164bf\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-b3102acb-8ecc-474a-9353-cc6a68f4d4f0",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"d8f38542-dacd-43f7-bbd8-2edf5b5164bf\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7424,6 +7474,13 @@
 										"packages": {},
 										"requests": {}
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"packages": {},
+										"type": "text/javascript"
+									}
 								}
 							],
 							"id": "49865639-24f95a12-9895-4a90-89d5-5748ddfa97a2",
@@ -7435,7 +7492,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId}}\",\n            \"reason\": \"Spot 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId1}}\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n            \"reason\": \"Checklist 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+									"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"15f90695-a954-4ddc-832a-2fa021a2c698\",\n            \"reason\": \"Spot 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId1}}\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n            \"reason\": \"Checklist 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
