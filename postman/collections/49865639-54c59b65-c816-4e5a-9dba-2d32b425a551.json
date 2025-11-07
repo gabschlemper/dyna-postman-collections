@@ -6846,7 +6846,7 @@
 									"response": []
 								},
 								{
-									"name": "CT005 -Spot answered",
+									"name": "CT005 - Spot answered",
 									"event": [
 										{
 											"listen": "test",
