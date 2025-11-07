@@ -6563,7 +6563,7 @@
 							"name": "Business Rules",
 							"item": [
 								{
-									"name": "CT011 - Valid Payload Copy",
+									"name": "CT001 -",
 									"event": [
 										{
 											"listen": "test",
