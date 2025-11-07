@@ -6011,6 +6011,55 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "CT001 - Mode Inválido Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "49865639-99f3e3ca-dcb3-454b-993e-25aff871a153",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mode\": \"mode_invalido\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+									"host": [
+										"{{urlpss}}"
+									],
+									"path": [
+										"v1",
+										"workspaces",
+										"{{WKDyna}}",
+										"answers"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "49865639-33e2d2aa-ca29-47e3-80da-040c0023cf90"
