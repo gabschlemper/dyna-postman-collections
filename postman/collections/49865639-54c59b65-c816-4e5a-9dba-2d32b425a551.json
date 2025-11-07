@@ -6555,7 +6555,13 @@
 										}
 									},
 									"response": []
-								},
+								}
+							],
+							"id": "49865639-0df11570-354c-4aa8-b8cb-f1389aa1eda4"
+						},
+						{
+							"name": "Business Rules",
+							"item": [
 								{
 									"name": "CT011 - Valid Payload Copy",
 									"event": [
@@ -6611,11 +6617,6 @@
 									"response": []
 								}
 							],
-							"id": "49865639-0df11570-354c-4aa8-b8cb-f1389aa1eda4"
-						},
-						{
-							"name": "Business Rules",
-							"item": [],
 							"id": "49865639-754a1e12-535a-4a0f-98f7-0ec1dcfbfa6a"
 						}
 					],
