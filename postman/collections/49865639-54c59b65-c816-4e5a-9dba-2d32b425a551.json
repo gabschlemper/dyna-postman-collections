@@ -6642,7 +6642,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"id": "0d661e2b-fdc3-469f-bb19-73b9b5ee9bfb",
 												"exec": [
 													"pm.test(\"Status code is 201\", function () {",
 													"    pm.response.to.have.status(201);",
@@ -6661,7 +6661,7 @@
 													"",
 													"pm.test(\"Group contains 2 answers\", function () {",
 													"    const jsonData = pm.response.json();",
-													"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(2);",
+													"    pm.expect(jsonData.data).to.have.lengthOf(2);",
 													"});",
 													"",
 													"pm.test(\"Both answers have unique IDs\", function () {",
@@ -6876,7 +6876,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"mode\": \"spot_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"spotId\": \"{{spotId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+											"raw": "{\n  \"mode\": \"spot_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"spotId\": \"{{spotId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"routeWorkspaceId\":\"{{routeWorkspaceId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6943,7 +6943,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"reason\": \"Checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+											"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n      \"reason\": \"Checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
