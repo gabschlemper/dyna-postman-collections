@@ -6914,7 +6914,7 @@
 									"response": []
 								},
 								{
-									"name": "CT006 - Answers justified",
+									"name": "CT006 - Answers justified - Checklist",
 									"event": [
 										{
 											"listen": "test",
@@ -6981,7 +6981,7 @@
 									"response": []
 								},
 								{
-									"name": "CT007 - Answers justified - spot",
+									"name": "CT007 - Answers justified - Spot",
 									"event": [
 										{
 											"listen": "test",
