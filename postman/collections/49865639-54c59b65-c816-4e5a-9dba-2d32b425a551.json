@@ -6178,7 +6178,7 @@
 							"response": []
 						},
 						{
-							"name": "CT004 -  Invalid image reference UUID",
+							"name": "CT005 -  Invalid image reference UUID",
 							"event": [
 								{
 									"listen": "test",
@@ -6243,7 +6243,7 @@
 											"});",
 											"",
 											"pm.test(\"Response body contains error message\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"Image reference id must be a valid UUID\");",
+											"    pm.expect(pm.response.text()).to.include(\"Audio reference id must be a valid UUID\");",
 											"});"
 										],
 										"type": "text/javascript",
