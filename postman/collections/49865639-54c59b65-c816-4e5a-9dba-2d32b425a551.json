@@ -6800,7 +6800,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"c900961a-6be8-4bcb-b472-a5ad166be945\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7392,70 +7392,70 @@
 												}
 											},
 											"response": []
-										},
-										{
-											"name": "CT012 - Answers justified - Mixed 2 spot e 1 checklist Copy",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-														"exec": [
-															"pm.test(\"Status code is 201\", function () {",
-															"    pm.response.to.have.status(201);",
-															"});",
-															"",
-															"pm.test(\"Each group has hash and answers\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    jsonData.data.forEach(group => {",
-															"        pm.expect(group).to.have.property('hash');",
-															"        pm.expect(group).to.have.property('answers');",
-															"        pm.expect(group.answers).to.be.an('array');",
-															"    });",
-															"});"
-														],
-														"type": "text/javascript",
-														"packages": {},
-														"requests": {}
-													}
-												}
-											],
-											"id": "49865639-24f95a12-9895-4a90-89d5-5748ddfa97a2",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId}}\",\n            \"reason\": \"Spot 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId1}}\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n            \"reason\": \"Checklist 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
-													"host": [
-														"{{urlpss}}"
-													],
-													"path": [
-														"v1",
-														"workspaces",
-														"{{WKid}}",
-														"answers"
-													]
-												}
-											},
-											"response": []
 										}
 									],
 									"id": "49865639-531268d5-5a84-4c09-a082-42fb4bc57190"
 								}
 							],
 							"id": "49865639-754a1e12-535a-4a0f-98f7-0ec1dcfbfa6a"
+						},
+						{
+							"name": "Genérico",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"pm.test(\"Each group has hash and answers\", function () {",
+											"    const jsonData = pm.response.json();",
+											"    jsonData.data.forEach(group => {",
+											"        pm.expect(group).to.have.property('hash');",
+											"        pm.expect(group).to.have.property('answers');",
+											"        pm.expect(group.answers).to.be.an('array');",
+											"    });",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "49865639-24f95a12-9895-4a90-89d5-5748ddfa97a2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId}}\",\n            \"reason\": \"Spot 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId1}}\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n            \"reason\": \"Checklist 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+									"host": [
+										"{{urlpss}}"
+									],
+									"path": [
+										"v1",
+										"workspaces",
+										"{{WKid}}",
+										"answers"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "49865639-33e2d2aa-ca29-47e3-80da-040c0023cf90"
