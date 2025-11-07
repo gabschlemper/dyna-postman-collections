@@ -6981,7 +6981,7 @@
 									"response": []
 								},
 								{
-									"name": "CT007 - Answers justified (spot)",
+									"name": "CT007 - Answers justified - spot",
 									"event": [
 										{
 											"listen": "test",
