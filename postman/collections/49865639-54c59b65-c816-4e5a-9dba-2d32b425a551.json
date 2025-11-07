@@ -6393,6 +6393,60 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "CT008 - Invalid number types Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Response body contains number validation errors\", function () {",
+													"    const responseText = pm.response.text();",
+													"    pm.expect(responseText).to.include(\"must be a number\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-c172d4e9-20e6-4805-8d40-32f64a3b0330",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"latitude\": \"not-a-number\",\n            \"longitude\": \"invalid\",\n            \"manualMeasurementValue\": \"text\",\n            \"roll\": \"abc\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKDyna}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "49865639-0df11570-354c-4aa8-b8cb-f1389aa1eda4"
