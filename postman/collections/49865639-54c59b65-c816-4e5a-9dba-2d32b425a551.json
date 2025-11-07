@@ -6449,7 +6449,7 @@
 									"response": []
 								},
 								{
-									"name": "CT009 - Invalid string types Copy",
+									"name": "CT010 - Invalid questions array (should contain UUIDs)",
 									"event": [
 										{
 											"listen": "test",
