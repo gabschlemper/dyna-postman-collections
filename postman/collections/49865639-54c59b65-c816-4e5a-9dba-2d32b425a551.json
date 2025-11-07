@@ -5965,328 +5965,329 @@
 					"item": [
 						{
 							"name": "DTO Validation Tests",
-							"item": [],
+							"item": [
+								{
+									"name": "CT001 - Invalid mode enum",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Response body contains error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"mode must be one of the following values\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-5cd0978e-ee26-43c6-ae77-5e9dc2fcae33",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mode\": \"mode_invalido\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKDyna}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT002 - Empty answers array",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Response body contains error message\", function () {",
+													"\tpm.expect(pm.response.text()).to.include(\"answers should not be empt\");",
+													"});",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-99f3e3ca-dcb3-454b-993e-25aff871a153",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": []\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKDyna}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT003 - Missing mode field",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Response body contains error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"mode should not be empty\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-d0ea44c8-69d2-4058-a0da-4303181c3475",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKDyna}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT004 - Invalid UUID formats",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Response body contains UUID validation errors\", function () {",
+													"    const responseText = pm.response.text();",
+													"    pm.expect(responseText).to.include(\"must be a valid UUID\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-f162e7cf-373b-4adb-abfc-3db52285d98e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"invalid-uuid\",\n            \"routeWorkspaceId\": \"not-a-uuid\",\n            \"checklistId\": \"123\",\n            \"quizId\": \"abc-def\",\n            \"questionId\": \"12345678\",\n            \"alternativeId\": \"wrong-format\",\n            \"criticalityLevelId\": \"bad-uuid\",\n            \"answerLevelId\": \"invalid\",\n            \"inspectorId\": \"not-valid\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKDyna}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT005 -  Invalid image reference UUID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Response body contains error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Image reference id must be a valid UUID\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-0c32dd1c-fd44-4127-bd5a-0b33d785726b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"images\": [\n                {\n                    \"id\": \"invalid-image-uuid\"\n                }\n            ]\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKDyna}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT006 -  Invalid audio reference UUID",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Response body contains error message\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Audio reference id must be a valid UUID\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-cc66b4f5-9a36-4b77-9c24-774a52d2b4be",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"audios\": [\n                {\n                    \"id\": \"invalid-audio-uuid\"\n                }\n            ]\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKDyna}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
+								}
+							],
 							"id": "49865639-0df11570-354c-4aa8-b8cb-f1389aa1eda4"
-						},
-						{
-							"name": "CT001 - Invalid mode enum",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Response body contains error message\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"mode must be one of the following values\");",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
-									}
-								}
-							],
-							"id": "49865639-5cd0978e-ee26-43c6-ae77-5e9dc2fcae33",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"mode\": \"mode_invalido\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
-									"host": [
-										"{{urlpss}}"
-									],
-									"path": [
-										"v1",
-										"workspaces",
-										"{{WKDyna}}",
-										"answers"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CT002 - Empty answers array",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Response body contains error message\", function () {",
-											"\tpm.expect(pm.response.text()).to.include(\"answers should not be empt\");",
-											"});",
-											""
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
-									}
-								}
-							],
-							"id": "49865639-99f3e3ca-dcb3-454b-993e-25aff871a153",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": []\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
-									"host": [
-										"{{urlpss}}"
-									],
-									"path": [
-										"v1",
-										"workspaces",
-										"{{WKDyna}}",
-										"answers"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CT003 - Missing mode field",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Response body contains error message\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"mode should not be empty\");",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
-									}
-								}
-							],
-							"id": "49865639-d0ea44c8-69d2-4058-a0da-4303181c3475",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\"\n        }\n    ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
-									"host": [
-										"{{urlpss}}"
-									],
-									"path": [
-										"v1",
-										"workspaces",
-										"{{WKDyna}}",
-										"answers"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CT004 - Invalid UUID formats",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Response body contains UUID validation errors\", function () {",
-											"    const responseText = pm.response.text();",
-											"    pm.expect(responseText).to.include(\"must be a valid UUID\");",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
-									}
-								}
-							],
-							"id": "49865639-f162e7cf-373b-4adb-abfc-3db52285d98e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"invalid-uuid\",\n            \"routeWorkspaceId\": \"not-a-uuid\",\n            \"checklistId\": \"123\",\n            \"quizId\": \"abc-def\",\n            \"questionId\": \"12345678\",\n            \"alternativeId\": \"wrong-format\",\n            \"criticalityLevelId\": \"bad-uuid\",\n            \"answerLevelId\": \"invalid\",\n            \"inspectorId\": \"not-valid\"\n        }\n    ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
-									"host": [
-										"{{urlpss}}"
-									],
-									"path": [
-										"v1",
-										"workspaces",
-										"{{WKDyna}}",
-										"answers"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CT005 -  Invalid image reference UUID",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Response body contains error message\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"Image reference id must be a valid UUID\");",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
-									}
-								}
-							],
-							"id": "49865639-0c32dd1c-fd44-4127-bd5a-0b33d785726b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"images\": [\n                {\n                    \"id\": \"invalid-image-uuid\"\n                }\n            ]\n        }\n    ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
-									"host": [
-										"{{urlpss}}"
-									],
-									"path": [
-										"v1",
-										"workspaces",
-										"{{WKDyna}}",
-										"answers"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "CT006 -  Invalid audio reference UUID",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-										"exec": [
-											"pm.test(\"Status code is 400\", function () {",
-											"    pm.response.to.have.status(400);",
-											"});",
-											"",
-											"pm.test(\"Response body contains error message\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"Audio reference id must be a valid UUID\");",
-											"});"
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
-									}
-								}
-							],
-							"id": "49865639-cc66b4f5-9a36-4b77-9c24-774a52d2b4be",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"audios\": [\n                {\n                    \"id\": \"invalid-audio-uuid\"\n                }\n            ]\n        }\n    ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
-									"host": [
-										"{{urlpss}}"
-									],
-									"path": [
-										"v1",
-										"workspaces",
-										"{{WKDyna}}",
-										"answers"
-									]
-								}
-							},
-							"response": []
 						}
 					],
 					"id": "49865639-33e2d2aa-ca29-47e3-80da-040c0023cf90"
