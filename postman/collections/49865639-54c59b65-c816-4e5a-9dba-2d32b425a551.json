@@ -6013,7 +6013,7 @@
 							"response": []
 						},
 						{
-							"name": "CT001 - Mode Inválido Copy",
+							"name": "CT002 - Answers Vazia",
 							"event": [
 								{
 									"listen": "test",
@@ -6022,7 +6022,11 @@
 										"exec": [
 											"pm.test(\"Status code is 400\", function () {",
 											"    pm.response.to.have.status(400);",
-											"});"
+											"});",
+											"",
+											"pm.test(\"Response body contains error message\", function () {",
+											"    pm.expect(pm.response.json().message).to.eql(\"answers should not be empty\");",
+											"})"
 										],
 										"type": "text/javascript",
 										"packages": {},
@@ -6039,7 +6043,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"mode\": \"mode_invalido\"\n}",
+									"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": []\n}",
 									"options": {
 										"raw": {
 											"language": "json"
