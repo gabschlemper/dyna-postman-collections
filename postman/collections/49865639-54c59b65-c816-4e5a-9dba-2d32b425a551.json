@@ -5964,7 +5964,7 @@
 					"name": "Post Answer",
 					"item": [
 						{
-							"name": "CT001 - Mode Inválido",
+							"name": "CT001 - Invalid mode enum",
 							"event": [
 								{
 									"listen": "test",
@@ -5973,6 +5973,10 @@
 										"exec": [
 											"pm.test(\"Status code is 400\", function () {",
 											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Response body contains error message\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"mode must be one of the following values\");",
 											"});"
 										],
 										"type": "text/javascript",
