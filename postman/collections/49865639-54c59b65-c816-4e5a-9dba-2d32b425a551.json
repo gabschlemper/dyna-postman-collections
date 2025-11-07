@@ -6317,7 +6317,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"audios\": [\n                {\n                    \"id\": \"invalid-audio-uuid\"\n                }\n            ]\n        }\n    ]\n}",
+											"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"answeredStartAt\": \"not-a-date\",\n            \"answeredAt\": \"2024-13-45\",\n            \"justifiedAt\": \"invalid-date-format\"\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
