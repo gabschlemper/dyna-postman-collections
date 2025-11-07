@@ -6124,7 +6124,7 @@
 							"response": []
 						},
 						{
-							"name": "CT003 - Missing mode field Copy",
+							"name": "CT004 - Invalid UUID formats",
 							"event": [
 								{
 									"listen": "test",
