@@ -5964,7 +5964,7 @@
 					"name": "Post Answer",
 					"item": [
 						{
-							"name": "CT001 - Mode",
+							"name": "CT001 - Mode Inválido",
 							"id": "49865639-5cd0978e-ee26-43c6-ae77-5e9dc2fcae33",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
