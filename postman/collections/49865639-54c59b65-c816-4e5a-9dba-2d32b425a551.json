@@ -7107,7 +7107,7 @@
 									"response": []
 								},
 								{
-									"name": "CT008 - Missing reason Copy",
+									"name": "CT008 - Mixed existence (1 ok + 1 missing)",
 									"event": [
 										{
 											"listen": "test",
