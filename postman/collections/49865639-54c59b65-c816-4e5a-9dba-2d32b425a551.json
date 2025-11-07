@@ -6555,6 +6555,60 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "CT011 - Valid Payload Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Response body contains string validation errors\", function () {",
+													"    const responseText = pm.response.text();",
+													"    pm.expect(responseText).to.include(\"must be a string\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-6afd06d4-6375-4481-8254-62dcc957ad6b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"c900961a-6be8-4bcb-b472-a5ad166be940\",\n      \"checklistId\": \"d8f38542-dacd-43f7-bbd8-2edf5b5164be\",\n      \"quizId\": \"1c7b3319-3ef4-42af-8aef-2298e456b154\",\n      \"questionId\": \"3dd21c32-f9a0-4d2a-a007-9e3a890a2666\",\n      \"alternativeId\": \"e8676c2c-09d0-4fdd-a747-2a9fca0e667a\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "49865639-0df11570-354c-4aa8-b8cb-f1389aa1eda4"
