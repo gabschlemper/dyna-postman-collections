@@ -6066,7 +6066,7 @@
 							"response": []
 						},
 						{
-							"name": "CT003 - Answers Vazia Copy",
+							"name": "CT003 - Missing mode field",
 							"event": [
 								{
 									"listen": "test",
