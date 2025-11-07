@@ -6980,6 +6980,74 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "CT006 - Answers justified Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+												"exec": [
+													"pm.test(\"Status code is 201\", function () {",
+													"    pm.response.to.have.status(201);",
+													"});",
+													"",
+													"pm.test(\"Response has correct mode\", function () {",
+													"    const jsonData = pm.response.json();",
+													"    pm.expect(jsonData.mode).to.eql(\"spot_answered\");",
+													"});",
+													"",
+													"pm.test(\"Response contains data with hash\", function () {",
+													"    const jsonData = pm.response.json();",
+													"    pm.expect(jsonData.data).to.be.an('array');",
+													"    pm.expect(jsonData.data[0]).to.have.property('hash');",
+													"    pm.expect(jsonData.data[0]).to.have.property('createdAt');",
+													"});",
+													"",
+													"pm.test(\"Response contains answers with id\", function () {",
+													"    const jsonData = pm.response.json();",
+													"    pm.expect(jsonData.data[0].answers).to.be.an('array');",
+													"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(1);",
+													"    pm.expect(jsonData.data[0].answers[0]).to.have.property('id');",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-d08a12ee-fe72-4898-b4cf-7b9b7812b46c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"reason\": \"Checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"answers"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "49865639-754a1e12-535a-4a0f-98f7-0ec1dcfbfa6a"
