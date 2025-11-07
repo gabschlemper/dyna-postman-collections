@@ -6135,8 +6135,9 @@
 											"    pm.response.to.have.status(400);",
 											"});",
 											"",
-											"pm.test(\"Response body contains error message\", function () {",
-											"    pm.expect(pm.response.text()).to.include(\"mode should not be empty\");",
+											"pm.test(\"Response body contains UUID validation errors\", function () {",
+											"    const responseText = pm.response.text();",
+											"    pm.expect(responseText).to.include(\"must be a valid UUID\");",
 											"});"
 										],
 										"type": "text/javascript",
