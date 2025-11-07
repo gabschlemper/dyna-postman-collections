@@ -6779,7 +6779,7 @@
 									"response": []
 								},
 								{
-									"name": "CT003 - Checklist without answer",
+									"name": "CT004 - Checklist without answer",
 									"event": [
 										{
 											"listen": "test",
