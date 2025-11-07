@@ -6176,6 +6176,60 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "CT004 -  Invalid image reference UUID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {",
+											"    pm.response.to.have.status(400);",
+											"});",
+											"",
+											"pm.test(\"Response body contains UUID validation errors\", function () {",
+											"    const responseText = pm.response.text();",
+											"    pm.expect(responseText).to.include(\"must be a valid UUID\");",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "49865639-0c32dd1c-fd44-4127-bd5a-0b33d785726b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"123e4567-e89b-12d3-a456-426614174000\",\n            \"images\": [\n                {\n                    \"id\": \"invalid-image-uuid\"\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{urlpss}}/v1/workspaces/{{WKDyna}}/answers",
+									"host": [
+										"{{urlpss}}"
+									],
+									"path": [
+										"v1",
+										"workspaces",
+										"{{WKDyna}}",
+										"answers"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "49865639-33e2d2aa-ca29-47e3-80da-040c0023cf90"
