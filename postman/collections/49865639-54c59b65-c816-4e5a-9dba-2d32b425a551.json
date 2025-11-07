@@ -7118,14 +7118,22 @@
 													"    pm.response.to.have.status(400);",
 													"});",
 													"",
-													"pm.test(\"Response contains error message about missing reason\", function () {",
+													"pm.test(\"Response contains error about RouteWorkspace not found\", function () {",
 													"    const responseText = pm.response.text();",
-													"    pm.expect(responseText).to.include(\"reason\");",
+													"    pm.expect(responseText).to.include(\"RouteWorkspace(s) not found\");",
 													"});",
 													"",
-													"pm.test(\"Response has error structure\", function () {",
-													"    const jsonData = pm.response.json();",
-													"    pm.expect(jsonData).to.have.property('message');",
+													"pm.test(\"Response contains the invalid ID\", function () {",
+													"    const responseText = pm.response.text();",
+													"    pm.expect(responseText).to.include(\"00000000-0000-0000-0000-000000000000\");",
+													"});",
+													"",
+													"pm.test(\"Response should not contain the valid ID\", function () {",
+													"    const responseText = pm.response.text();",
+													"    const validId = pm.environment.get(\"validRouteWorkspaceId\");",
+													"    if (validId) {",
+													"        pm.expect(responseText).to.not.include(validId);",
+													"    }",
 													"});"
 												],
 												"type": "text/javascript",
@@ -7143,7 +7151,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+											"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"reason\": \"Valid checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    },\n    {\n      \"routeWorkspaceId\": \"00000000-0000-0000-0000-000000000000\",\n      \"reason\": \"Invalid checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
