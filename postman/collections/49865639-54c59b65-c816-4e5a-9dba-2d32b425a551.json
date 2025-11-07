@@ -6914,7 +6914,7 @@
 									"response": []
 								},
 								{
-									"name": "CT005 - Spot answered Copy",
+									"name": "CT006 - Answers justified",
 									"event": [
 										{
 											"listen": "test",
@@ -6959,7 +6959,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"mode\": \"spot_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"spotId\": \"{{spotId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+											"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{routeWorkspaceId}}\",\n      \"reason\": \"Checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
