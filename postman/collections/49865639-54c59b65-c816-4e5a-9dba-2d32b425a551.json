@@ -6617,7 +6617,7 @@
 									"response": []
 								},
 								{
-									"name": "CT001 - Checklist answered Copy",
+									"name": "CT002 - Checklist answered (2 same group)",
 									"event": [
 										{
 											"listen": "test",
