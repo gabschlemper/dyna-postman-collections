@@ -7166,7 +7166,7 @@
 									"response": []
 								},
 								{
-									"name": "CT008 - Answers justified - Mixed existence",
+									"name": "CT008 - Answers justified - Mixed reason existence",
 									"event": [
 										{
 											"listen": "test",
