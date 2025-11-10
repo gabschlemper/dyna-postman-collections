@@ -7276,7 +7276,7 @@
 															"});",
 															"",
 															"pm.test(\"Body matches string\", function () {",
-															"    pm.expect(pm.response.text()).to.include(\"Missing required fields for CHECKLIST_WITHOUT_ANSWERS at index 0: routeId\");",
+															"    pm.expect(pm.response.text()).to.include(\"Missing required fields for CHECKLIST_WITHOUT_ANSWERS at index 0: routeWorkspaceId\");",
 															"});"
 														],
 														"type": "text/javascript",
@@ -7295,6 +7295,59 @@
 												"body": {
 													"mode": "raw",
 													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT005 - Checklist without answer - Missing answeredAt",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"Missing required fields for CHECKLIST_WITHOUT_ANSWERS at index 0: answeredAt\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-35a69379-bb3d-4649-b401-168fd03bc099",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7441,7 +7494,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n            \"reason\": \"Checklist justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"reason\": \"Checklist justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n      \"reason\": \"Checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
