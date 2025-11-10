@@ -7388,7 +7388,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n      \"reason\": \"Checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+													"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n      \"reason\": \"Checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    },\n     {\n      \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n      \"reason\": \"Checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    },\n     {\n      \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n      \"reason\": \"Checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7785,7 +7785,7 @@
 															"});",
 															"",
 															"pm.test(\"Body matches string\", function () {",
-															"    pm.expect(pm.response.text()).to.include(Inspector does not have permission to access one or more routes\");",
+															"    pm.expect(pm.response.text()).to.include(\"Inspector does not have permission to access one or more routes\");",
 															"});"
 														],
 														"type": "text/javascript",
