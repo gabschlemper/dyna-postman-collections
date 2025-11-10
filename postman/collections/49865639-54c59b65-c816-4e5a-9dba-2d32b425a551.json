@@ -6510,14 +6510,11 @@
 											"script": {
 												"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
 												"exec": [
-													"pm.test(\"Status code is 400\", function () {",
-													"    pm.response.to.have.status(400);",
+													"pm.test(\"Status code is 201\", function () {",
+													"    pm.response.to.have.status(201);",
 													"});",
 													"",
-													"pm.test(\"Response body contains string validation errors\", function () {",
-													"    const responseText = pm.response.text();",
-													"    pm.expect(responseText).to.include(\"must be a string\");",
-													"});"
+													""
 												],
 												"type": "text/javascript",
 												"packages": {},
@@ -7368,6 +7365,115 @@
 												}
 											},
 											"response": []
+										},
+										{
+											"name": "CT006 - Checklist without answer - Two answers",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 201\", function () {",
+															"    pm.response.to.have.status(201);",
+															"});",
+															"",
+															"pm.test(\"Validates that there are two IDs in the response\", function () {",
+															"    var jsonData = pm.response.json();",
+															"    var ids = jsonData.data.map(item => item.answers.id);",
+															"    pm.expect(ids).to.have.lengthOf(2);",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-3bddea0d-b4dc-443b-a09f-ea6386d7ce9d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId2}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT007 - Checklist without answer - Duplicate answers",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 201\", function () {",
+															"    pm.response.to.have.status(201);",
+															"});",
+															"",
+															"pm.test(\"Duplicate answers\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(2);",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-b3378712-7e75-493e-a55d-498dbba4ac4c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
 										}
 									],
 									"id": "49865639-e36fbce0-504d-402e-a1ce-ba08e8e5a5f4"
@@ -7930,9 +8036,173 @@
 												}
 											},
 											"response": []
+										},
+										{
+											"name": "CT002 - Permission - Invalid Bearer Token",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 403\", function () {",
+															"    pm.response.to.have.status(403);",
+															"});",
+															"",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"Inspector does not have permission to access one or more routes\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-642b2b71-838a-4c2b-b6f7-504efcef9d3e",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"022f74f4-c229-4f85-8b3f-df8914a44d9e\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
 										}
 									],
 									"id": "49865639-0c2781ae-6f92-4e6c-bb1f-77b19b176399"
+								},
+								{
+									"name": "General",
+									"item": [
+										{
+											"name": "CT001 - General - Missing Answers",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"mode should not be empty\",",
+															"        \"mode must be one of the following values: checklist_answered, checklist_without_answer, checklist_without_anomalies, checklist_justified, spot_answered, spot_justified, answers_justified\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-ff20ffa8-8144-4caf-aeaf-8bae07ddbf3f",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT002 - General - Missing mode",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"answers should not be empty\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-76139383-2611-4ff2-b021-bbd082a0e130",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"mode\": \"checklist_without_answer\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"id": "49865639-30cbbac2-4c85-440b-9084-09ef20a05c34"
 								}
 							],
 							"id": "49865639-754a1e12-535a-4a0f-98f7-0ec1dcfbfa6a"
