@@ -6744,7 +6744,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\",\n            \"note\": \"Observação opcional 1\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\",\n            \"note\": \"Observação opcional 2\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7044,7 +7044,7 @@
 															"});",
 															"",
 															"pm.test(\"Body matches string\", function () {",
-															"    pm.expect(pm.response.text()).to.include(\"Missing required fields for CHECKLIST_ANSWERED at index 0: answeredAt\");",
+															"    pm.expect(pm.response.text()).to.include(\"Missing required fields for CHECKLIST_ANSWERED at index 0: alternativeId\");",
 															"});"
 														],
 														"type": "text/javascript",
@@ -7091,7 +7091,7 @@
 									"name": "Checklist Without Answer",
 									"item": [
 										{
-											"name": "CT004 - Checklist without answer",
+											"name": "CT001 - Checklist without answer",
 											"event": [
 												{
 													"listen": "test",
@@ -7136,6 +7136,112 @@
 												"body": {
 													"mode": "raw",
 													"raw": "{\n  \"mode\": \"checklist_without_answer\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT002 - Checklist without answer - Invalid Mode",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"mode must be one of the following values: checklist_answered, checklist_without_answer, checklist_without_anomalies, checklist_justified, spot_answered, spot_justified, answers_justified\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-68db1cae-d58f-4d8f-9c99-4f33c3471844",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"mode\": \"checklist_without_answe\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT002 - Checklist without answer - Invalid Mode Copy",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"mode must be one of the following values: checklist_answered, checklist_without_answer, checklist_without_anomalies, checklist_justified, spot_answered, spot_justified, answers_justified\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-eedde034-87e3-42cf-84b6-b5594f7811af",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"mode\": \"checklist_without_answe\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7657,6 +7763,70 @@
 										}
 									],
 									"id": "49865639-531268d5-5a84-4c09-a082-42fb4bc57190"
+								},
+								{
+									"name": "Checklist Without Anomalies",
+									"item": [],
+									"id": "49865639-fc61fe0c-aa4f-4817-9e21-464e1712ceed"
+								},
+								{
+									"name": "Permissions",
+									"item": [
+										{
+											"name": "CT001 - Permission - User without permission on the route",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 403\", function () {",
+															"    pm.response.to.have.status(403);",
+															"});",
+															"",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(Inspector does not have permission to access one or more routes\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-4371a3ff-8a9a-488d-8ce1-6403a6355873",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"022f74f4-c229-4f85-8b3f-df8914a44d9e\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										}
+									],
+									"id": "49865639-0c2781ae-6f92-4e6c-bb1f-77b19b176399"
 								}
 							],
 							"id": "49865639-754a1e12-535a-4a0f-98f7-0ec1dcfbfa6a"
