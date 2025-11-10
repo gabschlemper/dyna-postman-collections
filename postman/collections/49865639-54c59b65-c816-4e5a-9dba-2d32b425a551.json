@@ -6871,6 +6871,218 @@
 												}
 											},
 											"response": []
+										},
+										{
+											"name": "CT006 - Checklist answered - Invalid mode",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"mode must be one of the following values: checklist_answered, checklist_without_answer, checklist_without_anomalies, checklist_justified, spot_answered, spot_justified, answers_justified\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-4530983f-0fb2-409d-8692-b48c26e03732",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_answere\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"d8f38542-dacd-43f7-bbd8-2edf5b5164bf\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT007 - Checklist answered - Missing qustionId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"Missing required fields for CHECKLIST_ANSWERED at index 0: questionId\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-7ed8eea0-1684-4df9-b135-7fb3b43fbc26",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT008 - Checklist answered - Missing answeredAt",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"Missing required fields for CHECKLIST_ANSWERED at index 0: answeredAt\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-cfebe65c-54ab-4ebe-a463-6ccc1cbb3312",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT009 - Checklist answered - Missing alternativeId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Body matches string\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"Missing required fields for CHECKLIST_ANSWERED at index 0: answeredAt\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-31d00490-0484-4d86-ad7f-75082eb3176d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
 										}
 									],
 									"id": "49865639-2e523b59-b659-4c46-aa5d-b752be053ab2"
