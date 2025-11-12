@@ -8651,7 +8651,20 @@
 				},
 				{
 					"name": "List Categories",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "49865639-d6020f58-9eed-4564-a32d-3e621d040ef2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "49865639-3af63002-949b-407b-82bf-16b709651232"
 				}
 			],
