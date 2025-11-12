@@ -8796,6 +8796,23 @@
 						}
 					],
 					"id": "49865639-b1581355-da38-4f74-b40c-79bf0add28f6"
+				},
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "49865639-297fedd8-7343-4b41-8957-ec7521239bf9"
+				},
+				{
+					"name": "New Request",
+					"id": "49865639-b23369de-d21a-44e6-8eef-c9e6eb295790",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "49865639-ffa31f33-737a-4d68-b363-86b206776049"
