@@ -8604,87 +8604,9 @@
 			"id": "49865639-a957ed38-8898-4091-856e-0d8c54b7a232"
 		},
 		{
-			"name": "Save many",
-			"id": "49865639-67569404-eb05-418b-a523-d234c2607770",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"answers\": [\n    {\n      \"routeId\": \"958afd6d-f5a9-4a9f-9801-714bba73c52e\",\n      \"checklistId\": \"558e8fd5-5228-463b-9906-877fb9933cab\",\n      \"quizId\": \"273aae95-ad5b-4809-9fe6-8e3843b5ea44\",\n      \"questionId\": \"c6cf007f-e855-42dd-898b-0c4c3e39a652\",\n      \"alternativeId\": \"828db3fe-55a2-4c69-9bd9-e57bffe51691\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://sandbox.predict.dynamox.solutions/psca/v4/answers/save-many",
-					"protocol": "https",
-					"host": [
-						"sandbox",
-						"predict",
-						"dynamox",
-						"solutions"
-					],
-					"path": [
-						"psca",
-						"v4",
-						"answers",
-						"save-many"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "List Routes by ID PSCA",
-			"id": "49865639-6faba896-d6e9-4ca5-83b6-731802ae34e3",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "email",
-						"value": "user@example.dynamox.net"
-					}
-				],
-				"url": {
-					"raw": "https://sandbox.predict.dynamox.solutions/psca/v4/routes/:id",
-					"protocol": "https",
-					"host": [
-						"sandbox",
-						"predict",
-						"dynamox",
-						"solutions"
-					],
-					"path": [
-						"psca",
-						"v4",
-						"routes",
-						":id"
-					],
-					"query": [
-						{
-							"key": "search",
-							"value": "PatchUpdate",
-							"disabled": true
-						}
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": "958afd6d-f5a9-4a9f-9801-714bba73c52e"
-						}
-					]
-				}
-			},
-			"response": []
+			"name": "New Folder",
+			"item": [],
+			"id": "49865639-ffa31f33-737a-4d68-b363-86b206776049"
 		}
 	],
 	"auth": {
