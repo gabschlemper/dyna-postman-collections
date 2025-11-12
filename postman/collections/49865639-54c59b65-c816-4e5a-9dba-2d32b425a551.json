@@ -8608,7 +8608,20 @@
 			"item": [
 				{
 					"name": "Delete Categorie by Id",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "49865639-6d299ea5-bd51-4052-b0a0-74d7ab3e42a9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "49865639-2e7b9c43-002d-4057-b98a-17705760878d"
 				}
 			],
