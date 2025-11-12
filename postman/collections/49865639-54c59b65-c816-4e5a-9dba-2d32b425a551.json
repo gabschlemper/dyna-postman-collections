@@ -8798,68 +8798,6 @@
 						}
 					],
 					"id": "49865639-b1581355-da38-4f74-b40c-79bf0add28f6"
-				},
-				{
-					"name": "GET Route Category by Route Id",
-					"item": [
-						{
-							"name": "C0001 - Lista Route Categories",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "4d6f6767-0e16-4df1-88a6-8f2d51613979",
-										"exec": [
-											"pm."
-										],
-										"type": "text/javascript",
-										"packages": {},
-										"requests": {}
-									}
-								}
-							],
-							"id": "49865639-f2813bd4-583d-4136-9bbf-e58c109ad5dc",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories/{{routeId1}}",
-									"host": [
-										"{{urlpss}}"
-									],
-									"path": [
-										"v1",
-										"workspaces",
-										"{{WKid}}",
-										"categories",
-										"{{routeId1}}"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "49865639-297fedd8-7343-4b41-8957-ec7521239bf9"
-				},
-				{
-					"name": "GET Route Categories by Route Id",
-					"item": [],
-					"id": "49865639-50fd6289-7fde-4e97-91b1-5420b9893df8"
-				},
-				{
-					"name": "New Request",
-					"id": "49865639-b23369de-d21a-44e6-8eef-c9e6eb295790",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
 				}
 			],
 			"id": "49865639-ffa31f33-737a-4d68-b363-86b206776049"
