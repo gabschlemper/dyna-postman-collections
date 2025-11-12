@@ -8763,7 +8763,9 @@
 									"script": {
 										"id": "4d6f6767-0e16-4df1-88a6-8f2d51613979",
 										"exec": [
-											"pm."
+											"pm.test(\"Status code is 404\", function () {",
+											"\tpm.response.to.have.status(404);",
+											"});"
 										],
 										"type": "text/javascript",
 										"packages": {},
@@ -8779,7 +8781,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories/{{categoryId}}",
+									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories/{{invalid-categoryId}}",
 									"host": [
 										"{{urlpss}}"
 									],
@@ -8788,7 +8790,7 @@
 										"workspaces",
 										"{{WKid}}",
 										"categories",
-										"{{categoryId}}"
+										"{{invalid-categoryId}}"
 									]
 								}
 							},
