@@ -8619,16 +8619,16 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/c50c512d-cb69-4425-b3a3-2f60bbdf136b/categories/03d3a850-3bc3-4107-89b8-bfafd79cf224",
+									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories/{{categoryId}}",
 									"host": [
 										"{{urlpss}}"
 									],
 									"path": [
 										"v1",
 										"workspaces",
-										"c50c512d-cb69-4425-b3a3-2f60bbdf136b",
+										"{{WKid}}",
 										"categories",
-										"03d3a850-3bc3-4107-89b8-bfafd79cf224"
+										"{{categoryId}}"
 									]
 								}
 							},
