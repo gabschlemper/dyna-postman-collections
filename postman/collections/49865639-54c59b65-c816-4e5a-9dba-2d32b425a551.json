@@ -8690,7 +8690,7 @@
 					"name": "GET Category by Id",
 					"item": [
 						{
-							"name": "C0001 - List Categories Copy",
+							"name": "C0001 - List Categorie",
 							"id": "49865639-a55a7fd2-f097-42c2-9bc7-843b8c6b3e9c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
