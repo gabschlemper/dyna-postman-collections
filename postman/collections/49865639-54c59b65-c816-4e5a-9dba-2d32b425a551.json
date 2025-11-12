@@ -8619,7 +8619,7 @@
 			"name": "Categories",
 			"item": [
 				{
-					"name": "DLEETE Categorie by Id",
+					"name": "DELETE Categorie by Id",
 					"item": [
 						{
 							"name": "C0001 - Delete Category",
