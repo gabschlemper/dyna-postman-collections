@@ -8653,7 +8653,7 @@
 					"name": "GET Categories",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "C0001 - List Categories",
 							"id": "49865639-d6020f58-9eed-4564-a32d-3e621d040ef2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
