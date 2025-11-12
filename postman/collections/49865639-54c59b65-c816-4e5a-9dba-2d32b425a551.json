@@ -8803,6 +8803,11 @@
 					"id": "49865639-297fedd8-7343-4b41-8957-ec7521239bf9"
 				},
 				{
+					"name": "GET Route Category by Route Id Copy",
+					"item": [],
+					"id": "49865639-50fd6289-7fde-4e97-91b1-5420b9893df8"
+				},
+				{
 					"name": "New Request",
 					"id": "49865639-b23369de-d21a-44e6-8eef-c9e6eb295790",
 					"protocolProfileBehavior": {
