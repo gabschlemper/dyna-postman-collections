@@ -8660,7 +8660,26 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories?limit=100",
+									"host": [
+										"{{urlpss}}"
+									],
+									"path": [
+										"v1",
+										"workspaces",
+										"{{WKid}}",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "100",
+											"type": "text"
+										}
+									]
+								}
 							},
 							"response": []
 						}
@@ -8678,7 +8697,20 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": {
+									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories/{{categoryId}}",
+									"host": [
+										"{{urlpss}}"
+									],
+									"path": [
+										"v1",
+										"workspaces",
+										"{{WKid}}",
+										"categories",
+										"{{categoryId}}"
+									]
+								}
 							},
 							"response": []
 						}
