@@ -8670,6 +8670,22 @@
 					"item": [
 						{
 							"name": "C0001 - Listar todas as categorias",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "bfdb3c8f-3169-4061-bb34-7bc464434b4f",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"\tpm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
 							"id": "49865639-d6020f58-9eed-4564-a32d-3e621d040ef2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -8700,6 +8716,22 @@
 					"item": [
 						{
 							"name": "C0001 - Id existente",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "54233926-7161-4f8c-adf1-ddee88d42ab8",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"\tpm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
 							"id": "49865639-1999123e-8d9e-467e-a922-2e837e608935",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -8725,6 +8757,20 @@
 						},
 						{
 							"name": "C0001 - Id inexistente",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4d6f6767-0e16-4df1-88a6-8f2d51613979",
+										"exec": [
+											"pm."
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
 							"id": "49865639-a55a7fd2-f097-42c2-9bc7-843b8c6b3e9c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
