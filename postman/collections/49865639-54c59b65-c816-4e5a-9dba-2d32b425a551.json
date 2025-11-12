@@ -8622,7 +8622,7 @@
 					"name": "DLEETE Categorie by Id",
 					"item": [
 						{
-							"name": "C001 - Delete Category",
+							"name": "C0001 - Delete Category",
 							"id": "49865639-6d299ea5-bd51-4052-b0a0-74d7ab3e42a9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -8669,7 +8669,20 @@
 				},
 				{
 					"name": "GET Category by Id",
-					"item": [],
+					"item": [
+						{
+							"name": "C0001 - List Categories Copy",
+							"id": "49865639-a55a7fd2-f097-42c2-9bc7-843b8c6b3e9c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "49865639-b1581355-da38-4f74-b40c-79bf0add28f6"
 				}
 			],
