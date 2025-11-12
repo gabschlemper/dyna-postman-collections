@@ -8801,7 +8801,7 @@
 					"name": "GET Route Category by Route Id",
 					"item": [
 						{
-							"name": "C0001 - Id inexistente Copy",
+							"name": "C0001 - Lista Route Categories",
 							"event": [
 								{
 									"listen": "test",
