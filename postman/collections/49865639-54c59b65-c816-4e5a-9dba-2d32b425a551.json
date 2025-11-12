@@ -8607,7 +8607,7 @@
 			"name": "Categories",
 			"item": [
 				{
-					"name": "Delete Categorie",
+					"name": "Delete Categorie by Id",
 					"item": [],
 					"id": "49865639-2e7b9c43-002d-4057-b98a-17705760878d"
 				}
