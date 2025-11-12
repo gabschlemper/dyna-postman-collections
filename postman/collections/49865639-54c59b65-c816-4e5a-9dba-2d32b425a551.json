@@ -8619,7 +8619,7 @@
 			"name": "Categories",
 			"item": [
 				{
-					"name": "Delete Categorie by Id",
+					"name": "DLEETE Categorie by Id",
 					"item": [
 						{
 							"name": "C001 - Delete Category",
@@ -8650,7 +8650,7 @@
 					"id": "49865639-2e7b9c43-002d-4057-b98a-17705760878d"
 				},
 				{
-					"name": "List Categories",
+					"name": "GET Categories",
 					"item": [
 						{
 							"name": "New Request",
@@ -8668,7 +8668,7 @@
 					"id": "49865639-3af63002-949b-407b-82bf-16b709651232"
 				},
 				{
-					"name": "New Folder",
+					"name": "GET Category by Id",
 					"item": [],
 					"id": "49865639-b1581355-da38-4f74-b40c-79bf0add28f6"
 				}
