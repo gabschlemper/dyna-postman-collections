@@ -8610,7 +8610,7 @@
 					"name": "Delete Categorie by Id",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "Del",
 							"id": "49865639-6d299ea5-bd51-4052-b0a0-74d7ab3e42a9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
