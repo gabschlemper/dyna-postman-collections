@@ -8690,7 +8690,7 @@
 					"name": "GET Category by Id",
 					"item": [
 						{
-							"name": "C0001 - ID Inexistente",
+							"name": "C0001 - Id Inexistente",
 							"id": "49865639-a55a7fd2-f097-42c2-9bc7-843b8c6b3e9c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -8715,7 +8715,7 @@
 							"response": []
 						},
 						{
-							"name": "C0001 - ID Inexistente Copy",
+							"name": "C0001 - Id existente",
 							"id": "49865639-1999123e-8d9e-467e-a922-2e837e608935",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
