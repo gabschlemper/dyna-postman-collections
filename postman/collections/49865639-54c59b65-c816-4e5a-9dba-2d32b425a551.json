@@ -8793,6 +8793,45 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "C0001 - Id inexistente Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4d6f6767-0e16-4df1-88a6-8f2d51613979",
+										"exec": [
+											"pm."
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "49865639-f2813bd4-583d-4136-9bbf-e58c109ad5dc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories/{{categoryId}}",
+									"host": [
+										"{{urlpss}}"
+									],
+									"path": [
+										"v1",
+										"workspaces",
+										"{{WKid}}",
+										"categories",
+										"{{categoryId}}"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "49865639-b1581355-da38-4f74-b40c-79bf0add28f6"
