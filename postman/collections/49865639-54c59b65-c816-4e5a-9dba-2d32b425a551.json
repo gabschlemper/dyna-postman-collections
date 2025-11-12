@@ -8623,6 +8623,22 @@
 					"item": [
 						{
 							"name": "C0001 - Deletar Categoria",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "e13dc10d-f2e1-4b64-9b5d-7f027d1c6c30",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"\tpm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
 							"id": "49865639-6d299ea5-bd51-4052-b0a0-74d7ab3e42a9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
