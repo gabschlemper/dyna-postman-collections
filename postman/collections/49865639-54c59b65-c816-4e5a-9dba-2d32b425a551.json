@@ -8653,7 +8653,7 @@
 					"name": "GET Categories",
 					"item": [
 						{
-							"name": "C0001 - List Categories",
+							"name": "C0001 - Listar todas as categorias",
 							"id": "49865639-d6020f58-9eed-4564-a32d-3e621d040ef2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -8662,7 +8662,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories?limit=100",
+									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories",
 									"host": [
 										"{{urlpss}}"
 									],
@@ -8671,13 +8671,6 @@
 										"workspaces",
 										"{{WKid}}",
 										"categories"
-									],
-									"query": [
-										{
-											"key": "limit",
-											"value": "100",
-											"type": "text"
-										}
 									]
 								}
 							},
