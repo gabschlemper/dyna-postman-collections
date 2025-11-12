@@ -8610,7 +8610,7 @@
 					"name": "Delete Categorie by Id",
 					"item": [
 						{
-							"name": "Del",
+							"name": "C001 - Delete Category",
 							"id": "49865639-6d299ea5-bd51-4052-b0a0-74d7ab3e42a9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -8619,16 +8619,16 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories/{{categoryId}}",
+									"raw": "{{urlpss}}/v1/workspaces/c50c512d-cb69-4425-b3a3-2f60bbdf136b/categories/03d3a850-3bc3-4107-89b8-bfafd79cf224",
 									"host": [
 										"{{urlpss}}"
 									],
 									"path": [
 										"v1",
 										"workspaces",
-										"{{WKid}}",
+										"c50c512d-cb69-4425-b3a3-2f60bbdf136b",
 										"categories",
-										"{{categoryId}}"
+										"03d3a850-3bc3-4107-89b8-bfafd79cf224"
 									]
 								}
 							},
