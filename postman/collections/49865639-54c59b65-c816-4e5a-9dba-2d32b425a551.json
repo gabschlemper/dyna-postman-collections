@@ -8826,7 +8826,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories/{{categoryId}}",
+									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/categories/{{routeId1}}",
 									"host": [
 										"{{urlpss}}"
 									],
@@ -8835,7 +8835,7 @@
 										"workspaces",
 										"{{WKid}}",
 										"categories",
-										"{{categoryId}}"
+										"{{routeId1}}"
 									]
 								}
 							},
