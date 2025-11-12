@@ -6614,7 +6614,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n    \n  ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7289,6 +7289,18 @@
 														"packages": {},
 														"requests": {}
 													}
+												},
+												{
+													"listen": "prerequest",
+													"script": {
+														"id": "0b27f24c-e673-4661-8889-272fb99d8c3d",
+														"exec": [
+															""
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
 												}
 											],
 											"id": "49865639-5cf1da0c-d9e1-477d-b822-694844eb0316",
@@ -7300,7 +7312,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"spot_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"spotId\": \"{{spotId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"182e7c57-a761-4bbb-966b-d2064adff1dc\",\n            \"spotId\": \"{{spotId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"raw": "{\n    \"mode\": \"spot_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"spotId\": \"{{spotId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -8486,7 +8498,7 @@
 															"",
 															"pm.test(\"Duplicate answers\", function () {",
 															"    const jsonData = pm.response.json();",
-															"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(2);",
+															"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(1);",
 															"});"
 														],
 														"type": "text/javascript",
@@ -8504,7 +8516,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"c900961a-6be8-4bcb-b472-a5ad166be941\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -8636,6 +8648,11 @@
 						}
 					],
 					"id": "49865639-2e7b9c43-002d-4057-b98a-17705760878d"
+				},
+				{
+					"name": "List Categories",
+					"item": [],
+					"id": "49865639-3af63002-949b-407b-82bf-16b709651232"
 				}
 			],
 			"id": "49865639-ffa31f33-737a-4d68-b363-86b206776049"
