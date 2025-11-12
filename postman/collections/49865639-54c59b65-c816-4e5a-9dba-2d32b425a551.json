@@ -8798,7 +8798,7 @@
 					"id": "49865639-b1581355-da38-4f74-b40c-79bf0add28f6"
 				},
 				{
-					"name": "GET R",
+					"name": "GET Route Category by Route Id",
 					"item": [],
 					"id": "49865639-297fedd8-7343-4b41-8957-ec7521239bf9"
 				},
