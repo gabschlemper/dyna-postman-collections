@@ -6605,7 +6605,7 @@
 													}
 												}
 											],
-											"id": "49865639-6afd06d4-6375-4481-8254-62dcc957ad6b",
+											"id": "49865639-2ef71822-2526-40d3-8849-7b660c1ac418",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -6614,7 +6614,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
+													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -6637,293 +6637,7 @@
 											"response": []
 										},
 										{
-											"name": "CT002 - Checklist answered (2 same group)",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "0d661e2b-fdc3-469f-bb19-73b9b5ee9bfb",
-														"exec": [
-															"pm.test(\"Status code is 201\", function () {",
-															"    pm.response.to.have.status(201);",
-															"});",
-															"",
-															"pm.test(\"Response has correct mode\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    pm.expect(jsonData.mode).to.eql(\"checklist_answered\");",
-															"});",
-															"",
-															"pm.test(\"Response contains single group (same route)\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    pm.expect(jsonData.data).to.be.an('array');",
-															"    pm.expect(jsonData.data.length).to.be.greaterThanOrEqual(1);",
-															"});",
-															"",
-															"pm.test(\"Group contains 2 answers\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    pm.expect(jsonData.data).to.have.lengthOf(2);",
-															"});",
-															"",
-															"pm.test(\"Both answers have unique IDs\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    const ids = jsonData.data[0].answers.map(a => a.id);",
-															"    pm.expect(ids[0]).to.not.equal(ids[1]);",
-															"});"
-														],
-														"type": "text/javascript",
-														"packages": {},
-														"requests": {}
-													}
-												}
-											],
-											"id": "49865639-35c3d94c-3563-450d-b33b-f448392f98e2",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    },\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"checklistId\": \"{{checklistId2}}\",\n      \"quizId\": \"{{quizId2}}\",\n      \"questionId\": \"{{questionId2}}\",\n      \"alternativeId\": \"{{alternativeId2}}\",\n      \"answeredAt\": \"2024-10-16T10:05:00Z\"\n    }\n  ]\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
-													"host": [
-														"{{urlpss}}"
-													],
-													"path": [
-														"v1",
-														"workspaces",
-														"{{WKid}}",
-														"answers"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "CT003 - Checklist answered - Duplicate Answers",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-														"exec": [
-															"pm.test(\"Status code is 201\", function () {",
-															"    pm.response.to.have.status(201);",
-															"});",
-															"",
-															"pm.test(\"Both answers are created with different IDs\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(2);",
-															"    const ids = jsonData.data[0].answers.map(a => a.id);",
-															"    pm.expect(ids[0]).to.not.equal(ids[1]); // Different IDs even if content is same",
-															"});"
-														],
-														"type": "text/javascript",
-														"packages": {},
-														"requests": {}
-													}
-												}
-											],
-											"id": "49865639-d76e9046-a2b5-463a-9486-13c4256aceb8",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\",\n            \"note\": \"Observação opcional 1\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\",\n            \"note\": \"Observação opcional 2\"\n        }\n    ]\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
-													"host": [
-														"{{urlpss}}"
-													],
-													"path": [
-														"v1",
-														"workspaces",
-														"{{WKid}}",
-														"answers"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "CT004 - Checklist answered - Invalid RouteId",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-														"exec": [
-															"pm.test(\"Status code is 400\", function () {",
-															"    pm.response.to.have.status(400);",
-															"});",
-															"",
-															"pm.test(\"Body matches string\", function () {",
-															"    pm.expect(pm.response.text()).to.include(\"Routes not found: c900961a-6be8-4bcb-b472-a5ad166be945\");",
-															"});"
-														],
-														"type": "text/javascript",
-														"packages": {},
-														"requests": {}
-													}
-												}
-											],
-											"id": "49865639-27273b1d-1f39-4906-b77c-946bb3cb870d",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"c900961a-6be8-4bcb-b472-a5ad166be945\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
-													"host": [
-														"{{urlpss}}"
-													],
-													"path": [
-														"v1",
-														"workspaces",
-														"{{WKid}}",
-														"answers"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "CT005 - Checklist answered - Invalid ChecklistId",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-														"exec": [
-															"pm.test(\"Status code is 400\", function () {",
-															"    pm.response.to.have.status(400);",
-															"});",
-															"",
-															"pm.test(\"Body matches string\", function () {",
-															"    pm.expect(pm.response.text()).to.include(\"Checklists not found: d8f38542-dacd-43f7-bbd8-2edf5b5164bf\");",
-															"});"
-														],
-														"type": "text/javascript",
-														"packages": {},
-														"requests": {}
-													}
-												}
-											],
-											"id": "49865639-b3102acb-8ecc-474a-9353-cc6a68f4d4f0",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"d8f38542-dacd-43f7-bbd8-2edf5b5164bf\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
-													"host": [
-														"{{urlpss}}"
-													],
-													"path": [
-														"v1",
-														"workspaces",
-														"{{WKid}}",
-														"answers"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "CT006 - Checklist answered - Invalid mode",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-														"exec": [
-															"pm.test(\"Status code is 400\", function () {",
-															"    pm.response.to.have.status(400);",
-															"});",
-															"",
-															"pm.test(\"Body matches string\", function () {",
-															"    pm.expect(pm.response.text()).to.include(\"mode must be one of the following values: checklist_answered, checklist_without_answer, checklist_without_anomalies, checklist_justified, spot_answered, spot_justified, answers_justified\");",
-															"});"
-														],
-														"type": "text/javascript",
-														"packages": {},
-														"requests": {}
-													}
-												}
-											],
-											"id": "49865639-4530983f-0fb2-409d-8692-b48c26e03732",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_answere\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"d8f38542-dacd-43f7-bbd8-2edf5b5164bf\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
-													"host": [
-														"{{urlpss}}"
-													],
-													"path": [
-														"v1",
-														"workspaces",
-														"{{WKid}}",
-														"answers"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "CT007 - Checklist answered - Missing qustionId",
+											"name": "CT002 - Checklist answered - Missing qustionId",
 											"event": [
 												{
 													"listen": "test",
@@ -6976,7 +6690,7 @@
 											"response": []
 										},
 										{
-											"name": "CT008 - Checklist answered - Missing answeredAt",
+											"name": "CT003 - Checklist answered - Missing answeredAt",
 											"event": [
 												{
 													"listen": "test",
@@ -7029,7 +6743,7 @@
 											"response": []
 										},
 										{
-											"name": "CT009 - Checklist answered - Missing alternativeId",
+											"name": "CT004 - Checklist answered - Missing alternativeId",
 											"event": [
 												{
 													"listen": "test",
@@ -7060,6 +6774,174 @@
 												"body": {
 													"mode": "raw",
 													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT005 - Checklist answered - Missing checklistId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response has correct mode\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.message).to.eql(\"Missing required fields for CHECKLIST_ANSWERED at index 0: checklistId\");",
+															"});",
+															"",
+															""
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-6afd06d4-6375-4481-8254-62dcc957ad6b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT006 - Checklist answered - Missing quizId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response has correct mode\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.message).to.eql(\"Missing required fields for CHECKLIST_ANSWERED at index 0: quizId\");",
+															"});",
+															"",
+															""
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-7762c920-796b-4431-8f6d-8f2e1d64c08f",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT006 - Checklist answered - Missing routeId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response has correct mode\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.message).to.eql(\"Missing required fields for CHECKLIST_ANSWERED at index 0: routeId\");",
+															"});",
+															"",
+															""
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-988cf89f-50d7-418f-b07f-4ede4d6542b6",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"checklistId\": \"{{checklistId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7132,7 +7014,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"mode\": \"checklist_without_answer\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7155,7 +7037,7 @@
 											"response": []
 										},
 										{
-											"name": "CT002 - Checklist without answer - Invalid Mode",
+											"name": "CT002 - Checklist without answer - Missing answeredAt",
 											"event": [
 												{
 													"listen": "test",
@@ -7167,7 +7049,7 @@
 															"});",
 															"",
 															"pm.test(\"Body matches string\", function () {",
-															"    pm.expect(pm.response.text()).to.include(\"mode must be one of the following values: checklist_answered, checklist_without_answer, checklist_without_anomalies, checklist_justified, spot_answered, spot_justified, answers_justified\");",
+															"    pm.expect(pm.response.text()).to.include(\"Missing required fields for CHECKLIST_WITHOUT_ANSWERS at index 0: answeredAt\");",
 															"});"
 														],
 														"type": "text/javascript",
@@ -7176,7 +7058,7 @@
 													}
 												}
 											],
-											"id": "49865639-68db1cae-d58f-4d8f-9c99-4f33c3471844",
+											"id": "49865639-35a69379-bb3d-4649-b401-168fd03bc099",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -7185,7 +7067,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"mode\": \"checklist_without_answe\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7314,7 +7196,7 @@
 											"response": []
 										},
 										{
-											"name": "CT005 - Checklist without answer - Missing answeredAt",
+											"name": "CT005 - Checklist without answer - Missing checklistId",
 											"event": [
 												{
 													"listen": "test",
@@ -7326,7 +7208,7 @@
 															"});",
 															"",
 															"pm.test(\"Body matches string\", function () {",
-															"    pm.expect(pm.response.text()).to.include(\"Missing required fields for CHECKLIST_WITHOUT_ANSWERS at index 0: answeredAt\");",
+															"    pm.expect(pm.response.text()).to.include(\"Missing required fields for CHECKLIST_WITHOUT_ANSWERS at index 0: checklistId\");",
 															"});"
 														],
 														"type": "text/javascript",
@@ -7335,7 +7217,7 @@
 													}
 												}
 											],
-											"id": "49865639-35a69379-bb3d-4649-b401-168fd03bc099",
+											"id": "49865639-0e866f0a-ccbe-48a5-84e7-5fcb900eb794",
 											"protocolProfileBehavior": {
 												"disableBodyPruning": true
 											},
@@ -7344,116 +7226,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\"\n        }\n    ]\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
-													"host": [
-														"{{urlpss}}"
-													],
-													"path": [
-														"v1",
-														"workspaces",
-														"{{WKid}}",
-														"answers"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "CT006 - Checklist without answer - Two answers",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-														"exec": [
-															"pm.test(\"Status code is 201\", function () {",
-															"    pm.response.to.have.status(201);",
-															"});",
-															"",
-															"pm.test(\"Validates that there are two IDs in the response\", function () {",
-															"    var jsonData = pm.response.json();",
-															"    var ids = jsonData.data.map(item => item.answers.id);",
-															"    pm.expect(ids).to.have.lengthOf(2);",
-															"});"
-														],
-														"type": "text/javascript",
-														"packages": {},
-														"requests": {}
-													}
-												}
-											],
-											"id": "49865639-3bddea0d-b4dc-443b-a09f-ea6386d7ce9d",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId2}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
-													"host": [
-														"{{urlpss}}"
-													],
-													"path": [
-														"v1",
-														"workspaces",
-														"{{WKid}}",
-														"answers"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "CT007 - Checklist without answer - Duplicate answers",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-														"exec": [
-															"pm.test(\"Status code is 201\", function () {",
-															"    pm.response.to.have.status(201);",
-															"});",
-															"",
-															"pm.test(\"Duplicate answers\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(2);",
-															"});"
-														],
-														"type": "text/javascript",
-														"packages": {},
-														"requests": {}
-													}
-												}
-											],
-											"id": "49865639-b3378712-7e75-493e-a55d-498dbba4ac4c",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7482,7 +7255,7 @@
 									"name": "Spot Answered",
 									"item": [
 										{
-											"name": "CT005 - Spot answered",
+											"name": "CT001 - Spot answered",
 											"event": [
 												{
 													"listen": "test",
@@ -7527,7 +7300,175 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"mode\": \"spot_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"spotId\": \"{{spotId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"routeWorkspaceId\":\"{{routeWorkspaceId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
+													"raw": "{\n    \"mode\": \"spot_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"spotId\": \"{{spotId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"182e7c57-a761-4bbb-966b-d2064adff1dc\",\n            \"spotId\": \"{{spotId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT002 - Spot answered - Missing spotId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response has correct error message\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.message).to.eql(\"Missing required fields for SPOT_ANSWERED at index 0: spotId\");",
+															"});",
+															"",
+															""
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-56d9cf73-ebf5-4c0f-949b-b6b3717f61d4",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"spot_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT003 - Spot answered - Missing routeId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response has correct error message\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.message).to.eql(\"Missing required fields for SPOT_ANSWERED at index 0: routeId\");",
+															"});",
+															"",
+															""
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-99d011fb-1f90-44ca-abef-a76726ba15f1",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"spot_answered\",\n    \"answers\": [\n        {\n            \"spotId\": \"{{spotId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT004 - Spot answered - Missing answeredAt",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response has correct error message\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.message).to.eql(\"Missing required fields for SPOT_ANSWERED at index 0: answeredAt\");",
+															"});",
+															"",
+															""
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-8be34c74-5ce3-48ac-a02a-456bee521bec",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"spot_answered\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"spotId\": \"{{spotId1}}\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7556,7 +7497,7 @@
 									"name": "Answers justified",
 									"item": [
 										{
-											"name": "CT006 - Answers justified - Checklist",
+											"name": "CT001 - Answers justified - Checklist",
 											"event": [
 												{
 													"listen": "test",
@@ -7623,7 +7564,7 @@
 											"response": []
 										},
 										{
-											"name": "CT007 - Answers justified - Spot",
+											"name": "CT002 - Answers justified - Spot",
 											"event": [
 												{
 													"listen": "test",
@@ -7690,7 +7631,7 @@
 											"response": []
 										},
 										{
-											"name": "CT008 - Answers justified - Missing reason",
+											"name": "CT003 - Answers justified - Missing reason",
 											"event": [
 												{
 													"listen": "test",
@@ -7749,7 +7690,7 @@
 											"response": []
 										},
 										{
-											"name": "CT009 - Answers justified - Missing justifiedAt",
+											"name": "CT004 - Answers justified - Missing justifiedAt",
 											"event": [
 												{
 													"listen": "test",
@@ -7808,57 +7749,7 @@
 											"response": []
 										},
 										{
-											"name": "CT010 - Answers justified - Mixed existence",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-														"exec": [
-															"pm.test(\"Status code is 400\", function () {",
-															"    pm.response.to.have.status(400);",
-															"});",
-															""
-														],
-														"type": "text/javascript",
-														"packages": {},
-														"requests": {}
-													}
-												}
-											],
-											"id": "49865639-fc6496cb-f672-440b-8976-627ff6248fb7",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n  \"mode\": \"answers_justified\",\n  \"answers\": [\n    {\n      \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n      \"reason\": \"Valid checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    },\n    {\n      \"routeWorkspaceId\": \"00000000-0000-0000-0000-000000000000\",\n      \"reason\": \"Invalid checklist justified\",\n      \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n    }\n  ]\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
-													"host": [
-														"{{urlpss}}"
-													],
-													"path": [
-														"v1",
-														"workspaces",
-														"{{WKid}}",
-														"answers"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "CT011 - Answers justified - Mixed spot e checklist",
+											"name": "CT005- Answers justified - Mixed spot e checklist",
 											"event": [
 												{
 													"listen": "test",
@@ -7916,7 +7807,7 @@
 											"response": []
 										},
 										{
-											"name": "CT012 - Answers justified - Mixed 2 spot e 1 checklist",
+											"name": "CT006 - Answers justified - Mixed 2 spot e 1 checklist",
 											"event": [
 												{
 													"listen": "test",
@@ -7951,7 +7842,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId}}\",\n            \"reason\": \"Spot 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId1}}\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n            \"reason\": \"Checklist 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId}}\",\n            \"reason\": \"Spot 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"9bc0e3e7-85da-4da8-8955-20e06509ee7b\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"9bc0e3e7-85da-4da8-8955-20e06509ee7b\",\n            \"reason\": \"Spot 3 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n            \"reason\": \"Checklist 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7978,7 +7869,329 @@
 								},
 								{
 									"name": "Checklist Without Anomalies",
-									"item": [],
+									"item": [
+										{
+											"name": "CT001 - Checklist Without Anomalies",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 201\", function () {",
+															"    pm.response.to.have.status(201);",
+															"});",
+															"",
+															""
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-80640a82-90b7-4d6c-941b-516f10b04ab8",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_without_anomalies\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2025-11-10T13:30:00.000Z\",\n            \"questions\": [\n                \"{{questionId1}}\",\n                \"{{questionId2}}\"\n            ]\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT002 - Checklist Without Anomalies - Missing routeId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response has correct error message\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.message).to.eql(\"Missing required fields for CHECKLIST_WITHOUT_ANOMALIES at index 0: routeId\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-e7e5a590-a749-4f6c-8aa3-36f55ce8ee6a",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_without_anomalies\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2025-11-10T13:30:00.000Z\",\n            \"questions\": [\n                \"{{questionId1}}\",\n                \"{{questionId2}}\"\n            ]\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT003 - Checklist Without Anomalies - Missing routeWorkspaceId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response has correct error message\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.message).to.eql(\"Missing required fields for CHECKLIST_WITHOUT_ANOMALIES at index 0: routeWorkspaceId\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-68867b77-2484-44f0-808e-18e2546dac3d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_without_anomalies\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2025-11-10T13:30:00.000Z\",\n            \"questions\": [\n                \"{{questionId1}}\",\n                \"{{questionId2}}\"\n            ]\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT004 - Checklist Without Anomalies - Missing checklistId",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response has correct error message\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.message).to.eql(\"Missing required fields for CHECKLIST_WITHOUT_ANOMALIES at index 0: checklistId\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-0c7e30a1-d91c-4e40-8266-206cf0f0b2d6",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_without_anomalies\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"answeredAt\": \"2025-11-10T13:30:00.000Z\",\n            \"questions\": [\n                \"{{questionId1}}\",\n                \"{{questionId2}}\"\n            ]\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT005 - Checklist Without Anomalies - Missing answeredAt",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response has correct error message\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.message).to.eql(\"Missing required fields for CHECKLIST_WITHOUT_ANOMALIES at index 0: answeredAt\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-f47775f2-2a11-4c68-9ee3-7a127be8328c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_without_anomalies\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"questions\": [\n                \"{{questionId1}}\",\n                \"{{questionId2}}\"\n            ]\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT005 - Checklist Without Anomalies - Missing questions",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Response has correct error message\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.message).to.eql(\"Missing required fields for CHECKLIST_WITHOUT_ANOMALIES at index 0: questions\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-fb91604e-3a0e-428b-bef1-9aa1737aeff6",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_without_anomalies\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2025-11-10T13:30:00.000Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										}
+									],
 									"id": "49865639-fc61fe0c-aa4f-4817-9e21-464e1712ceed"
 								},
 								{
@@ -8045,12 +8258,12 @@
 													"script": {
 														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
 														"exec": [
-															"pm.test(\"Status code is 403\", function () {",
-															"    pm.response.to.have.status(403);",
+															"pm.test(\"Status code is 401\", function () {",
+															"    pm.response.to.have.status(401);",
 															"});",
 															"",
 															"pm.test(\"Body matches string\", function () {",
-															"    pm.expect(pm.response.text()).to.include(\"Inspector does not have permission to access one or more routes\");",
+															"    pm.expect(pm.response.text()).to.include(\"Access Unauthorized. Request should use a valid token.\");",
 															"});"
 														],
 														"type": "text/javascript",
@@ -8064,6 +8277,9 @@
 												"disableBodyPruning": true
 											},
 											"request": {
+												"auth": {
+													"type": "bearer"
+												},
 												"method": "POST",
 												"header": [],
 												"body": {
@@ -8180,6 +8396,115 @@
 												"body": {
 													"mode": "raw",
 													"raw": "{\n  \"mode\": \"checklist_without_answer\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT003 - General - Two answers",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 201\", function () {",
+															"    pm.response.to.have.status(201);",
+															"});",
+															"",
+															"pm.test(\"Validates that there are two IDs in the response\", function () {",
+															"    var jsonData = pm.response.json();",
+															"    var ids = jsonData.data.map(item => item.answers.id);",
+															"    pm.expect(ids).to.have.lengthOf(2);",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-3bddea0d-b4dc-443b-a09f-ea6386d7ce9d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId2}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT004 - General - Duplicate answers",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 201\", function () {",
+															"    pm.response.to.have.status(201);",
+															"});",
+															"",
+															"pm.test(\"Duplicate answers\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(2);",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-b3378712-7e75-493e-a55d-498dbba4ac4c",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_without_answer\",\n    \"answers\": [\n        {\n            \"routeId\": \"c900961a-6be8-4bcb-b472-a5ad166be941\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"routeWorkspaceId\": \"{{routeWorkspaceId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"answeredAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
