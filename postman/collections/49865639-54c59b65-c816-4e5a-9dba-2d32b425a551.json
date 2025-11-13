@@ -6820,7 +6820,7 @@
 									"response": []
 								},
 								{
-									"name": "CT107: UID de usuário inexistente Copy",
+									"name": "CT108: UID vazio",
 									"event": [
 										{
 											"listen": "test",
