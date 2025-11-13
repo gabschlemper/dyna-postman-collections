@@ -5866,7 +5866,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"team\": {\n    \"id\": \"{{teamId}}\"\n  },\n  \"users\": [\n    {\n      \"uid\": \"{{userUid}}\",\n      \"isAccountable\": true\n    }\n  ]\n}",
+											"raw": "{\n    \"name\": \"CT001: Adicionar um time existente a uma rota sem time\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
