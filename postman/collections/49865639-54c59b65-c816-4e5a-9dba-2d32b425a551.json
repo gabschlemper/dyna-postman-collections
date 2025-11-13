@@ -6386,7 +6386,7 @@
 									"response": []
 								},
 								{
-									"name": "CT009: Atualizar apenas campo name da rota sem mexer em team/userspy Copy",
+									"name": "CT101: Enviar teamId vazio (string vazia)",
 									"event": [
 										{
 											"listen": "test",
