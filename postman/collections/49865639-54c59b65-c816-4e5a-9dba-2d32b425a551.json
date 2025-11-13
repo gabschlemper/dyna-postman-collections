@@ -7854,7 +7854,60 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId}}\",\n            \"reason\": \"Spot 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"9bc0e3e7-85da-4da8-8955-20e06509ee7b\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"9bc0e3e7-85da-4da8-8955-20e06509ee7b\",\n            \"reason\": \"Spot 3 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n            \"reason\": \"Checklist 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId}}\",\n            \"reason\": \"Spot 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"9bc0e3e7-85da-4da8-8955-20e06509ee7b\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"9bc0e3e7-85da-4da8-8955-20e06509ee7b\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n            \"reason\": \"Checklist 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "CT007 - Answers justified - Missing All",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 400\", function () {",
+															"    pm.response.to.have.status(400);",
+															"});",
+															"",
+															"pm.test(\"Retorna a mensagem de erro correta\", function () {",
+															"    pm.expect(pm.response.text()).to.include(\"answers should not be empty\");",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-872676e6-184f-47ac-af9d-841cbd2742b0",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n       \n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -8240,7 +8293,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"022f74f4-c229-4f85-8b3f-df8914a44d9e\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
+													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"ec0f030d-8c0e-4bff-8131-cbd9fead5451\",\n      \"checklistId\": \"468c1c19-512f-4341-ae5c-1b4f27415897\",\n      \"quizId\": \"c728416f-c427-4c0e-ac56-b16e1e187576\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
