@@ -7068,7 +7068,7 @@
 									"response": []
 								},
 								{
-									"name": "CT111: Campo isAccountable com tipo errado (string ao invés de boolean) Copy",
+									"name": "CT112: Array de users vazio",
 									"event": [
 										{
 											"listen": "test",
@@ -7106,7 +7106,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT111: Campo isAccountable com tipo errado (string ao invés de boolean)\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT112: Array de users vazio\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
