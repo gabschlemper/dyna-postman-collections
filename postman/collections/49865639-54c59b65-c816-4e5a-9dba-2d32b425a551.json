@@ -7168,7 +7168,69 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT112: Array de users vazio\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT113: Apenas 1 usuário sem teamId (não deve criar time autogenerado)\",\n    \"team\": []\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT113: Apenas 1 usuário sem teamId (não deve criar time autogenerado) Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"\tpm.response.to.have.status(204);",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "934c04df-831b-4370-b3b9-e61293ffe932",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-040162bb-2e1a-479d-9f0a-045fa3b6080b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"CT113: Apenas 1 usuário sem teamId (não deve criar time autogenerado)\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
