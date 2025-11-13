@@ -6510,7 +6510,7 @@
 									"response": []
 								},
 								{
-									"name": "CT102: Enviar teamId null dentro do objeto Copy",
+									"name": "CT103: Time que não pertence ao workspace da rota",
 									"event": [
 										{
 											"listen": "test",
@@ -6548,7 +6548,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT102: Enviar teamId null dentro do objeto\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT103: Time que não pertence ao workspace da rota\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
