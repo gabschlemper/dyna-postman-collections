@@ -5447,13 +5447,13 @@
 							]
 						},
 						{
+							"name": "New Folder",
+							"item": [],
+							"id": "49865639-5d0069fc-908f-412c-915c-d572d32e73e8"
+						},
+						{
 							"name": "Update User",
 							"item": [
-								{
-									"name": "New Folder",
-									"item": [],
-									"id": "49865639-5d0069fc-908f-412c-915c-d572d32e73e8"
-								},
 								{
 									"name": "CT001: Adicionar um usuário",
 									"event": [
