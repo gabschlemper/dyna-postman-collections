@@ -6634,7 +6634,7 @@
 									"response": []
 								},
 								{
-									"name": "CT104: Múltiplos usuários marcados como accountable Copy",
+									"name": "CT105: Nenhum usuário marcado como accountable",
 									"event": [
 										{
 											"listen": "test",
@@ -6672,7 +6672,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT104: Múltiplos usuários marcados como accountable\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT105: Nenhum usuário marcado como accountable\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
