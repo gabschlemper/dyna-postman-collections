@@ -6138,7 +6138,7 @@
 									"response": []
 								},
 								{
-									"name": "CT005: Atualizar rota mantendo o mesmo time e apenas trocando responsável Copy",
+									"name": "CT006: Adicionar usuários a uma rota que já tem time autogenerado",
 									"event": [
 										{
 											"listen": "test",
