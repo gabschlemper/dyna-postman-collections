@@ -5496,16 +5496,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKid}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{routeId1}}"
 											]
 										}
 									},
@@ -5558,16 +5558,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKid}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{routeId1}}"
 											]
 										}
 									},
@@ -5620,16 +5620,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKid}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{routeId1}}"
 											]
 										}
 									},
