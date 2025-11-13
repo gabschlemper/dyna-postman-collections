@@ -6324,7 +6324,7 @@
 									"response": []
 								},
 								{
-									"name": "CT008: Manter substitutos ao atualizar apenas o time Copy",
+									"name": "CT010: Atualizar apenas campo name da rota sem mexer em team/userspy",
 									"event": [
 										{
 											"listen": "test",
