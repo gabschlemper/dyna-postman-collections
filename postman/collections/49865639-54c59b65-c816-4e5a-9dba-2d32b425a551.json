@@ -6944,7 +6944,7 @@
 									"response": []
 								},
 								{
-									"name": "CT109: UID null Copy",
+									"name": "CT110: Campo isAccountable ausente",
 									"event": [
 										{
 											"listen": "test",
@@ -6982,7 +6982,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT109: UID null\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT110: Campo isAccountable ausente\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
