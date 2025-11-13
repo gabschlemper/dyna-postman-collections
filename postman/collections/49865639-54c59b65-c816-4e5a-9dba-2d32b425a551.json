@@ -6858,7 +6858,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"users\": [\n    {\n      \"uid\": \"non-existent-uid-12345\",\n      \"isAccountable\": true\n    }\n  ]\n}",
+											"raw": "{\n    \"name\": \"CT108: UID vazio\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
