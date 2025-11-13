@@ -7128,6 +7128,68 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "CT113: Apenas 1 usuário sem teamId (não deve criar time autogenerado)",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"\tpm.response.to.have.status(204);",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "934c04df-831b-4370-b3b9-e61293ffe932",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-951ff1d3-183d-4897-aab2-6135ad6588c2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"CT112: Array de users vazio\",\n    \"team\": []\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "49865639-5d0069fc-908f-412c-915c-d572d32e73e8"
