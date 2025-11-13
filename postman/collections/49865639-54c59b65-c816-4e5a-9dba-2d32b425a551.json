@@ -6758,7 +6758,7 @@
 									"response": []
 								},
 								{
-									"name": "CT106: Usuário sem papel MECHANICAL_INSPECTOR Copy",
+									"name": "CT107: UID de usuário inexistente",
 									"event": [
 										{
 											"listen": "test",
