@@ -6114,7 +6114,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT004: Criar time autogenerado com 3+ usuários\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT005: Atualizar rota mantendo o mesmo time e apenas trocando responsável\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
