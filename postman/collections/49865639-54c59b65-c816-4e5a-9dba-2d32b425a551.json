@@ -5952,7 +5952,7 @@
 									"response": []
 								},
 								{
-									"name": "CT002: Trocar time de uma rota (de teamA para teamB) Copy",
+									"name": "CT003: Criar time autogenerado com exatamente 2 usuários",
 									"event": [
 										{
 											"listen": "test",
@@ -5990,7 +5990,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT002: Trocar time de uma rota (de teamA para teamB)\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT003: Criar time autogenerado com exatamente 2 usuários\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
