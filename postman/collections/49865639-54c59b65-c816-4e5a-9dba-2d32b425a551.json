@@ -6176,7 +6176,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT005: Atualizar rota mantendo o mesmo time e apenas trocando responsável\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT006: Adicionar usuários a uma rota que já tem time autogenerado\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
