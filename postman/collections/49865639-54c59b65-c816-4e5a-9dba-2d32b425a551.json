@@ -6324,7 +6324,7 @@
 									"response": []
 								},
 								{
-									"name": "CT010: Atualizar apenas campo name da rota sem mexer em team/userspy",
+									"name": "CT009: Atualizar apenas campo name da rota sem mexer em team/userspy",
 									"event": [
 										{
 											"listen": "test",
@@ -6362,7 +6362,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT008: Manter substitutos ao atualizar apenas o time\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT009: Atualizar apenas campo name da rota sem mexer em team/userspy\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
