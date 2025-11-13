@@ -7006,7 +7006,7 @@
 									"response": []
 								},
 								{
-									"name": "CT110: Campo isAccountable ausente Copy",
+									"name": "CT111: Campo isAccountable com tipo errado (string ao invés de boolean)",
 									"event": [
 										{
 											"listen": "test",
