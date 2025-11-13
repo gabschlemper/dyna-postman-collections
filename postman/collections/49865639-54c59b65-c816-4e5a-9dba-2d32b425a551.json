@@ -5866,7 +5866,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT001 Adicionar um usuário\",\n    \"users\": [\n        {\n            \"uid\": \"8e3193ac-3fee-4c82-86b1-49ce59341214\",\"isAccountable\": true\n        }\n    ]\n}",
+											"raw": "{\n  \"team\": {\n    \"id\": \"{{teamId}}\"\n  },\n  \"users\": [\n    {\n      \"uid\": \"{{userUid}}\",\n      \"isAccountable\": true\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
