@@ -5828,7 +5828,7 @@
 							"name": "Update Team",
 							"item": [
 								{
-									"name": "CT001: Adicionar um usuário Copy",
+									"name": "CT001: Adicionar um time",
 									"event": [
 										{
 											"listen": "test",
