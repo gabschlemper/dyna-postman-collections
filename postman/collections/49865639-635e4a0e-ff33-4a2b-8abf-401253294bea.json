@@ -9,7 +9,7 @@
 			"name": "Routes",
 			"item": [
 				{
-					"name": "List Routes by ID PSCA",
+					"name": "List Routes by ID",
 					"id": "49865639-fa0e184a-9926-488d-b7be-9599b23438a3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
