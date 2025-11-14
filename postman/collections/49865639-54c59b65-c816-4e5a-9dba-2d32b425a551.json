@@ -9878,7 +9878,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId}}\",\n            \"reason\": \"Spot 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"9bc0e3e7-85da-4da8-8955-20e06509ee7b\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"9bc0e3e7-85da-4da8-8955-20e06509ee7b\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n            \"reason\": \"Checklist 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
+													"raw": "{\n    \"mode\": \"answers_justified\",\n    \"answers\": [\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId}}\",\n            \"reason\": \"Spot 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{spotWorkspaceId1}}\",\n            \"reason\": \"Spot 2 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        },\n        {\n            \"routeWorkspaceId\": \"{{checklistWorkspaceId}}\",\n            \"reason\": \"Checklist 1 justified\",\n            \"justifiedAt\": \"2024-10-16T10:00:00Z\"\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
