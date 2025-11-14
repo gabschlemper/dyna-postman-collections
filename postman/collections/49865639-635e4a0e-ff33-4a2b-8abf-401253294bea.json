@@ -23,12 +23,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{urlpsca}}/psca/v4/routes/{{routeId1}}",
+							"raw": "{{urlpsca}}/v4/routes/{{routeId1}}",
 							"host": [
 								"{{urlpsca}}"
 							],
 							"path": [
-								"psca",
 								"v4",
 								"routes",
 								"{{routeId1}}"
