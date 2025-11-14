@@ -1197,22 +1197,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKid}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId1}}"
 											]
 										}
 									},
