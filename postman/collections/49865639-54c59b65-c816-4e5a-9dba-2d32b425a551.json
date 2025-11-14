@@ -5488,7 +5488,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT001 Adicionar um usuário\",\n    \"users\": [\n        {\n            \"uid\": \"8e3193ac-3fee-4c82-86b1-49ce59341214\",\"isAccountable\": true\n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT001 Adicionar um usuário\",\n    \"users\": [\n        {\n            \"uid\": \"{{userId}}\",\"isAccountable\": true\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -5612,7 +5612,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT001 Adicionar um usuário\",\n    \"users\": [\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\",\n            \"isAccountable\": true\n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT001 Adicionar um usuário\",\n    \"users\": [\n        {\n            \"uid\": \"{{userId}}\",\n            \"isAccountable\": true\n        },\n        {\n            \"uid\": \"{{userId}}\"\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -5643,8 +5643,12 @@
 											"script": {
 												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
 												"exec": [
-													"pm.test(\"Status code is 204\", function () {",
-													"\tpm.response.to.have.status(204);",
+													"pm.test(\"Status code is 404\", function () {",
+													"\tpm.response.to.have.status(404);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Route accountable user not found\");",
 													"});"
 												],
 												"type": "text/javascript",
@@ -5674,7 +5678,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT001 Adicionar um usuário\",\n    \"users\": [\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\",\n            \"isAccountable\": true\n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT004 Adicionar mais de um usuario sem o isAccountable\",\n    \"users\": [\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\"\n            \n        },\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\"\n           \n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -5705,8 +5709,11 @@
 											"script": {
 												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
 												"exec": [
-													"pm.test(\"Status code is 204\", function () {",
-													"\tpm.response.to.have.status(204);",
+													"pm.test(\"Status code is 400\", function () {",
+													"\tpm.response.to.have.status(400);",
+													"});",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Multiple accountable users found\");",
 													"});"
 												],
 												"type": "text/javascript",
@@ -5736,7 +5743,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT001 Adicionar um usuário\",\n    \"users\": [\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\",\n            \"isAccountable\": true\n        },\n        {\n            \"uid\": \"8e3193ac-3fee-4c82-86b1-49ce59341214\",\n            \"isAccountable\": true\n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT005 Adicionar mais de um usuario com mais de um isAccountable\",\n    \"users\": [\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\",\n            \"isAccountable\": true\n        },\n        {\n            \"uid\": \"8e3193ac-3fee-4c82-86b1-49ce59341214\",\n            \"isAccountable\": true\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -5767,8 +5774,8 @@
 											"script": {
 												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
 												"exec": [
-													"pm.test(\"Status code is 204\", function () {",
-													"\tpm.response.to.have.status(204);",
+													"pm.test(\"Status code is 400\", function () {",
+													"\tpm.response.to.have.status(400);",
 													"});"
 												],
 												"type": "text/javascript",
@@ -5799,6 +5806,405 @@
 										"body": {
 											"mode": "raw",
 											"raw": "{\n    \"name\": \"CT006 Não enviar nenhum usuario\",\n    \"users\": []\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT007 Enviar mais de 2 usuarios",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"\tpm.response.to.have.status(400);",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "934c04df-831b-4370-b3b9-e61293ffe932",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-7539107e-9a31-4373-bf10-171602979acf",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"CT007 Enviar mais de 2 usuarios\",\n    \"users\": [\n        {\n            \"uid\": \"{{userId}}\",\n            \"isAccountable\": true\n        },\n        {\n            \"uid\": \"qLFJdGRgbNgIriWIjfdDh6ySPmt1\"\n        },\n        {\n            \"uid\": \"xXjB0gkeORSOn6u0CjzOE8hoEAC2\"\n        },\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT008 Remover todos os usuarios e manter apenas um responsavel",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"\tpm.response.to.have.status(400);",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "934c04df-831b-4370-b3b9-e61293ffe932",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-a7be1d35-d5e9-44a7-9212-b290cc82b0f7",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"CT008 Remover todos os usuarios e manter apenas um responsavel\",\n    \"users\": [\n        {\n            \"uid\": \"{{userId}}\",\n            \"isAccountable\": true\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT009 Enviar um UID invalido",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
+												"exec": [
+													"json = pm.response.json();",
+													"",
+													"pm.test(\"Status code is 404\", function () {",
+													"\tpm.response.to.have.status(404);",
+													"});",
+													"",
+													"pm.test(\"Body.message has expected value\", function () {",
+													"    pm.expect(json.message).to.equal(\"User not found\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "934c04df-831b-4370-b3b9-e61293ffe932",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-aab6e41b-f28f-48f6-9a2f-0e9689ae1af4",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"CT009 Enviar um UID invalido\",\n    \"users\": [\n        {\n            \"uid\": \"8e3193ac-3fee-4c82-86b1-49ce59341217\",\n            \"isAccountable\": true\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT010 Enviar isAccountable como String",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
+												"exec": [
+													"",
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"users.0.isAccountable must be a boolean value\");",
+													"});",
+													"",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "934c04df-831b-4370-b3b9-e61293ffe932",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-fc9e3d0b-166a-415d-a5f3-3ea45c855cb2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"CT010 Enviar isAccountable como String\",\n    \"users\": [\n        {\n            \"uid\": \"8e3193ac-3fee-4c82-86b1-49ce59341217\",\n            \"isAccountable\": \"true\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT011 Responsavel da rota sem permissao de inspetor",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
+												"exec": [
+													"",
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"users.0.isAccountable must be a boolean value\");",
+													"});",
+													"",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "934c04df-831b-4370-b3b9-e61293ffe932",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-9e6fb4ba-da94-454b-b0e8-d4845ddf2179",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"CT011 Responsavel da rota sem permissao de inspetor\",\n    \"users\": [\n        {\n            \"uid\": \"cab5fe20-3f6b-478c-999a-ade4f8e84278\",\n            \"isAccountable\": true\n        }\n    ]\n}\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "CT012 Responsavel da rota sem permissao nos ativos",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
+												"exec": [
+													"",
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"users.0.isAccountable must be a boolean value\");",
+													"});",
+													"",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "934c04df-831b-4370-b3b9-e61293ffe932",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-470dd13f-b6e7-4c76-98e0-a27eb4c3561d",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"CT011 Responsavel da rota sem permissao de inspetor\",\n    \"users\": [\n        {\n            \"uid\": \"9PF0tzobKfO3GRGcB3eSZaomTjg2\",\n            \"isAccountable\": true\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6424,7 +6830,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT101: Enviar teamId vazio (string vazia)\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT101 Enviar teamId vazio (string vazia)\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
