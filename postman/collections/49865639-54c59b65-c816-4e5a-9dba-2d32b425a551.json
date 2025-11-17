@@ -7904,7 +7904,7 @@
 									"response": []
 								},
 								{
-									"name": "CT117: Usuário já soft-deleted tentando ser adicionado Copy",
+									"name": "CT118: Time já soft-deleted",
 									"event": [
 										{
 											"listen": "test",
