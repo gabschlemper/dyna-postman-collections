@@ -7818,7 +7818,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT115: RouteId inexistente\",\n    \"team\": []\n}",
+											"raw": "{\n  \"users\": [\n    {\n      \"uid\": \"{{userUid}}\",\n      \"isAccountable\": true\n    }\n  ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
