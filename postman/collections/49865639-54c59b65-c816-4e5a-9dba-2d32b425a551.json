@@ -5569,8 +5569,12 @@
 											"script": {
 												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
 												"exec": [
-													"pm.test(\"Status code is 204\", function () {",
-													"\tpm.response.to.have.status(204);",
+													"pm.test(\"Status code is 400\", function () {",
+													"\tpm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"users must have unique uid values\");",
 													"});"
 												],
 												"type": "text/javascript",
@@ -5666,7 +5670,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT004 Adicionar mais de um usuario sem o isAccountable\",\n    \"users\": [\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\"\n            \n        },\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\"\n           \n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT004 Adicionar mais de um usuario sem o isAccountable\",\n    \"users\": [\n        {\n            \"uid\": \"{{userId}}\"\n            \n        },\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\"\n           \n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -5764,6 +5768,10 @@
 												"exec": [
 													"pm.test(\"Status code is 400\", function () {",
 													"\tpm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"users must not be an empty array\");",
 													"});"
 												],
 												"type": "text/javascript",
@@ -5886,8 +5894,8 @@
 											"script": {
 												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
 												"exec": [
-													"pm.test(\"Status code is 400\", function () {",
-													"\tpm.response.to.have.status(400);",
+													"pm.test(\"Status code is 204\", function () {",
+													"\tpm.response.to.have.status(204);",
 													"});"
 												],
 												"type": "text/javascript",
@@ -6086,12 +6094,12 @@
 												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
 												"exec": [
 													"",
-													"pm.test(\"Status code is 400\", function () {",
-													"    pm.response.to.have.status(400);",
+													"pm.test(\"Status code is 404\", function () {",
+													"    pm.response.to.have.status(404);",
 													"});",
 													"",
 													"pm.test(\"Body matches string\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"users.0.isAccountable must be a boolean value\");",
+													"    pm.expect(pm.response.text()).to.include(\"Route accountable user does not have executor role\");",
 													"});",
 													"",
 													""
@@ -7772,7 +7780,7 @@
 									"response": []
 								},
 								{
-									"name": "CT115: RouteId inexistente Copy",
+									"name": "CT116: WorkspaceId inexistente no path",
 									"event": [
 										{
 											"listen": "test",
