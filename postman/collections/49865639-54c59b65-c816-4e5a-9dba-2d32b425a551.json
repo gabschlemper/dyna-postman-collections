@@ -6235,10 +6235,10 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
+												"id": "463307fb-4d77-4661-a06e-a0aaaf988f72",
 												"exec": [
 													"pm.test(\"Status code is 204\", function () {",
-													"\tpm.response.to.have.status(204);",
+													"    pm.response.to.have.status(204);",
 													"});"
 												],
 												"type": "text/javascript",
@@ -6249,7 +6249,7 @@
 										{
 											"listen": "prerequest",
 											"script": {
-												"id": "934c04df-831b-4370-b3b9-e61293ffe932",
+												"id": "18604c1b-10e9-4dd9-be77-e605cb418740",
 												"exec": [
 													""
 												],
@@ -6268,7 +6268,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT001 Adicionar um time existente a uma rota sem time\",\n    \"team\": {\n        \"id\": \"{{teamId}}\"\n    },\n    \"users\": [\n        {\n            \"uid\": \"{{userUid}}\",\n            \"isAccountable\": true\n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT001 Adicionar um time existente a uma rota sem time\",\n    \"team\": {\n        \"id\": \"{{teamId}}\"\n    },\n    \"users\": [\n        {\n            \"uid\": \"{{userUid}}\",\n            \"isAccountable\": true\n        },\n        {\n            \"uid\": \"{{userUid2}}\"\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
