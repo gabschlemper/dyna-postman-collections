@@ -7942,7 +7942,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT117: Usuário já soft-deleted tentando ser adicionado\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT118: Time já soft-deleted\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
