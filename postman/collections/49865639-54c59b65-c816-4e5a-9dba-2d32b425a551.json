@@ -8004,7 +8004,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT118: Time já soft-deleted\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT119: Enviar teamId quando há múltiplos usuários (conflito de lógica)\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
