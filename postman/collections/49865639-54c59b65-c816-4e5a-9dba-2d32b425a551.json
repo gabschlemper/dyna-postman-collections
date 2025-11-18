@@ -7334,7 +7334,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT109: UID null\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT109: UID null\",\n      \"users\": [\n        {\n            \"uid\": null,\n            \"isAccountable\": false\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
