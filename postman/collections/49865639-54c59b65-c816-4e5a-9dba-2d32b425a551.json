@@ -6454,7 +6454,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT004: Criar time autogenerado com 3+ usuários\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT004: Criar time autogenerado com 3+ usuários\",\n   \"users\": [\n        {\n            \"uid\": \"{{userUid1}}\",\n            \"isAccountable\": false\n        },\n        {\n            \"uid\": \"{{userUid2}}\",\n            \"isAccountable\": true\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
