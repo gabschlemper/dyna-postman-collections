@@ -7110,7 +7110,7 @@
 									"response": []
 								},
 								{
-									"name": "CT106: Usuário sem papel MECHANICAL_INSPECTOR",
+									"name": "CT106: Usuário sem papel INSPETOR",
 									"event": [
 										{
 											"listen": "test",
