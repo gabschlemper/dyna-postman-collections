@@ -7365,8 +7365,8 @@
 											"script": {
 												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
 												"exec": [
-													"pm.test(\"Status code is 204\", function () {",
-													"\tpm.response.to.have.status(204);",
+													"pm.test(\"Status code is 404\", function () {",
+													"    pm.response.to.have.status(404);",
 													"});"
 												],
 												"type": "text/javascript",
