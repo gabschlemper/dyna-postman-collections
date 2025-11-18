@@ -6954,7 +6954,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT103: Time que não pertence ao workspace da rota\",\n    \"team\": {\n        \"id\": \"{{teamId3}}\"\n    }\n}",
+											"raw": "{\n    \"name\": \"CT103 Time que não pertence ao workspace da rota\",\n    \"team\": {\n        \"id\": \"{{teamId3}}\"\n    },\n    \"users\": [\n        {\n            \"uid\": \"{{userUid5}}\",\n            \"isAccountable\": true\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
