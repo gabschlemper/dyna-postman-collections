@@ -6764,7 +6764,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT009: Atualizar apenas campo name da rota sem mexer em team/user\"\n}",
+											"raw": "{\n    \"name\": \"CT009 Atualizar apenas campo name da rota sem mexer em team e user\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
