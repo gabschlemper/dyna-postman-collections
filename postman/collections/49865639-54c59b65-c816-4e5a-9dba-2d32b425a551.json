@@ -6764,7 +6764,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT009 Atualizar apenas campo name da rota sem mexer em team e user\"\n}",
+											"raw": "{\n    \"name\": \"CTT009 Atualizar apenas campo name da rota sem mexer em team e user\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6857,8 +6857,8 @@
 											"script": {
 												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
 												"exec": [
-													"pm.test(\"Status code is 204\", function () {",
-													"\tpm.response.to.have.status(204);",
+													"pm.test(\"Status code is 400 or 404\", function () {",
+													"    pm.expect(pm.response.code).to.be.oneOf([400, 404]);",
 													"});"
 												],
 												"type": "text/javascript",
@@ -6888,7 +6888,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT102: Enviar teamId null dentro do objeto\",\n     \"team\": {\n        \"id\": null\n    }\n}",
+											"raw": "{\n    \"name\": \"CT102 Enviar teamId null dentro do objeto\",\n    \"team\": {\n        \"id\": null\n    },\n    \"users\": [\n        {\n            \"uid\": \"{{userUid1}}\",\n            \"isAccountable\": true\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
