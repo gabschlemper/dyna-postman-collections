@@ -7396,7 +7396,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT110 Campo isAccountable ausente\",\n    \"users\": [\n        {\n            \"uid\": \"{{userUid2}}\"\n        },\n        {\n            \"uid\": \"{{userUid1}}\",\n                        \"isAccountable\": true\n\n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT110 Campo isAccountable ausente\",\n    \"users\": [\n        {\n            \"uid\": \"{{userUid2}}\"\n        },\n        {\n            \"uid\": \"{{userUid1}}\"\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
