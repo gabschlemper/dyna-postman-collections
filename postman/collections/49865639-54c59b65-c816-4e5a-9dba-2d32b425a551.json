@@ -6919,8 +6919,12 @@
 											"script": {
 												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
 												"exec": [
-													"pm.test(\"Status code is 204\", function () {",
-													"\tpm.response.to.have.status(204);",
+													"pm.test(\"Status code is 404 or 403\", function () {",
+													"    pm.expect(pm.response.code).to.be.oneOf([404, 403]);",
+													"});",
+													"",
+													"pm.test(\"Error message about workspace mismatch\", function () {",
+													"    pm.expect(pm.response.json().message).to.include(\"workspace\");",
 													"});"
 												],
 												"type": "text/javascript",
