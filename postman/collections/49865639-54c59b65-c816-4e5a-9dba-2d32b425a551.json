@@ -6702,7 +6702,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT008: Manter substitutos ao atualizar apenas o time\",\n    \"team\": {\n        \"id\": \"{{newTeamId}}\"\n    }\n}",
+											"raw": "{\n    \"name\": \"CT008 Manter substitutos ao atualizar apenas o time\",\n    \"team\": {\n        \"id\": \"{{newTeamId}}\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6764,7 +6764,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT009: Atualizar apenas campo name da rota sem mexer em team/userspy\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT009: Atualizar apenas campo name da rota sem mexer em team/usery\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
