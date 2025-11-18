@@ -6268,7 +6268,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT001 Adicionar um time existente a uma rota sem time\",\n    \"team\": {\n        \"id\": \"{{teamId}}\"\n    },\n    \"users\": [\n        {\n            \"uid\": \"{{userUid}}\",\n            \"isAccountable\": true\n        },\n        {\n            \"uid\": \"{{userUid2}}\"\n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT001 Adicionar um time existente a uma rota sem time\",\n    \"team\": {\n        \"id\": \"{{teamId}}\"\n    },\n    \"users\": [\n        {\n            \"uid\": \"{{userUid}}\",\n            \"isAccountable\": true\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6330,7 +6330,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT002: Trocar time de uma rota (de teamA para teamB)\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT002 Trocar time de uma rota (de teamA para teamB)\",\n     \"team\": {\n        \"id\": \"{{teamId2}}\"\n    },\n    \"users\": [\n        {\n            \"uid\": \"{{userUid2}}\",\n            \"isAccountable\": true\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
