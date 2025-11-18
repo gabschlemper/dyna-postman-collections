@@ -6578,7 +6578,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT006 Adicionar usuários a uma rota que já tem time autogenerado\",\n       \"users\": [\n        {\n            \"uid\": \"{{userUid1}}\",\n            \"isAccountable\": false\n        },\n        {\n            \"uid\": \"{{userUid2}}\",\n            \"isAccountable\": false\n        },\n        {\n            \"uid\": \"{{userUid3}}\",\n            \"isAccountable\": true\n        },\n           {\n            \"uid\": \"{{userUid4}}\",\n            \"isAccountable\": true\n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT006 Adicionar usuários a uma rota que já tem time autogenerado\",\n    \"users\": [\n        {\n            \"uid\": \"{{userUid1}}\",\n            \"isAccountable\": false\n        },\n        {\n            \"uid\": \"{{userUid2}}\",\n            \"isAccountable\": false\n        },\n        {\n            \"uid\": \"{{userUid3}}\",\n            \"isAccountable\": true\n        },\n        {\n            \"uid\": \"{{userUid4}}\",\n            \"isAccountable\": false\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
