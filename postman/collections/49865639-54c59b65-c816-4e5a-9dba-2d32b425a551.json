@@ -6392,7 +6392,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT005: Atualizar rota mantendo o mesmo time e apenas trocando responsável\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT003: Atualizar rota mantendo o mesmo time e apenas trocando responsável\",\n    \"user\": [\n        {\n            \"uid\": \"{{userUid3}}\",\n            \"isAccountable\": false\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6640,7 +6640,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT007 Remover time de uma rota (deixar sem time)\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT007 Remover time de uma rota (deixar sem time)\",\n    \"team\": null, //testar earray vazio e undefined\n    \"users\": [\n        {\n            \"uid\": \"{{userUid3}}\",\n            \"isAccountable\": true\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6702,7 +6702,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT008: Manter substitutos ao atualizar apenas o time\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT008: Manter substitutos ao atualizar apenas o time\",\n    \"team\": {\n        \"id\": \"{{newTeamId}}\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
