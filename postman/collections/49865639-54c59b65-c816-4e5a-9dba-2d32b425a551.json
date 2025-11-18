@@ -6640,7 +6640,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT007: Remover time de uma rota (deixar sem time\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT007 Remover time de uma rota (deixar sem time)\",\n    \"team\": []\n}",
 											"options": {
 												"raw": {
 													"language": "json"
