@@ -6826,7 +6826,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT101 Enviar teamId vazio (string vazia)\",\n    \"team\": []\n}",
+											"raw": "{\n    \"name\": \"CT101 Enviar teamId vazio (string vazia)\",\n      \"team\": {\n        \"id\": \"\"\n    }\n}",
 											"options": {
 												"raw": {
 													"language": "json"
