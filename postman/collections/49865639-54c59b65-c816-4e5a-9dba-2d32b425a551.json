@@ -6354,7 +6354,7 @@
 									"response": []
 								},
 								{
-									"name": "CT005: Atualizar rota mantendo o mesmo time e apenas trocando responsável",
+									"name": "CT003: Atualizar rota mantendo o mesmo time e apenas trocando responsável",
 									"event": [
 										{
 											"listen": "test",
