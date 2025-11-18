@@ -6268,7 +6268,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT001 Adicionar um time existente a uma rota sem time\",\n    \"team\": {\n        \"id\": \"{{teamId}}\"\n    },\n    \"users\": [\n        {\n            \"uid\": \"{{userUid}}\",\n            \"isAccountable\": true\n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT001 Adicionar um time existente a uma rota sem time\",\n    \"team\": {\n        \"id\": \"{{teamId1}}\"\n    },\n    \"users\": [\n        {\n            \"uid\": \"{{userUid1}}\",\n            \"isAccountable\": true\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
