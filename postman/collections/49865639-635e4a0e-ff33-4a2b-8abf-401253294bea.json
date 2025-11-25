@@ -35,6 +35,34 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "List Routes by ID Copy",
+					"id": "49865639-3275c069-41ce-494f-81e8-7cac189c49ca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "email",
+								"value": "gabriela.silva@dynamox.net"
+							}
+						],
+						"url": {
+							"raw": "{{urlpsca}}/v4/routes/{{routeId1}}",
+							"host": [
+								"{{urlpsca}}"
+							],
+							"path": [
+								"v4",
+								"routes",
+								"{{routeId1}}"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "49865639-77b6241e-3c95-4092-9116-dc4b40f28bba"
