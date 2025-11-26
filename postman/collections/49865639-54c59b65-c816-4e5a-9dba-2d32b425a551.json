@@ -6335,6 +6335,23 @@
 								},
 								{
 									"name": "CT003 Atualizar rota preservando substituto",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8b081529-eb49-4aa4-8381-cc6c7cddec36",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"    pm.response.to.have.status(204);",
+													"});",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-1a7336df-1fed-497c-9f33-a1524a8fc3d7",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
