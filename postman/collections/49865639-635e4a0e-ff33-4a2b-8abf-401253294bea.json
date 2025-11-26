@@ -89,7 +89,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"answers\": [\n    {\n      \"routeId\": \"958afd6d-f5a9-4a9f-9801-714bba73c52e\",\n      \"checklistId\": \"558e8fd5-5228-463b-9906-877fb9933cab\",\n      \"quizId\": \"273aae95-ad5b-4809-9fe6-8e3843b5ea44\",\n      \"questionId\": \"c6cf007f-e855-42dd-898b-0c4c3e39a652\",\n      \"alternativeId\": \"828db3fe-55a2-4c69-9bd9-e57bffe51691\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
+							"raw": "{\n  \"answers\": [\n    {\n      \"routeId\": \"aaabfd91-29ed-4c2f-8abe-dabd893e5f2f\",\n      \"checklistId\": \"9342d9ca-6cdd-4cb9-b40c-cce88cd71763\",\n      \"quizId\": \"262fefb6-c0e3-4b7f-8132-e02f1964f750\",\n      \"questionId\": \"cd1b6d84-75cf-491a-9714-ddfbab5982af\",\n      \"alternativeId\": \"cc0e44c5-ca21-4510-bb09-75ba1e9e91f3\",\n      \"answeredAt\": \"2025-10-27 06:00:00+00\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -97,17 +97,12 @@
 							}
 						},
 						"url": {
-							"raw": "https://sandbox.predict.dynamox.solutions/psca/v4/answers/save-many",
-							"protocol": "https",
+							"raw": "{{urlpsca}}/v5/answers/save-many",
 							"host": [
-								"sandbox",
-								"predict",
-								"dynamox",
-								"solutions"
+								"{{urlpsca}}"
 							],
 							"path": [
-								"psca",
-								"v4",
+								"v5",
 								"answers",
 								"save-many"
 							]
