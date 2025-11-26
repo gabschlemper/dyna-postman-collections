@@ -6921,7 +6921,7 @@
 									"response": []
 								},
 								{
-									"name": "CT107 Erro ao não enviar responsável ao criar um time",
+									"name": "CT107 Erro ao não enviar responsável ao adicionar um time existente",
 									"event": [
 										{
 											"listen": "test",
@@ -6956,7 +6956,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CCT106 Erro ao atribuir um time de outro workspace a rota\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\"\n  }\n}"
+											"raw": "{\n  \"name\": \"CCT106 CT107 Erro ao não enviar responsável ao adicionar um time existente\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\"\n  }\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
