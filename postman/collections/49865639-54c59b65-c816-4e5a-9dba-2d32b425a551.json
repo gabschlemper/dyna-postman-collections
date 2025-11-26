@@ -6881,7 +6881,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CCT106  Erro ao atribuir um time de outro workspace a rota\",\n  \"team\": {\n    \"id\": \"{{externalTeamId}}\",\n    \"accountableUid\": \"{{userUid1FromTeam1}}\"\n  }\n}"
+											"raw": "{\n  \"name\": \"CCT106  Erro ao atribuir um time de outro workspace a rota\",\n  \"team\": {\n    \"id\": \"{{externalTeamId}}\",\n    \"accountableUid\": \"{{userUid1}}\"\n  }\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
