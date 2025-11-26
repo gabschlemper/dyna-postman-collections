@@ -6629,7 +6629,7 @@
 									"response": []
 								},
 								{
-									"name": "CT101 Erro Time Nao Encontrado",
+									"name": "CT101 erro time nao encontrado",
 									"id": "49865639-c306eca8-49ba-424c-99cc-20d8c04659bc",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6644,7 +6644,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT101 Erro Time Nao Encontrado\",\n  \"team\": {\n    \"id\": \"{{invalidTeamId}}\",\n    \"accountableUid\": \"{{userUid1}}\"\n  }\n}"
+											"raw": "{\n  \"name\": \"CT101 erro time nao encontrado\",\n  \"team\": {\n    \"id\": \"{{invalidTeamId}}\",\n    \"accountableUid\": \"{{userUid1}}\"\n  }\n}"
 										},
 										"url": {
 											"raw": ""
