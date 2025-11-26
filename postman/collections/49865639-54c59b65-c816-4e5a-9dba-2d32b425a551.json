@@ -6701,7 +6701,7 @@
 									"response": []
 								},
 								{
-									"name": "CT102 Erro Usuario Sem Papel Executor",
+									"name": "CT102 Erro usuario sem papel executor",
 									"event": [
 										{
 											"listen": "test",
@@ -6713,7 +6713,7 @@
 													"});",
 													"",
 													"pm.test(\"Body matches string\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"Team not found\");",
+													"    pm.expect(pm.response.text()).to.include(\"Route accountable user does not have executor role\");",
 													"});"
 												],
 												"type": "text/javascript",
