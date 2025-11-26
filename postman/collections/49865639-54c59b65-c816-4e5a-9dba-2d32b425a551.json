@@ -6757,6 +6757,26 @@
 								},
 								{
 									"name": "CT103 Erro multiplos Responsaveis",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "4d408f88-6f1b-4d67-acda-7a1ac7d64995",
+												"exec": [
+													"pm.test(\"Status code is 404\", function () {",
+													"    pm.response.to.have.status(404);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Multiple accountable users found\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-1777d3cd-3ae5-4803-876e-5646e2716556",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
