@@ -6976,7 +6976,7 @@
 									"response": []
 								},
 								{
-									"name": "CT107 Erro ao não enviar responsável ao adicionar um time existente Copy",
+									"name": "CT108 Erro ao não enviar responsável ao adicionar um time autogerado",
 									"event": [
 										{
 											"listen": "test",
