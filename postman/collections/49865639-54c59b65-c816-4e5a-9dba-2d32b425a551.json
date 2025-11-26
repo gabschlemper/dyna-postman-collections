@@ -6542,7 +6542,7 @@
 									"response": []
 								},
 								{
-									"name": "CT008 Usuario unico sem team nao cria time autogerado",
+									"name": "CT007 Usuario unico sem team nao cria time autogerado",
 									"event": [
 										{
 											"listen": "test",
@@ -7029,44 +7029,44 @@
 										"description": "Precondição: usuário externo não possui papel na branch de workspaces. Resultado esperado: validação de roles falha — erro 403/404 conforme implementação."
 									},
 									"response": []
+								},
+								{
+									"name": "CT007 Criar Versao Preservando Substitutos Padrao",
+									"id": "49865639-5905bcac-5ff7-4500-b5ab-184e29ea15ec",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"CT007 criar versao preservando substitutos ṕadrao\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{user2FromTeamId1}}\"\n  },\n  \"assets\": [\n\t\t{\n\t\t\t\"id\": \"688ca3c2a936ff7d02c38106\",\n\t\t\t\"type\": \"machine\",\n\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19\",\n\t\t\t\"title\": \"Maquina 1\",\n\t\t\t\"parentId\": null,\n\t\t\t\"sort\": null,\n\t\t\t\"children\": [\n\t\t\t\t{\n\t\t\t\t\t\"id\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n\t\t\t\t\t\"type\": \"checklists\",\n\t\t\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19\",\n\t\t\t\t\t\"title\": null,\n\t\t\t\t\t\"parentId\": \"688ca3c2a936ff7d02c38106\",\n\t\t\t\t\t\"sort\": null,\n\t\t\t\t\t\"children\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"id\": \"50b2915a-c99b-45f8-b63d-baa287b81b0e\",\n\t\t\t\t\t\t\t\"type\": \"checklist\",\n\t\t\t\t\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19/06-09-checklist-alterada-1\",\n\t\t\t\t\t\t\t\"title\": \"3399 - 06-09ChecklistAlterada-1\",\n\t\t\t\t\t\t\t\"parentId\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n\t\t\t\t\t\t\t\"sort\": null,\n\t\t\t\t\t\t\t\"children\": []\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"id\": \"09ce904c-ea10-4e1b-99f7-b1cc69ee5f76\",\n\t\t\t\t\t\t\t\"type\": \"checklist\",\n\t\t\t\t\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19/0909-espessura-justificada\",\n\t\t\t\t\t\t\t\"title\": \"3422 - 0909EspessuraJustificada\",\n\t\t\t\t\t\t\t\"parentId\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n\t\t\t\t\t\t\t\"sort\": null,\n\t\t\t\t\t\t\t\"children\": []\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}"
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
+										},
+										"description": "Pré: rota possui respostas. Atualizando assets + team deve gerar nova versão. Resultado: nova versão criada; substitutos existentes preservados exceto os promovidos pelo payload."
+									},
+									"response": []
 								}
 							],
 							"id": "49865639-5d0069fc-908f-412c-915c-d572d32e73e8"
-						},
-						{
-							"name": "CT007 Criar Versao Preservando Substitutos Padrao",
-							"id": "49865639-5905bcac-5ff7-4500-b5ab-184e29ea15ec",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"name\": \"CT007 criar versao preservando substitutos ṕadrao\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{user2FromTeamId1}}\"\n  },\n  \"assets\": [\n\t\t{\n\t\t\t\"id\": \"688ca3c2a936ff7d02c38106\",\n\t\t\t\"type\": \"machine\",\n\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19\",\n\t\t\t\"title\": \"Maquina 1\",\n\t\t\t\"parentId\": null,\n\t\t\t\"sort\": null,\n\t\t\t\"children\": [\n\t\t\t\t{\n\t\t\t\t\t\"id\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n\t\t\t\t\t\"type\": \"checklists\",\n\t\t\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19\",\n\t\t\t\t\t\"title\": null,\n\t\t\t\t\t\"parentId\": \"688ca3c2a936ff7d02c38106\",\n\t\t\t\t\t\"sort\": null,\n\t\t\t\t\t\"children\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"id\": \"50b2915a-c99b-45f8-b63d-baa287b81b0e\",\n\t\t\t\t\t\t\t\"type\": \"checklist\",\n\t\t\t\t\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19/06-09-checklist-alterada-1\",\n\t\t\t\t\t\t\t\"title\": \"3399 - 06-09ChecklistAlterada-1\",\n\t\t\t\t\t\t\t\"parentId\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n\t\t\t\t\t\t\t\"sort\": null,\n\t\t\t\t\t\t\t\"children\": []\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"id\": \"09ce904c-ea10-4e1b-99f7-b1cc69ee5f76\",\n\t\t\t\t\t\t\t\"type\": \"checklist\",\n\t\t\t\t\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19/0909-espessura-justificada\",\n\t\t\t\t\t\t\t\"title\": \"3422 - 0909EspessuraJustificada\",\n\t\t\t\t\t\t\t\"parentId\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n\t\t\t\t\t\t\t\"sort\": null,\n\t\t\t\t\t\t\t\"children\": []\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}"
-								},
-								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
-									"host": [
-										"{{urlpss}}"
-									],
-									"path": [
-										"v1",
-										"workspaces",
-										"{{WKid}}",
-										"routes",
-										"{{routeId1}}"
-									]
-								},
-								"description": "Pré: rota possui respostas. Atualizando assets + team deve gerar nova versão. Resultado: nova versão criada; substitutos existentes preservados exceto os promovidos pelo payload."
-							},
-							"response": []
 						},
 						{
 							"name": "Genérica",
