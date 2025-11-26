@@ -6262,7 +6262,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT001 Adicionar um time existente a rota sem time\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid1}}\"\n  }\n}"
+											"raw": "{\n  \"name\": \"CT001 Adicionar um time existente a rota sem time\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid1FromTeam1}}\"\n  }\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
@@ -6349,7 +6349,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT003 Atualizar Rota Preservando Substituto\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid3}}\"\n  }\n}"
+											"raw": "{\n  \"name\": \"CT003 Atualizar Rota Preservando Substituto\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid2FromTeamId1}}\"\n  }\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
@@ -6370,6 +6370,23 @@
 								},
 								{
 									"name": "CT004 Promover Substituto A Responsavel",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "4bdffca0-6594-4b2d-a96b-f646b43c732a",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"    pm.response.to.have.status(204);",
+													"});",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-a3dcd6fe-5886-4b03-9b84-fd706fb1c070",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6384,7 +6401,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT004 Promover Substituto A Responsavel\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{substituteUid}}\"\n  }\n}"
+											"raw": "{\n  \"name\": \"CT004 Promover substituto a responsável\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid1FromTeam1}}\"\n  }\n}"
 										},
 										"url": {
 											"raw": ""
