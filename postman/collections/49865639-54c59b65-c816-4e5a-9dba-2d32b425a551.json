@@ -6609,7 +6609,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT009 Trocar De Time E Gerar Auditoria\",\n  \"team\": {\n    \"id\": \"{{teamId2}}\",\n    \"accountableUid\": \"{{userUid1FromTeam2}}\"\n  }\n}"
+											"raw": "{\n  \"name\": \"CT009 Trocar de time e gerar auditoria\",\n  \"team\": {\n    \"id\": \"{{teamId2}}\",\n    \"accountableUid\": \"{{userUid1FromTeam2}}\"\n  }\n}"
 										},
 										"url": {
 											"raw": ""
