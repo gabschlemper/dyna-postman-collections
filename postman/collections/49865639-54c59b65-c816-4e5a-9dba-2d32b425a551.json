@@ -6702,6 +6702,26 @@
 								},
 								{
 									"name": "CT102 Erro Usuario Sem Papel Executor",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "07ae46e2-b565-4895-83d0-9a2a702c6d3f",
+												"exec": [
+													"pm.test(\"Status code is 404\", function () {",
+													"    pm.response.to.have.status(404);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Team not found\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-a0b6d7ea-7c94-4b0f-beb9-060cfc57f4aa",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
