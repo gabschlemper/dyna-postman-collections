@@ -6231,6 +6231,23 @@
 							"item": [
 								{
 									"name": "CT001 Adicionar um time existente a rota sem time",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "fcfe2b98-7298-4402-a924-4f8e70f8eab4",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"    pm.response.to.have.status(204);",
+													"});",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-2ff3a3a6-8f7b-483d-868b-936cb24d0927",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6266,6 +6283,23 @@
 								},
 								{
 									"name": "CT002 Criar time autogerado com dois usuarios",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "d511d132-ce1d-44ae-aa23-a2d06b7fc792",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"    pm.response.to.have.status(204);",
+													"});",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-0c7e963d-d931-423a-9cf1-25dbceca9070",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
