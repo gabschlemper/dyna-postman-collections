@@ -6453,7 +6453,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT005 Trocar responsavel e limpar responsaveis antigos\",\n  \"users\": [\n    { \"uid\": \"{{userUid3}}\", \"isAccountable\": true },\n    { \"uid\": \"{{userUid4}}\", \"isAccountable\": false }\n  ]\n}"
+											"raw": "{\n  \"name\": \"CT005 Trocar responsavel e limpar responsaveis antigos\",\n  \"users\": [\n    { \"uid\": \"{{userUid3}}\", \"isAccountable\": false },\n    { \"uid\": \"{{userUid4}}\", \"isAccountable\": true }\n  ]\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
