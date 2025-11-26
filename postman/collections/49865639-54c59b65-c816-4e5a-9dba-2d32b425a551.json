@@ -7031,7 +7031,7 @@
 									"response": []
 								},
 								{
-									"name": "CT007 Criar versão adicionando time",
+									"name": "CT007 Criar versão adicionando time existente",
 									"id": "49865639-5905bcac-5ff7-4500-b5ab-184e29ea15ec",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -7066,7 +7066,7 @@
 									"response": []
 								},
 								{
-									"name": "CT007 Criar versão adicionando time Copy",
+									"name": "CT007 Criar versão adicionando time auto gerado",
 									"id": "49865639-21af7157-57f3-4ced-9c17-c501deb6a1fd",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
