@@ -6983,12 +6983,12 @@
 											"script": {
 												"id": "3695911e-92d0-402d-8923-22cf5697b3b7",
 												"exec": [
-													"pm.test(\"Status code is 44\", function () {",
+													"pm.test(\"Status code is 404\", function () {",
 													"    pm.response.to.have.status(404);",
 													"});",
 													"",
 													"pm.test(\"Body matches string\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"Accountable user not found in payload\");",
+													"    pm.expect(pm.response.text()).to.include(\"Route accountable user not found\");",
 													"});"
 												],
 												"type": "text/javascript",
