@@ -6386,7 +6386,7 @@
 									"response": []
 								},
 								{
-									"name": "CT004 Promover Substituto A Responsavel",
+									"name": "CT004 Promover substituto a responsavel",
 									"event": [
 										{
 											"listen": "test",
@@ -6491,7 +6491,17 @@
 											"raw": "{\n  \"name\": \"CT006 Atualizar Com Usuarios Com Papel Executor\",\n  \"users\": [\n    { \"uid\": \"{{executorUser1}}\", \"isAccountable\": true },\n    { \"uid\": \"{{executorUser2}}\", \"isAccountable\": false }\n  ]\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Pré: ambos usuários possuem papel MECHANICAL_INSPECTOR em algum workspace da branch. Resultado: OK (validação de papéis passa)."
 									},
