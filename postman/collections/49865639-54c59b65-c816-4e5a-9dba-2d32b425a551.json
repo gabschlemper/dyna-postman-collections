@@ -6334,7 +6334,7 @@
 									"response": []
 								},
 								{
-									"name": "CT003 Atualizar Rota Preservando Substituto",
+									"name": "CT003 Atualizar rota preservando substituto",
 									"id": "49865639-1a7336df-1fed-497c-9f33-a1524a8fc3d7",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6352,7 +6352,17 @@
 											"raw": "{\n  \"name\": \"CT003 Atualizar Rota Preservando Substituto\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid3}}\"\n  }\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Precondição: rota tem um substituto existente ({{substituteUid}}). Resultado: substituto preservado; novo accountable definido."
 									},
