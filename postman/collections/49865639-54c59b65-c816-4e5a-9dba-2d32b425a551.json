@@ -9717,7 +9717,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "0aaba071-f1b7-4628-a4ff-41c381c956ef",
+				"id": "f24dfbaf-248c-444e-9101-3bd96c70140e",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -9770,7 +9770,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "1400cda7-892d-44ce-82d0-eefe849731b2",
+				"id": "e68a745e-e06b-4bc7-955c-8fb5e7d4f20c",
 				"type": "text/javascript",
 				"packages": {},
 				"requests": {},
@@ -9788,11 +9788,6 @@
 		{
 			"key": "authTokenExp",
 			"value": "1762456996"
-		},
-		{
-			"key": "user2FromTeamId1",
-			"value": "",
-			"type": "default"
 		}
 	]
 }
