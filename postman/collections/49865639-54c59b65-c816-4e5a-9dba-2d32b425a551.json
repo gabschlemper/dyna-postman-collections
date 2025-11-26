@@ -6928,12 +6928,12 @@
 											"script": {
 												"id": "3695911e-92d0-402d-8923-22cf5697b3b7",
 												"exec": [
-													"pm.test(\"Status code is 400\", function () {",
-													"    pm.response.to.have.status(400);",
+													"pm.test(\"Status code is 44\", function () {",
+													"    pm.response.to.have.status(404);",
 													"});",
 													"",
 													"pm.test(\"Body matches string\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"Team workspace must be the same as route workspace or one of its parent workspaces\");",
+													"    pm.expect(pm.response.text()).to.include(\"Accountable user not found in payload\");",
 													"});"
 												],
 												"type": "text/javascript",
@@ -6943,6 +6943,61 @@
 										}
 									],
 									"id": "49865639-e5df0598-dc1d-46b2-91d6-294bb3e0f779",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"CT107 Erro ao não enviar responsável ao adicionar um time existente\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\"\n  }\n}"
+										},
+										"url": {
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
+										},
+										"description": "Precondição: usuário externo não possui papel na branch de workspaces. Resultado esperado: validação de roles falha — erro 403/404 conforme implementação."
+									},
+									"response": []
+								},
+								{
+									"name": "CT107 Erro ao não enviar responsável ao adicionar um time existente Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "3695911e-92d0-402d-8923-22cf5697b3b7",
+												"exec": [
+													"pm.test(\"Status code is 44\", function () {",
+													"    pm.response.to.have.status(404);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Accountable user not found in payload\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "49865639-ad7842e6-820b-4dd6-b26c-298292bb500f",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
 									},
