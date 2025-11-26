@@ -6439,6 +6439,23 @@
 								},
 								{
 									"name": "CT005 Trocar responsavel e limpar responsaveis Antigos",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "ff0378c9-33a2-4538-add8-847c70ebe4c0",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"    pm.response.to.have.status(204);",
+													"});",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-87fa639e-1ca7-4024-89f2-7ef7c086f232",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6474,6 +6491,23 @@
 								},
 								{
 									"name": "CT006 Atualizar com usuários com papel executor",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a4981650-efb0-496d-9c17-345053185d73",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"    pm.response.to.have.status(204);",
+													"});",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-239bde1f-5059-4c9a-b544-ae6564a78723",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6509,6 +6543,23 @@
 								},
 								{
 									"name": "CT008 Usuario Unico Sem Team Nao Cria Time Autogerado",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "33cb215a-adfb-4d07-ba94-5a4099943b4b",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"    pm.response.to.have.status(204);",
+													"});",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-86db7183-f2dc-470e-b0dc-751b612d23ce",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
