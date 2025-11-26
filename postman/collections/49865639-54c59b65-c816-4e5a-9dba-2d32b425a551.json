@@ -6523,7 +6523,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT008 Usuario Unico Sem Team Nao Cria Time Autogerado\",\n  \"users\": [\n    { \"uid\": \"{{userSoloUid}}\", \"isAccountable\": true }\n  ]\n}"
+											"raw": "{\n  \"name\": \"CT008 Usuario unico sem team nao cria time autogerado\",\n  \"users\": [\n    { \"uid\": \"{{userUid4}}\", \"isAccountable\": true }\n  ]\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
