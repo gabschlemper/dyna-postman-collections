@@ -6248,7 +6248,17 @@
 											"raw": "{\n  \"name\": \"CT001 Adicionar Um Time Existente A Rota Sem Time\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid1}}\"\n  }\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Precondição: rota sem team. Resultado: rota associada a {{teamId1}} e {{userUid1}} marcado como accountable."
 									},
