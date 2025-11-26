@@ -6739,7 +6739,17 @@
 											"raw": "{\n  \"name\": \"CT102 Erro usuario sem papel executor\",\n  \"users\": [\n    { \"uid\": \"{{userWithoutExecutorRoleUid}}\", \"isAccountable\": true }\n  ]\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Resultado esperado: 404 (ou erro definido) \"Route accountable user does not have executor role\"."
 									},
