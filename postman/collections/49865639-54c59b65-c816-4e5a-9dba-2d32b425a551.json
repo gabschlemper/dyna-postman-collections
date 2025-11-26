@@ -6812,6 +6812,26 @@
 								},
 								{
 									"name": "CT104 Erro Usuario Inexistente",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8c0fe1ef-0769-4754-be38-f1dfea49deee",
+												"exec": [
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Multiple accountable users found\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-e5cdc137-7893-46b5-b4cf-e08268b2278a",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
