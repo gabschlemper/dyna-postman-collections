@@ -9788,6 +9788,11 @@
 		{
 			"key": "authTokenExp",
 			"value": "1762456996"
+		},
+		{
+			"key": "user2FromTeamId1",
+			"value": "",
+			"type": "default"
 		}
 	]
 }
