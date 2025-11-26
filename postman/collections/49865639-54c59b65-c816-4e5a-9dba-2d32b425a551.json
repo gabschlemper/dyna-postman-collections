@@ -6473,7 +6473,7 @@
 									"response": []
 								},
 								{
-									"name": "CT006 Atualizar Com Usuarios Com Papel Executor",
+									"name": "CT006 Atualizar com usuários com papel executor",
 									"id": "49865639-239bde1f-5059-4c9a-b544-ae6564a78723",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
