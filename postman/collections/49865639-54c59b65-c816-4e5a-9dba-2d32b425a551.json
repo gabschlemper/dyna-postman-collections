@@ -6873,8 +6873,8 @@
 											"script": {
 												"id": "3695911e-92d0-402d-8923-22cf5697b3b7",
 												"exec": [
-													"pm.test(\"Status code is 404\", function () {",
-													"    pm.response.to.have.status(404);",
+													"pm.test(\"Status code is 400\", function () {",
+													"    pm.response.to.have.status(400);",
 													"});",
 													"",
 													"pm.test(\"Body matches string\", function () {",
