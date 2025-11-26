@@ -6595,6 +6595,23 @@
 								},
 								{
 									"name": "CT009 Trocar de time e gerar auditoria",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "4dce9717-2839-4c93-aa28-3ca5a431db5c",
+												"exec": [
+													"pm.test(\"Status code is 204\", function () {",
+													"    pm.response.to.have.status(204);",
+													"});",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-c3e05064-6fa7-4f18-9713-7199757f7384",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6629,7 +6646,7 @@
 									"response": []
 								},
 								{
-									"name": "CT101 erro time nao encontrado",
+									"name": "CT101 Erro time nao encontrado",
 									"id": "49865639-c306eca8-49ba-424c-99cc-20d8c04659bc",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
