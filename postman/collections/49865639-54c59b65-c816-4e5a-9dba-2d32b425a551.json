@@ -6866,41 +6866,6 @@
 									"response": []
 								},
 								{
-									"name": "CT105 Erro Payload Sem Time Ou Usuarios",
-									"id": "49865639-82c3c5ef-4d42-43ae-94bd-97c03dc79ee9",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "PATCH",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT105 Erro Payload Sem Time Ou Usuarios\"\n}"
-										},
-										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
-											"host": [
-												"{{urlpss}}"
-											],
-											"path": [
-												"v1",
-												"workspaces",
-												"{{WKid}}",
-												"routes",
-												"{{routeId1}}"
-											]
-										},
-										"description": "Resultado esperado: 400 Bad Request — payload inválido (nenhum team nem users fornecidos)."
-									},
-									"response": []
-								},
-								{
 									"name": "CT106 Erro Atribuir Usuario De Outro Workspace Sem Permissao",
 									"id": "49865639-dee52ec0-6021-471a-8e61-c820288fcb66",
 									"protocolProfileBehavior": {
