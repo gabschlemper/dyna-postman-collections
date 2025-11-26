@@ -6774,7 +6774,17 @@
 											"raw": "{\n  \"name\": \"CT103 Erro Multiplos Responsaveis\",\n  \"users\": [\n    { \"uid\": \"{{userAUid}}\", \"isAccountable\": true },\n    { \"uid\": \"{{userBUid}}\", \"isAccountable\": true }\n  ]\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Resultado esperado: erro \"Multiple accountable users found\"."
 									},
@@ -6799,7 +6809,17 @@
 											"raw": "{\n  \"name\": \"CT104 Erro Usuario Inexistente\",\n  \"users\": [\n    { \"uid\": \"{{nonexistentUid}}\", \"isAccountable\": true }\n  ]\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Resultado esperado: 404 \"User not found\" (ou mensagem equivalente)."
 									},
@@ -6824,7 +6844,17 @@
 											"raw": "{\n  \"name\": \"CT105 Erro Payload Sem Time Ou Usuarios\"\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Resultado esperado: 400 Bad Request — payload inválido (nenhum team nem users fornecidos)."
 									},
@@ -6849,7 +6879,17 @@
 											"raw": "{\n  \"name\": \"CT106 Erro Atribuir Usuario De Outro Workspace Sem Permissao\",\n  \"users\": [\n    { \"uid\": \"{{externalWorkspaceUserUid}}\", \"isAccountable\": true }\n  ]\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Precondição: usuário externo não possui papel na branch de workspaces. Resultado esperado: validação de roles falha — erro 403/404 conforme implementação."
 									},
