@@ -6456,7 +6456,17 @@
 											"raw": "{\n  \"name\": \"CT005 Trocar responsavel e limpar responsaveis antigos\",\n  \"users\": [\n    { \"uid\": \"{{userUid3}}\", \"isAccountable\": true },\n    { \"uid\": \"{{userUid4}}\", \"isAccountable\": false }\n  ]\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Precondição: rota já tinha 1+ responsáveis antigos. Resultado: antigos responsáveis soft-deleted; apenas {{newAccountableUid}} fica como accountable."
 									},
