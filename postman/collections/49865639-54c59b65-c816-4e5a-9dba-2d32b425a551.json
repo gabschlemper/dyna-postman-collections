@@ -6647,6 +6647,23 @@
 								},
 								{
 									"name": "CT101 Erro time nao encontrado",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a5e91511-67d6-45d6-a3d3-e7320aca7692",
+												"exec": [
+													"pm.test(\"Status code is 404\", function () {",
+													"    pm.response.to.have.status(404);",
+													"});",
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-c306eca8-49ba-424c-99cc-20d8c04659bc",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6664,7 +6681,17 @@
 											"raw": "{\n  \"name\": \"CT101 erro time nao encontrado\",\n  \"team\": {\n    \"id\": \"{{invalidTeamId}}\",\n    \"accountableUid\": \"{{userUid1}}\"\n  }\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Resultado esperado: 404 \"Team not found\"."
 									},
