@@ -6438,7 +6438,7 @@
 									"response": []
 								},
 								{
-									"name": "CT005 Trocar responsavel e limpar responsaveis Antigos",
+									"name": "CT005 Trocar responsavel e limpar responsaveis antigos",
 									"event": [
 										{
 											"listen": "test",
