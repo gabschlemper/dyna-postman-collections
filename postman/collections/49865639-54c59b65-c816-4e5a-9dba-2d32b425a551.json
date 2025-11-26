@@ -6280,7 +6280,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT002 Criar Time Autogerado Com Dois Usuarios\",\n  \"users\": [\n    { \"uid\": \"{{userUid1}}\", \"isAccountable\": true },\n    { \"uid\": \"{{userUid2}}\", \"isAccountable\": false }\n  ]\n}"
+											"raw": "{\n  \"name\": \"CT002 Criar Time Autogerado Com Dois Usuarios\",\n  \"users\": [\n    { \"uid\": \"{{userUid1}}\", \"isAccountable\": false },\n    { \"uid\": \"{{userUid2}}\", \"isAccountable\": true }\n  ]\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
