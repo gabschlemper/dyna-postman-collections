@@ -6230,7 +6230,7 @@
 							"name": "Update Team",
 							"item": [
 								{
-									"name": "CT001 Adicionar Um Time Existente A Rota Sem Time",
+									"name": "CT001 Adicionar um time existente a rota sem time",
 									"id": "49865639-2ff3a3a6-8f7b-483d-868b-936cb24d0927",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -6245,7 +6245,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT001 Adicionar Um Time Existente A Rota Sem Time\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid1}}\"\n  }\n}"
+											"raw": "{\n  \"name\": \"CT001 Adicionar um time existente a rota sem time\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid1}}\"\n  }\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
