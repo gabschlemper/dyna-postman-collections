@@ -6881,7 +6881,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT106 Erro Atribuir Usuario De Outro Workspace Sem Permissao\",\n  \"users\": [\n    { \"uid\": \"{{externalWorkspaceUserUid}}\", \"isAccountable\": true }\n  ]\n}"
+											"raw": "{\n  \"name\": \"CT106  Erro ao atribuir um time de outro workspace a rota\",\n  \"team\": [\n    \"id\": {{externalTeamId}}\n  ]\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
