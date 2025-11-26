@@ -6526,7 +6526,17 @@
 											"raw": "{\n  \"name\": \"CT008 Usuario Unico Sem Team Nao Cria Time Autogerado\",\n  \"users\": [\n    { \"uid\": \"{{userSoloUid}}\", \"isAccountable\": true }\n  ]\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Resultado: nenhum time autogerado criado (regra: só autogerar quando >=2 users sem teamId)."
 									},
