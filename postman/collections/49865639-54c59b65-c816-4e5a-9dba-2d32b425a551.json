@@ -6656,7 +6656,10 @@
 													"pm.test(\"Status code is 404\", function () {",
 													"    pm.response.to.have.status(404);",
 													"});",
-													""
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Team not found\");",
+													"});"
 												],
 												"type": "text/javascript",
 												"packages": {},
