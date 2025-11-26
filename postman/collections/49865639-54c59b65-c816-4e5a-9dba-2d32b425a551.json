@@ -6866,7 +6866,7 @@
 									"response": []
 								},
 								{
-									"name": "CT106 Erro Atribuir Usuario De Outro Workspace Sem Permissao",
+									"name": "CT106 Erro ao atribuir um time de outro workspace a rota",
 									"id": "49865639-dee52ec0-6021-471a-8e61-c820288fcb66",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
