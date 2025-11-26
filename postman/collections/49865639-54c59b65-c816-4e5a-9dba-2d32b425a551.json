@@ -6542,7 +6542,7 @@
 									"response": []
 								},
 								{
-									"name": "CT008 Usuario Unico Sem Team Nao Cria Time Autogerado",
+									"name": "CT008 Usuario unico sem team nao cria time autogerado",
 									"event": [
 										{
 											"listen": "test",
