@@ -6265,7 +6265,7 @@
 									"response": []
 								},
 								{
-									"name": "CT002 Criar Time Autogerado Com Dois Usuarios",
+									"name": "CT002 Criar time autogerado com dois usuarios",
 									"id": "49865639-0c7e963d-d931-423a-9cf1-25dbceca9070",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
