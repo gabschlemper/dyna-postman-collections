@@ -6574,7 +6574,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT008 Usuario unico sem team nao cria time autogerado\",\n  \"users\": [\n    { \"uid\": \"{{userUid4}}\", \"isAccountable\": true }\n  ]\n}"
+											"raw": "{\n  \"name\": \"CT007 Usuario unico sem team nao cria time autogerado\",\n  \"users\": [\n    { \"uid\": \"{{userUid4}}\", \"isAccountable\": true }\n  ]\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
@@ -6594,7 +6594,7 @@
 									"response": []
 								},
 								{
-									"name": "CT009 Trocar de time e gerar auditoria",
+									"name": "CT008 Trocar de time e gerar auditoria",
 									"event": [
 										{
 											"listen": "test",
