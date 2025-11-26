@@ -6811,19 +6811,19 @@
 									"response": []
 								},
 								{
-									"name": "CT104 Erro Usuario Inexistente",
+									"name": "CT104 Erro usuario inexistente",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
 												"id": "8c0fe1ef-0769-4754-be38-f1dfea49deee",
 												"exec": [
-													"pm.test(\"Status code is 400\", function () {",
-													"    pm.response.to.have.status(400);",
+													"pm.test(\"Status code is 404\", function () {",
+													"    pm.response.to.have.status(404);",
 													"});",
 													"",
 													"pm.test(\"Body matches string\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"Multiple accountable users found\");",
+													"    pm.expect(pm.response.text()).to.include(\"User not found\");",
 													"});"
 												],
 												"type": "text/javascript",
