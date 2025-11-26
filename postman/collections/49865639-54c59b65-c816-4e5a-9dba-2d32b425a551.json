@@ -6867,6 +6867,26 @@
 								},
 								{
 									"name": "CT106 Erro ao atribuir um time de outro workspace a rota",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "3695911e-92d0-402d-8923-22cf5697b3b7",
+												"exec": [
+													"pm.test(\"Status code is 404\", function () {",
+													"    pm.response.to.have.status(404);",
+													"});",
+													"",
+													"pm.test(\"Body matches string\", function () {",
+													"    pm.expect(pm.response.text()).to.include(\"Team workspace must be the same as route workspace or one of its parent workspaces\");",
+													"});"
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
 									"id": "49865639-dee52ec0-6021-471a-8e61-c820288fcb66",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
