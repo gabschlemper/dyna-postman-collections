@@ -6421,7 +6421,17 @@
 											"raw": "{\n  \"name\": \"CT004 Promover substituto a responsável\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid1FromTeam1}}\"\n  }\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Precondição: {{substituteUid}} era substituto. Resultado: {{substituteUid}} vira accountable e sua associação de substituto é removida."
 									},
