@@ -6612,7 +6612,17 @@
 											"raw": "{\n  \"name\": \"CT009 Trocar de time e gerar auditoria\",\n  \"team\": {\n    \"id\": \"{{teamId2}}\",\n    \"accountableUid\": \"{{userUid1FromTeam2}}\"\n  }\n}"
 										},
 										"url": {
-											"raw": ""
+											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"host": [
+												"{{urlpss}}"
+											],
+											"path": [
+												"v1",
+												"workspaces",
+												"{{WKid}}",
+												"routes",
+												"{{routeId1}}"
+											]
 										},
 										"description": "Precondição: rota atualmente associada a {{teamId1}}. Resultado: associa nova team {{teamId2}}, remove relação com {{teamId1}} e cria registro em audits com metadata { routeId, oldTeamId, newTeamId }."
 									},
