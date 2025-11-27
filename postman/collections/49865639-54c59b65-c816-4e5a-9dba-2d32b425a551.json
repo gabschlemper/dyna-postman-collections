@@ -8132,7 +8132,7 @@
 											"response": []
 										},
 										{
-											"name": "CT006 - Checklist answered - Missing quizId",
+											"name": "CT006 - Missing quizId",
 											"event": [
 												{
 													"listen": "test",
@@ -8188,7 +8188,7 @@
 											"response": []
 										},
 										{
-											"name": "CT006 - Checklist answered - Missing routeId",
+											"name": "CT006 - Missing routeId",
 											"event": [
 												{
 													"listen": "test",
