@@ -8542,6 +8542,81 @@
 												}
 											},
 											"response": []
+										},
+										{
+											"name": "CT001 - Duas respostas diferentes do mesmo ciclo em horários diferentes Copy",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 201\", function () {",
+															"    pm.response.to.have.status(201);",
+															"});",
+															"",
+															"pm.test(\"Response has correct mode\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.mode).to.eql(\"checklist_answered\");",
+															"});",
+															"",
+															"pm.test(\"Response contains data array with hash\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.data).to.be.an('array');",
+															"    pm.expect(jsonData.data.length).to.be.greaterThan(0);",
+															"    pm.expect(jsonData.data[0]).to.have.property('hash');",
+															"    pm.expect(jsonData.data[0].hash).to.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i);",
+															"});",
+															"",
+															"pm.test(\"Response contains createdAt timestamp\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.data[0]).to.have.property('createdAt');",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-63f55bd2-e326-4f11-b5c6-df388a3733e9",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"client\": \"ios\",\n    \"version\": \"4.8.0\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{defaultChecklistId}}\",\n            \"quizId\": \"{{defaultQuizId}}\",\n            \"questionId\": \"{{defaultQuestionId}}\",\n            \"alternativeId\": \"{{defaultAlternativeId}}\",\n            \"answeredAt\": \"2025-12-02T10:00:00Z\",\n            \"answeredStartAt\": \"2025-12-02T15:06:42.836Z\",\n            \"criticality\": \"p3\",\n            \"note\": \"Respondendo checklist boulevard com p3\",\n            \"latitude\": -5.7814846757552765,\n            \"longitude\": -50.51680831768066\n        },\n        {\n            \"alternativeId\": \"{{alternativeManualMeasurement}}\",\n            \"answeredAt\": \"2025-12-02T11:00:00Z\",\n            \"answeredStartAt\": \"2025-12-02T11:00:00Z\",\n            \"audios\": [],\n            \"checklistId\": \"{{checklistManualMeasurement}}\",\n            \"criticality\": null,\n            \"criticalityLevelId\": null,\n            \"images\": [],\n            \"inspectorId\": \"{{inspectorId}}\",\n            \"latitude\": -20.269967688228917,\n            \"longitude\": -40.25210817009708,\n            \"manualMeasurementUnit\": \"kg/m²\",\n            \"manualMeasurementValue\": 4.5,\n            \"note\": \"\",\n            \"otherNote\": null,\n            \"questionId\": \"{{questionManualMeasurement}}\",\n            \"quizId\": \"{{quizManualMeasurement}}\",\n            \"roll\": null,\n            \"rollerFailureMode\": null,\n            \"routeId\": \"{{routeId1}}\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													],
+													"query": [
+														{
+															"key": null,
+															"value": "",
+															"type": "text",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
 										}
 									],
 									"id": "49865639-2e523b59-b659-4c46-aa5d-b752be053ab2"
