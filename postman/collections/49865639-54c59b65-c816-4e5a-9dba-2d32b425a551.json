@@ -7842,7 +7842,7 @@
 									"name": "Checklist Answered",
 									"item": [
 										{
-											"name": "CT001 - Checklist answered - livre",
+											"name": "CT001 - Checklist answered - Livre",
 											"event": [
 												{
 													"listen": "test",
