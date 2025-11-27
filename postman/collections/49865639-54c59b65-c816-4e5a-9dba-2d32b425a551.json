@@ -8394,7 +8394,7 @@
 											"response": []
 										},
 										{
-											"name": "CT009 - Checklist answered - Belt Thickness",
+											"name": "CT009 - Belt Thickness",
 											"event": [
 												{
 													"listen": "test",
@@ -8469,7 +8469,7 @@
 											"response": []
 										},
 										{
-											"name": "CT001 - Checklist answered - Duas alternativas do mesmo ciclo em horários diferentes",
+											"name": "CT001 - Duas alternativas do mesmo ciclo em horários diferentes",
 											"event": [
 												{
 													"listen": "test",
