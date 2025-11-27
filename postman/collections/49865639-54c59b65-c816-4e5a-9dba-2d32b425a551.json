@@ -8319,7 +8319,7 @@
 											"response": []
 										},
 										{
-											"name": "CT008 - Checklist answered - Manual Measurement",
+											"name": "CT008 - Manual Measurement",
 											"event": [
 												{
 													"listen": "test",
