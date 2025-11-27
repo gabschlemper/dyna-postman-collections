@@ -8469,7 +8469,7 @@
 											"response": []
 										},
 										{
-											"name": "CT001 - Checklist answered - Duas alternativas",
+											"name": "CT001 - Checklist answered - Duas alternativas do mesmo ciclo em horários diferentes",
 											"event": [
 												{
 													"listen": "test",
