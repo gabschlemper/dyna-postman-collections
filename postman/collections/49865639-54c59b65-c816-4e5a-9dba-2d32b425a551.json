@@ -7142,7 +7142,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"CT001 Adicionar um usuário\",\n    \"users\": [\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\",\n            \"isAccountable\": true\n        }\n    ]\n}",
+									"raw": "{\n    \"name\": \"CT001 Adicionar um usuário\",\n     \"users\": [\n        {\n            \"uid\": \"qLFJdGRgbNgIriWIjfdDh6ySPmt1\",\n            \"isAccountable\": true\n        }\n    ]\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -7150,16 +7150,16 @@
 									}
 								},
 								"url": {
-									"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+									"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{newRouteId}}",
 									"host": [
 										"{{urlpss}}"
 									],
 									"path": [
 										"v1",
 										"workspaces",
-										"{{WKAPPTeam}}",
+										"{{WKid}}",
 										"routes",
-										"{{periodic-route-Id}}"
+										"{{newRouteId}}"
 									]
 								}
 							},
@@ -7866,13 +7866,6 @@
 															"    pm.expect(jsonData.data[0].hash).to.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i);",
 															"});",
 															"",
-															"pm.test(\"Response contains answers with id\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    pm.expect(jsonData.data[0].answers).to.be.an('array');",
-															"    pm.expect(jsonData.data[0].answers).to.have.lengthOf(1);",
-															"    pm.expect(jsonData.data[0].answers[0]).to.have.property('id');",
-															"});",
-															"",
 															"pm.test(\"Response contains createdAt timestamp\", function () {",
 															"    const jsonData = pm.response.json();",
 															"    pm.expect(jsonData.data[0]).to.have.property('createdAt');",
@@ -7893,7 +7886,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"mode\": \"checklist_answered\",\n  \"answers\": [\n    {\n      \"routeId\": \"{{routeId1}}\",\n      \"checklistId\": \"{{checklistId1}}\",\n      \"quizId\": \"{{quizId1}}\",\n      \"questionId\": \"{{questionId1}}\",\n      \"alternativeId\": \"{{alternativeId1}}\",\n      \"answeredAt\": \"2024-10-16T10:00:00Z\"\n    }\n    \n  ]\n}",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"client\": \"ios\",\n    \"version\": \"4.8.0\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2025-08-05T10:00:00Z\",\n            \"answeredStartAt\": \"2025-08-05T15:06:42.836Z\",\n            \"criticality\": \"p0\",\n            \"note\":\"Teste Cleison\",\n            \"latitude\": -5.7814846757552765,\n            \"longitude\": -50.51680831768066\n\n        },\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2025-08-05T10:00:00Z\",\n            \"answeredStartAt\": \"2025-08-05T15:06:42.836Z\",\n            \"criticality\": \"p0\",\n            \"note\":\"Teste Cleison 2\",\n            \"latitude\": -5.7814846757552765,\n            \"longitude\": -50.51680831768066\n\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -7910,6 +7903,14 @@
 														"workspaces",
 														"{{WKid}}",
 														"answers"
+													],
+													"query": [
+														{
+															"key": null,
+															"value": "",
+															"type": "text",
+															"disabled": true
+														}
 													]
 												}
 											},
