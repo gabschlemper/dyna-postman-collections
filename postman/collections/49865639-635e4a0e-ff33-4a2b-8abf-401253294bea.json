@@ -89,7 +89,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"answers\": [\n    {\n      \"routeId\": \"aaabfd91-29ed-4c2f-8abe-dabd893e5f2f\",\n      \"checklistId\": \"9342d9ca-6cdd-4cb9-b40c-cce88cd71763\",\n      \"quizId\": \"262fefb6-c0e3-4b7f-8132-e02f1964f750\",\n      \"questionId\": \"cd1b6d84-75cf-491a-9714-ddfbab5982af\",\n      \"alternativeId\": \"cc0e44c5-ca21-4510-bb09-75ba1e9e91f3\",\n      \"answeredAt\": \"2025-10-27 06:00:00+00\",\n      \"note\": \"Observação opcional\",\n      \"latitude\": -23.5505,\n      \"longitude\": -46.6333\n    }\n  ]\n}",
+							"raw": "{\n  \"client\": \"ios\",\n  \"answeredAt\": \"2025-11-24T16:45:44.248Z\",\n  \"localId\": \"4487EA21-62F2-4360-B732-166B3C47911C\",\n  \"spotId\": \"67b389e471a5e4e208d51cb5\",\n  \"sync\": null,\n  \"deleted\": null,\n  \"longitude\": -40.244049368284784,\n  \"spectralRequired\": true,\n  \"routeId\": \"d51df51c-561a-4710-8832-1c32084bd51f\",\n  \"latitude\": -20.259119801445696,\n  \"answeredStartAt\": \"2025-11-24T16:45:15.635Z\",\n  \"routeWorkspaceId\": \"bb10f716-1e85-4a12-9f9d-0b9a6463a86b\",\n  \"inspectorId\": \"81041770\",\n  \"version\": \"4.8.0\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
