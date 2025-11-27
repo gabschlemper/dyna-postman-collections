@@ -8544,7 +8544,7 @@
 											"response": []
 										},
 										{
-											"name": "CT001 - Duas respostas diferentes do mesmo ciclo em horários diferentes Copy",
+											"name": "CT001 - Duas respostas com answeredAt idêntico",
 											"event": [
 												{
 													"listen": "test",
