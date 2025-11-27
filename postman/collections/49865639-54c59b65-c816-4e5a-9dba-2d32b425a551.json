@@ -7917,7 +7917,7 @@
 											"response": []
 										},
 										{
-											"name": "CT002 - Checklist answered - Missing qustionId",
+											"name": "CT002 - Missing qustionId",
 											"event": [
 												{
 													"listen": "test",
@@ -7970,7 +7970,7 @@
 											"response": []
 										},
 										{
-											"name": "CT003 - Checklist answered - Missing answeredAt",
+											"name": "CT003 - Missing answeredAt",
 											"event": [
 												{
 													"listen": "test",
