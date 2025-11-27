@@ -8544,7 +8544,7 @@
 											"response": []
 										},
 										{
-											"name": "CT001 - Duas respostas com answeredAt idêntico",
+											"name": "CT001 - Duas respostas diferentes com answeredAt idêntico",
 											"event": [
 												{
 													"listen": "test",
