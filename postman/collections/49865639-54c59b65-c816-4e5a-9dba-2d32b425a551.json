@@ -7842,6 +7842,81 @@
 									"name": "Checklist Answered",
 									"item": [
 										{
+											"name": "CT001 - Checklist answered - livre",
+											"event": [
+												{
+													"listen": "test",
+													"script": {
+														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
+														"exec": [
+															"pm.test(\"Status code is 201\", function () {",
+															"    pm.response.to.have.status(201);",
+															"});",
+															"",
+															"pm.test(\"Response has correct mode\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.mode).to.eql(\"checklist_answered\");",
+															"});",
+															"",
+															"pm.test(\"Response contains data array with hash\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.data).to.be.an('array');",
+															"    pm.expect(jsonData.data.length).to.be.greaterThan(0);",
+															"    pm.expect(jsonData.data[0]).to.have.property('hash');",
+															"    pm.expect(jsonData.data[0].hash).to.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i);",
+															"});",
+															"",
+															"pm.test(\"Response contains createdAt timestamp\", function () {",
+															"    const jsonData = pm.response.json();",
+															"    pm.expect(jsonData.data[0]).to.have.property('createdAt');",
+															"});"
+														],
+														"type": "text/javascript",
+														"packages": {},
+														"requests": {}
+													}
+												}
+											],
+											"id": "49865639-b34cc657-e5dc-443d-accd-c9f6971ebae8",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"client\": \"ios\",\n    \"version\": \"4.8.0\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2025-08-05T10:00:00Z\",\n            \"answeredStartAt\": \"2025-08-05T15:06:42.836Z\",\n            \"criticality\": \"p0\",\n            \"note\": \"Teste Cleison\",\n            \"latitude\": -5.7814846757552765,\n            \"longitude\": -50.51680831768066\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
+													"host": [
+														"{{urlpss}}"
+													],
+													"path": [
+														"v1",
+														"workspaces",
+														"{{WKid}}",
+														"answers"
+													],
+													"query": [
+														{
+															"key": null,
+															"value": "",
+															"type": "text",
+															"disabled": true
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
 											"name": "CT002 - Checklist answered - Missing qustionId",
 											"event": [
 												{
@@ -8163,81 +8238,6 @@
 														"workspaces",
 														"{{WKid}}",
 														"answers"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "CT001 - Checklist answered - livre",
-											"event": [
-												{
-													"listen": "test",
-													"script": {
-														"id": "33f471a9-2c17-4ea5-8dfe-98ee0b1b139a",
-														"exec": [
-															"pm.test(\"Status code is 201\", function () {",
-															"    pm.response.to.have.status(201);",
-															"});",
-															"",
-															"pm.test(\"Response has correct mode\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    pm.expect(jsonData.mode).to.eql(\"checklist_answered\");",
-															"});",
-															"",
-															"pm.test(\"Response contains data array with hash\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    pm.expect(jsonData.data).to.be.an('array');",
-															"    pm.expect(jsonData.data.length).to.be.greaterThan(0);",
-															"    pm.expect(jsonData.data[0]).to.have.property('hash');",
-															"    pm.expect(jsonData.data[0].hash).to.match(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i);",
-															"});",
-															"",
-															"pm.test(\"Response contains createdAt timestamp\", function () {",
-															"    const jsonData = pm.response.json();",
-															"    pm.expect(jsonData.data[0]).to.have.property('createdAt');",
-															"});"
-														],
-														"type": "text/javascript",
-														"packages": {},
-														"requests": {}
-													}
-												}
-											],
-											"id": "49865639-b34cc657-e5dc-443d-accd-c9f6971ebae8",
-											"protocolProfileBehavior": {
-												"disableBodyPruning": true
-											},
-											"request": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"client\": \"ios\",\n    \"version\": \"4.8.0\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistId1}}\",\n            \"quizId\": \"{{quizId1}}\",\n            \"questionId\": \"{{questionId1}}\",\n            \"alternativeId\": \"{{alternativeId1}}\",\n            \"answeredAt\": \"2025-08-05T10:00:00Z\",\n            \"answeredStartAt\": \"2025-08-05T15:06:42.836Z\",\n            \"criticality\": \"p0\",\n            \"note\": \"Teste Cleison\",\n            \"latitude\": -5.7814846757552765,\n            \"longitude\": -50.51680831768066\n        }\n    ]\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": {
-													"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/answers",
-													"host": [
-														"{{urlpss}}"
-													],
-													"path": [
-														"v1",
-														"workspaces",
-														"{{WKid}}",
-														"answers"
-													],
-													"query": [
-														{
-															"key": null,
-															"value": "",
-															"type": "text",
-															"disabled": true
-														}
 													]
 												}
 											},
