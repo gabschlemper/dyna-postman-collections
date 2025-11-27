@@ -89,7 +89,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"client\": \"ios\",\n  \"answeredAt\": \"2025-11-24T16:45:44.248Z\",\n  \"localId\": \"4487EA21-62F2-4360-B732-166B3C47911C\",\n  \"spotId\": \"67b389e471a5e4e208d51cb5\",\n  \"sync\": null,\n  \"deleted\": null,\n  \"longitude\": -40.244049368284784,\n  \"spectralRequired\": true,\n  \"routeId\": \"d51df51c-561a-4710-8832-1c32084bd51f\",\n  \"latitude\": -20.259119801445696,\n  \"answeredStartAt\": \"2025-11-24T16:45:15.635Z\",\n  \"routeWorkspaceId\": \"bb10f716-1e85-4a12-9f9d-0b9a6463a86b\",\n  \"inspectorId\": \"81041770\",\n  \"version\": \"4.8.0\"\n}",
+							"raw": "{\n  \"client\": \"ios\",\n  \"answeredAt\": \"2025-11-24T16:45:44.248Z\",\n  \"localId\": \"4487EA21-62F2-4360-B732-166B3C47911C\",\n  \"spotId\": \"67b389e471a5e4e208d51cb5\",\n  \"sync\": null,\n  \"deleted\": null,\n  \"longitude\": -40.244049368284784,\n  \"spectralRequired\": true,\n  \"routeId\": \"35ed6d04-6fec-414c-a47f-7ccb3c4b7254\",\n  \"latitude\": -20.259119801445696,\n  \"answeredStartAt\": \"2025-11-24T16:45:15.635Z\",\n  \"routeWorkspaceId\": \"bb10f716-1e85-4a12-9f9d-0b9a6463a86b\",\n  \"inspectorId\": \"81041770\",\n  \"version\": \"4.8.0\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
