@@ -8288,7 +8288,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"client\": \"ios\",\n    \"version\": \"4.8.0\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistRolls}}\",\n            \"quizId\": \"{{quizRolls}}\",\n            \"questionId\": \"{{questionRolls}}\",\n            \"alternativeId\": \"{{alternativeRolls}}\",\n            \"answeredAt\": \"2025-08-05T10:00:00Z\",\n            \"answeredStartAt\": \"2025-08-05T15:06:42.836Z\",\n            \"criticality\": null,\n            \"note\": \"Teste Cleison1\",\n            \"latitude\": -5.7814846757552765,\n            \"longitude\": -50.51680831768066,\n            \"roll\": null,\n            \"rollerFailureMode\": null\n        }\n    ]\n}",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"client\": \"ios\",\n    \"version\": \"4.8.0\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistRolls}}\",\n            \"quizId\": \"{{quizRolls}}\",\n            \"questionId\": \"{{questionRolls}}\",\n            \"alternativeId\": \"{{alternativeRolls}}\",\n            \"answeredAt\": \"2025-12-02T10:00:00Z\",\n            \"answeredStartAt\": \"2025-12-02T15:06:42.836Z\",\n            \"criticality\": null,\n            \"note\": \"Teste atualizando checklist tipo rolls\",\n            \"latitude\": -5.7814846757552765,\n            \"longitude\": -50.51680831768066,\n            \"roll\": null,\n            \"rollerFailureMode\": null\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
