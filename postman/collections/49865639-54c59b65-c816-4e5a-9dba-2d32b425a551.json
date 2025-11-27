@@ -8023,7 +8023,7 @@
 											"response": []
 										},
 										{
-											"name": "CT004 - Checklist answered - Missing alternativeId",
+											"name": "CT004 - Missing alternativeId",
 											"event": [
 												{
 													"listen": "test",
