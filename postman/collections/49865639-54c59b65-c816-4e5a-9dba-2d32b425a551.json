@@ -8469,7 +8469,7 @@
 											"response": []
 										},
 										{
-											"name": "CT001 - Checklist answered - Livre Copy",
+											"name": "CT001 - Checklist answered - Duas alternativas",
 											"event": [
 												{
 													"listen": "test",
