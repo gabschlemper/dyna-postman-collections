@@ -8469,7 +8469,7 @@
 											"response": []
 										},
 										{
-											"name": "CT001 - Duas respostas diferentes do mesmo ciclo em horários diferentes",
+											"name": "CT001 - Duas alternativas diferentes do mesmo ciclo em horários diferentes",
 											"event": [
 												{
 													"listen": "test",
