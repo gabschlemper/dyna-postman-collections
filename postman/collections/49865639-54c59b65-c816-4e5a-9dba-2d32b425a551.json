@@ -6366,7 +6366,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT003 Atualizar Rota Preservando Substituto\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{user2FromTeamId1}}\"\n  }\n}"
+											"raw": "{\n  \"name\": \"CT003 Atualizar Rota Preservando Substituto\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid1FromTeam1}}\"\n  }\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
