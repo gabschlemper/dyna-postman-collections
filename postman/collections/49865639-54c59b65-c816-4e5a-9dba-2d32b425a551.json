@@ -59,7 +59,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -68,13 +68,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "79e57f03-33c1-48d7-b3e9-7c1933296395"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -129,7 +123,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -138,13 +132,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "79e57f03-33c1-48d7-b3e9-7c1933296395"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -191,7 +179,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"Rota teste\",\n    \"type\": \"periodic\",\n    \"assets\": [\n        {\n            \"id\": \"5ebe897a8726b92e939d4ffa\",\n            \"title\": \"astes\",\n            \"type\": \"machine\",\n            \"parentId\": \"5d01fa073ce1505ff95991f4\",\n            \"path\": \"/malicious-interaction-murder-32/yellow-quarter-stick-92\",\n            \"alerts\": {\n                \"a1\": 8,\n                \"a2\": 2,\n                \"total\": 10,\n                \"none\": 18\n            },\n            \"class\": \"class_c\",\n            \"code\": null,\n            \"businessRisk\": false,\n            \"displayFields\": [],\n            \"hasChildren\": true,\n            \"roles\": [\n                \"support\",\n                \"lubricator\",\n                \"reader\",\n                \"electricalInspector\",\n                \"mechanicalInspector\",\n                \"administrator\"\n            ],\n            \"children\": [\n                {\n                    \"id\": \"5ebe897a8726b92e939d4ffa-checklistGroup\",\n                    \"type\": \"checklists\",\n                    \"parentId\": \"5ebe897a8726b92e939d4ffa\",\n                    \"path\": \"/malicious-interaction-murder-32/yellow-quarter-stick-92\",\n                    \"alerts\": {\n                        \"a1\": 8,\n                        \"a2\": 2,\n                        \"total\": 10,\n                        \"none\": 11\n                    },\n                    \"roles\": [\n                        \"support\",\n                        \"lubricator\",\n                        \"reader\",\n                        \"electricalInspector\",\n                        \"mechanicalInspector\",\n                        \"administrator\"\n                    ],\n                    \"children\": [\n                                         {\n                            \"id\": \"468c1c19-512f-4341-ae5c-1b4f27415897\",\n                            \"title\": \"1430 - 1212 Checklist Manual\",\n                            \"type\": \"checklist\",\n                            \"parentId\": \"5ebe897a8726b92e939d4ffa\",\n                            \"path\": \"/malicious-interaction-murder-32/yellow-quarter-stick-92/1212-checklist-manual\",\n                            \"alerts\": {\n                                \"a1\": 0,\n                                \"a2\": 0,\n                                \"total\": 0,\n                                \"none\": 1\n                            },\n                            \"roles\": [\n                                \"support\",\n                                \"lubricator\",\n                                \"reader\",\n                                \"electricalInspector\",\n                                \"mechanicalInspector\",\n                                \"administrator\"\n                            ]\n                        }\n                    ]\n                }\n            ]\n        }\n    ],\n    \"activated\": true\n}",
+											"raw": "{\n    \"name\": \"CT003 Tentativa de mudança de rota TRIGGER para PERIODIC\",\n    \"type\": \"periodic\",\n    \"cycleTrigger\": {\n        \"numberOrder\": null,\n        \"type\": \"other\",\n        \"note\": \"\",\n        \"periodTrigger\": null,\n        \"unitTrigger\": null,\n        \"hourMeter\": null,\n        \"cycleStartAt\": \"2025-10-30T00:00:00.000Z\",\n        \"cycleEndAt\": \"2025-10-30T01:00:00.000Z\"\n    },\n    \"activated\": true\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -199,7 +187,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routePeriodicId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -208,13 +196,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "79e57f03-33c1-48d7-b3e9-7c1933296395"
-												}
+												"{{routePeriodicId}}"
 											]
 										}
 									},
@@ -269,7 +251,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -278,13 +260,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "79e57f03-33c1-48d7-b3e9-7c1933296395"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -339,7 +315,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -348,13 +324,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "bf86633b-a069-4910-8e11-e783a354a943"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -409,7 +379,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -418,13 +388,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "bf86633b-a069-4910-8e11-e783a354a943"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -483,7 +447,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -492,13 +456,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "bf86633b-a069-4910-8e11-e783a354a943"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -565,7 +523,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -574,13 +532,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "bf86633b-a069-4910-8e11-e783a354a943"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -635,7 +587,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -644,13 +596,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "bf86633b-a069-4910-8e11-e783a354a943"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -705,7 +651,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -714,13 +660,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "79e57f03-33c1-48d7-b3e9-7c1933296395"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -775,7 +715,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -784,13 +724,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -845,7 +779,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -854,13 +788,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -917,7 +845,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -926,33 +854,21 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "CT014 Workspace inexistente nos assets VAI SER ARRUMADO EM OUTRA TASK",
+									"name": "CT014 Workspace inexistente nos assets",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
 												"id": "abc1248f-b40e-4907-ab26-ece15f80c498",
 												"exec": [
-													"pm.test(\"Status code is 400\", function () {",
-													"    pm.response.to.have.status(400);",
-													"});",
-													"",
-													"pm.test(\"Valida retorno de erro\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"cyclePeriodic.frequency must not be less than 1\");",
-													"});"
+													""
 												],
 												"type": "text/javascript",
 												"packages": {},
@@ -979,7 +895,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT014 Workspace inexistente nos assets\",\n    \"assets\": [\n        {\n            \"id\": \"5ebe897a8726b92e939d4ffa\",\n            \"title\": \"astes\",\n            \"type\": \"machine\",\n            \"path\": \"/malicious-interaction-murder-32/yellow-quarter-stick-92\",\n            \"alerts\": {\n                \"a1\": 8,\n                \"a2\": 2,\n                \"total\": 10,\n                \"none\": 18\n            },\n            \"class\": \"class_c\",\n            \"code\": null,\n            \"businessRisk\": false,\n            \"displayFields\": [],\n            \"hasChildren\": true,\n            \"roles\": [\n                \"support\",\n                \"lubricator\",\n                \"reader\",\n                \"electricalInspector\",\n                \"mechanicalInspector\",\n                \"administrator\"\n            ],\n            \"children\": [\n                {\n                    \"id\": \"5ebe897a8726b92e939d4ffa-checklistGroup\",\n                    \"type\": \"checklists\",\n                    \"parentId\": \"5ebe897a8726b92e939d4ffa\",\n                    \"path\": \"/malicious-interaction-murder-32/yellow-quarter-stick-92\",\n                    \"alerts\": {\n                        \"a1\": 8,\n                        \"a2\": 2,\n                        \"total\": 10,\n                        \"none\": 11\n                    },\n                    \"roles\": [\n                        \"support\",\n                        \"lubricator\",\n                        \"reader\",\n                        \"electricalInspector\",\n                        \"mechanicalInspector\",\n                        \"administrator\"\n                    ],\n                    \"children\": [\n                                         {\n                            \"id\": \"468c1c19-512f-4341-ae5c-1b4f27415897\",\n                            \"title\": \"1430 - 1212 Checklist Manual\",\n                            \"type\": \"checklist\",\n                            \"parentId\": \"5ebe897a8726b92e939d4ffa\",\n                            \"path\": \"/malicious-interaction-murder-32/yellow-quarter-stick-92/1212-checklist-manual\",\n                            \"alerts\": {\n                                \"a1\": 0,\n                                \"a2\": 0,\n                                \"total\": 0,\n                                \"none\": 1\n                            },\n                            \"roles\": [\n                                \"support\",\n                                \"lubricator\",\n                                \"reader\",\n                                \"electricalInspector\",\n                                \"mechanicalInspector\",\n                                \"administrator\"\n                            ]\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT014 Workspace inexistente nos assets\",\n    \"assets\": [\n        {\n            \"id\": \"5ebe897a8726b92e939d4ffa\",\n            \"title\": \"astes\",\n            \"type\": \"machine\",\n            \"path\": \"/malicious-interaction-murder-32/yellow-quarter-stick-92\",\n            \"alerts\": {\n                \"a1\": 8,\n                \"a2\": 2,\n                \"total\": 10,\n                \"none\": 18\n            },\n            \"class\": \"class_c\",\n            \"code\": null,\n            \"businessRisk\": false,\n            \"displayFields\": [],\n            \"hasChildren\": true,\n            \"roles\": [\n                \"support\",\n                \"lubricator\",\n                \"reader\",\n                \"electricalInspector\",\n                \"mechanicalInspector\",\n                \"administrator\"\n            ],\n            \"children\": [\n                {\n                    \"id\": \"5ebe897a8726b92e939d4ffa-checklistGroup\",\n                    \"type\": \"checklists\",\n                    \"parentId\": \"asdazxczxczxczxczxczxczxczxc\",\n                    \"path\": \"/malicious-interaction-murder-32/yellow-quarter-stick-92\",\n                    \"alerts\": {\n                        \"a1\": 8,\n                        \"a2\": 2,\n                        \"total\": 10,\n                        \"none\": 11\n                    },\n                    \"roles\": [\n                        \"support\",\n                        \"lubricator\",\n                        \"reader\",\n                        \"electricalInspector\",\n                        \"mechanicalInspector\",\n                        \"administrator\"\n                    ],\n                    \"children\": [\n                                         {\n                            \"id\": \"468c1c19-512f-4341-ae5c-1b4f27415897\",\n                            \"title\": \"1430 - 1212 Checklist Manual\",\n                            \"type\": \"checklist\",\n                            \"parentId\": \"5ebe897a8726b92e939d4ffa\",\n                            \"path\": \"/malicious-interaction-murder-32/yellow-quarter-stick-92/1212-checklist-manual\",\n                            \"alerts\": {\n                                \"a1\": 0,\n                                \"a2\": 0,\n                                \"total\": 0,\n                                \"none\": 1\n                            },\n                            \"roles\": [\n                                \"support\",\n                                \"lubricator\",\n                                \"reader\",\n                                \"electricalInspector\",\n                                \"mechanicalInspector\",\n                                \"administrator\"\n                            ]\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1051,7 +967,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1060,13 +976,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -1121,7 +1031,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1130,32 +1040,26 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
 									"response": []
 								},
 								{
-									"name": "CT017 Novo usuário sem permissões de inspetor [VAI SER ARRUMADO EM OUTRA TASK]",
+									"name": "CT017 Novo usuário sem permissões de inspetor",
 									"event": [
 										{
 											"listen": "test",
 											"script": {
 												"id": "8ec8ce35-adb3-4345-8466-30e4503f3d52",
 												"exec": [
-													"pm.test(\"Status code is 400\", function () {",
-													"    pm.response.to.have.status(400);",
+													"pm.test(\"Status code is 403\", function () {",
+													"    pm.response.to.have.status(403);",
 													"});",
 													"",
 													"pm.test(\"Valida retorno de erro\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"cyclePeriodic.frequency must not be less than 1\");",
+													"    pm.expect(pm.response.text()).to.include(\"Forbidden: User does not have role binding of inspector in some asset\");",
 													"});"
 												],
 												"type": "text/javascript",
@@ -1273,7 +1177,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1282,13 +1186,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -1345,7 +1243,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1354,13 +1252,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -1416,7 +1308,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1425,13 +1317,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -1487,7 +1373,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1496,13 +1382,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -1567,7 +1447,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1576,13 +1456,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -1647,7 +1521,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1656,13 +1530,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -1718,7 +1586,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1727,13 +1595,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -1789,7 +1651,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1798,13 +1660,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -1862,7 +1718,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1871,13 +1727,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": ""
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -1930,7 +1780,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -1939,13 +1789,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": ""
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -1998,7 +1842,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2007,13 +1851,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2066,7 +1904,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2075,13 +1913,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2134,7 +1966,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2143,13 +1975,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2205,7 +2031,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2214,13 +2040,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2276,7 +2096,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2285,13 +2105,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2347,7 +2161,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2356,13 +2170,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2418,7 +2226,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2427,13 +2235,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2498,7 +2300,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2507,13 +2309,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2578,7 +2374,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2587,13 +2383,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2658,7 +2448,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2667,13 +2457,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2738,7 +2522,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2747,13 +2531,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2821,7 +2599,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2830,13 +2608,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2904,7 +2676,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2913,13 +2685,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -2987,7 +2753,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -2996,13 +2762,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3070,7 +2830,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3079,13 +2839,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3150,7 +2904,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3159,13 +2913,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3230,7 +2978,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3239,13 +2987,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3310,7 +3052,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3319,13 +3061,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": ""
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3390,7 +3126,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3399,13 +3135,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3470,7 +3200,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3479,13 +3209,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3554,7 +3278,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3563,13 +3287,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3638,7 +3356,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3647,13 +3365,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3722,7 +3434,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3731,13 +3443,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3803,7 +3509,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3812,13 +3518,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3884,7 +3584,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3893,13 +3593,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -3965,7 +3659,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -3974,13 +3668,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -4046,7 +3734,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -4055,13 +3743,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -4131,7 +3813,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -4140,13 +3822,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -4216,7 +3892,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -4225,13 +3901,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -4301,7 +3971,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -4310,13 +3980,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -4387,7 +4051,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -4396,13 +4060,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -4472,7 +4130,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -4481,13 +4139,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -4558,7 +4210,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -4567,13 +4219,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -4643,7 +4289,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -4652,13 +4298,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -4732,7 +4372,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/:routeId",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId}}",
 											"host": [
 												"{{urlpss}}"
 											],
@@ -4741,13 +4381,7 @@
 												"workspaces",
 												"{{WKAPPTeam}}",
 												"routes",
-												":routeId"
-											],
-											"variable": [
-												{
-													"key": "routeId",
-													"value": "7d148153-d3e9-4cd4-9cb9-3c3e55261cec"
-												}
+												"{{routeId}}"
 											]
 										}
 									},
@@ -4813,7 +4447,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"name\": \"CT001 Adicionar mais de uma categoria\",\n\t\"externalId\":\"PatchUpdate\",\n\t\"categories\": [\n\t\t\t\"d2beb0e5-8055-4cf7-85ff-19184295f2d2\",\n\t\t\t\"f3cfb21b-617a-40c4-8e42-6bb892e8717d\"\n\t]\n}",
+											"raw": "{\n\t\"name\": \"CT001 Adicionar mais de uma categoria\",\n\t\"externalId\":\"PatchUpdate\",\n\t\"categories\": [\n\t\t\t\"a84a3584-e931-42b2-a651-8187d755b464\",\n\t\t\t\"ec8af9f2-09a7-4311-8abe-4a611535d4bd\"\n\t]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4821,16 +4455,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDynamox}}/routes/{{dynamoxRouteId}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKDynamox}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{dynamoxRouteId}}"
 											]
 										}
 									},
@@ -4846,7 +4480,9 @@
 												"exec": [
 													"pm.test(\"Status code is 204\", function () {",
 													"\tpm.response.to.have.status(204);",
-													"});"
+													"});",
+													"",
+													""
 												],
 												"type": "text/javascript",
 												"packages": {},
@@ -4863,7 +4499,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"name\": \"CT002 Remover uma categoria\",\n\t\"categories\": [\"f3cfb21b-617a-40c4-8e42-6bb892e8717d\"]\n}",
+											"raw": "{\n    \"name\": \"CT002 Remover uma categoria\",\n    \"categories\": [\n        \"a84a3584-e931-42b2-a651-8187d755b464\"\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -4871,16 +4507,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDynamox}}/routes/{{dynamoxRouteId}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKDynamox}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{dynamoxRouteId}}"
 											]
 										}
 									},
@@ -4921,16 +4557,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDynamox}}/routes/{{dynamoxRouteId}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKDynamox}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{dynamoxRouteId}}"
 											]
 										}
 									},
@@ -4971,16 +4607,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDynamox}}/routes/{{dynamoxRouteId}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKDynamox}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{dynamoxRouteId}}"
 											]
 										}
 									},
@@ -5025,16 +4661,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDynamox}}/routes/{{dynamoxRouteId}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKDynamox}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{dynamoxRouteId}}"
 											]
 										}
 									},
@@ -5079,16 +4715,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDynamox}}/routes/{{dynamoxRouteId}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKDynamox}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{dynamoxRouteId}}"
 											]
 										}
 									},
@@ -5133,16 +4769,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDynamox}}/routes/{{dynamoxRouteId}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKDynamox}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{dynamoxRouteId}}"
 											]
 										}
 									},
@@ -5187,16 +4823,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDynamox}}/routes/{{dynamoxRouteId}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKDynamox}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{dynamoxRouteId}}"
 											]
 										}
 									},
@@ -5215,7 +4851,7 @@
 													"});",
 													"",
 													"pm.test(\"Retorna mensagem falando que o UUID é invalido\", function () {",
-													"\tpm.expect(pm.response.text()).to.include(\"Categories do not belong to workspace 5e74a793b17accdba3483000\");",
+													"\tpm.expect(pm.response.text()).to.include(\"Categories do not belong to workspace\");",
 													"});"
 												],
 												"type": "text/javascript",
@@ -5233,7 +4869,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"name\": \"CT009 Passando uma categoria de um workspace invalido\",\n\t\"categories\": [\n\t\t\"fbbc9daa-ad7d-4adf-a546-fc12b016d586\",\n\t\t\"ec8af9f2-09a7-4311-8abe-4a611535d4bd\"\n\t]\n}",
+											"raw": "{\n\t\"name\": \"CT009 Passando uma categoria de um workspace invalido\",\n\t\"categories\": [\n\t\t\"30de34a1-1943-4f90-811c-018edced2e54\",\n\t\t\"c2760736-e614-45a6-b609-3aa40dcdc219\"\n\t]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -5241,16 +4877,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDynamox}}/routes/{{dynamoxRouteId}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKDynamox}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{dynamoxRouteId}}"
 											]
 										}
 									},
@@ -5295,16 +4931,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDynamox}}/routes/{{dynamoxRouteId}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKDynamox}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{dynamoxRouteId}}"
 											]
 										}
 									},
@@ -5318,13 +4954,7 @@
 											"script": {
 												"id": "559cf3a4-8242-4a00-8a09-08a8e363a0c2",
 												"exec": [
-													"pm.test(\"Status code is 400\", function () {",
-													"\tpm.response.to.have.status(400);",
-													"});",
-													"",
-													"pm.test(\"Retorna mensagem falando que o UUID é invalido\", function () {",
-													"\tpm.expect(pm.response.text()).to.include(\"Maximum 5 categories allowed per route\");",
-													"});"
+													""
 												],
 												"type": "text/javascript",
 												"packages": {},
@@ -5341,7 +4971,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n\t\"name\": \"CT010 Limite maximo de categorias\",\n\t\"categories\": [\n\t\t\"a0af7d9f-1635-41c9-9837-3e27ea4e171d\",\n\t\t\"7d5f9afe-bb18-4a3f-9105-c0f993d1a5e9\"\n\t],\n\t\"assets\": [\n\t\t{\n\t\t\t\"id\": \"688ca3c2a936ff7d02c38106\",\n\t\t\t\"type\": \"machine\",\n\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19\",\n\t\t\t\"title\": \"Maquina 1\",\n\t\t\t\"parentId\": null,\n\t\t\t\"sort\": null,\n\t\t\t\"children\": [\n\t\t\t\t{\n\t\t\t\t\t\"id\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n\t\t\t\t\t\"type\": \"checklists\",\n\t\t\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19\",\n\t\t\t\t\t\"title\": null,\n\t\t\t\t\t\"parentId\": \"688ca3c2a936ff7d02c38106\",\n\t\t\t\t\t\"sort\": null,\n\t\t\t\t\t\"children\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"id\": \"50b2915a-c99b-45f8-b63d-baa287b81b0e\",\n\t\t\t\t\t\t\t\"type\": \"checklist\",\n\t\t\t\t\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19/06-09-checklist-alterada-1\",\n\t\t\t\t\t\t\t\"title\": \"3399 - 06-09ChecklistAlterada-1\",\n\t\t\t\t\t\t\t\"parentId\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n\t\t\t\t\t\t\t\"sort\": null,\n\t\t\t\t\t\t\t\"children\": []\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"id\": \"09ce904c-ea10-4e1b-99f7-b1cc69ee5f76\",\n\t\t\t\t\t\t\t\"type\": \"checklist\",\n\t\t\t\t\t\t\t\"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19/0909-espessura-justificada\",\n\t\t\t\t\t\t\t\"title\": \"3422 - 0909EspessuraJustificada\",\n\t\t\t\t\t\t\t\"parentId\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n\t\t\t\t\t\t\t\"sort\": null,\n\t\t\t\t\t\t\t\"children\": []\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t]\n}",
+											"raw": "{\n    \"name\": \"CT010 Limite maximo de categorias\",\n    \"categories\": [\n        \"a84a3584-e931-42b2-a651-8187d755b464\",\n        \"ec8af9f2-09a7-4311-8abe-4a611535d4bd\"\n    ],\n    \"assets\": [\n        {\n            \"id\": \"688ca3c2a936ff7d02c38106\",\n            \"type\": \"machine\",\n            \"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19\",\n            \"title\": \"Maquina 1\",\n            \"parentId\": null,\n            \"sort\": null,\n            \"children\": [\n                {\n                    \"id\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n                    \"type\": \"checklists\",\n                    \"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19\",\n                    \"title\": null,\n                    \"parentId\": \"688ca3c2a936ff7d02c38106\",\n                    \"sort\": null,\n                    \"children\": [\n                        {\n                            \"id\": \"50b2915a-c99b-45f8-b63d-baa287b81b0e\",\n                            \"type\": \"checklist\",\n                            \"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19/06-09-checklist-alterada-1\",\n                            \"title\": \"3399 - 06-09ChecklistAlterada-1\",\n                            \"parentId\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n                            \"sort\": null,\n                            \"children\": []\n                        },\n                        {\n                            \"id\": \"09ce904c-ea10-4e1b-99f7-b1cc69ee5f76\",\n                            \"type\": \"checklist\",\n                            \"path\": \"/determined-personality-grow-92/different-difficulty-move-15/godly-alcohol-execute-19/0909-espessura-justificada\",\n                            \"title\": \"3422 - 0909EspessuraJustificada\",\n                            \"parentId\": \"688ca3c2a936ff7d02c38106-checklistGroup\",\n                            \"sort\": null,\n                            \"children\": []\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -5349,16 +4979,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{periodic-route-Id}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKDynamox}}/routes/{{dynamoxRouteId}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKAPPTeam}}",
+												"{{WKDynamox}}",
 												"routes",
-												"{{periodic-route-Id}}"
+												"{{dynamoxRouteId}}"
 											]
 										}
 									},
@@ -5832,8 +5462,8 @@
 											"script": {
 												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
 												"exec": [
-													"pm.test(\"Status code is 400\", function () {",
-													"\tpm.response.to.have.status(400);",
+													"pm.test(\"Status code is 204\", function () {",
+													"\tpm.response.to.have.status(204);",
 													"});"
 												],
 												"type": "text/javascript",
@@ -5863,7 +5493,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT007 Enviar mais de 2 usuarios\",\n    \"users\": [\n        {\n            \"uid\": \"{{userId}}\",\n            \"isAccountable\": true\n        },\n        {\n            \"uid\": \"qLFJdGRgbNgIriWIjfdDh6ySPmt1\"\n        },\n        {\n            \"uid\": \"xXjB0gkeORSOn6u0CjzOE8hoEAC2\"\n        },\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\"\n        }\n    ]\n}",
+											"raw": "{\n    \"name\": \"CT007 Enviar mais de 2 usuarios\",\n    \"users\": [\n        {\n            \"uid\": \"{{userId}}\",\n            \"isAccountable\": true\n        },\n        {\n            \"uid\": \"KBAa1Q1ayKfnKgkMflpLIdiyWyS2\"\n        },\n        {\n            \"uid\": \"qLFJdGRgbNgIriWIjfdDh6ySPmt1\"\n        }\n    ]\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -6163,12 +5793,12 @@
 												"id": "5a198496-0f68-4b2a-add4-981c129cc6a3",
 												"exec": [
 													"",
-													"pm.test(\"Status code is 400\", function () {",
-													"    pm.response.to.have.status(400);",
+													"pm.test(\"Status code is 404\", function () {",
+													"    pm.response.to.have.status(404);",
 													"});",
 													"",
 													"pm.test(\"Body matches string\", function () {",
-													"    pm.expect(pm.response.text()).to.include(\"users.0.isAccountable must be a boolean value\");",
+													"    pm.expect(pm.response.text()).to.include(\"Route accountable user does not have executor role\");",
 													"});",
 													"",
 													""
@@ -6208,16 +5838,16 @@
 											}
 										},
 										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
+											"raw": "{{urlpss}}/v1/workspaces/{{WKAPPTeam}}/routes/{{routeId1UserSemPermissão}}",
 											"host": [
 												"{{urlpss}}"
 											],
 											"path": [
 												"v1",
 												"workspaces",
-												"{{WKid}}",
+												"{{WKAPPTeam}}",
 												"routes",
-												"{{routeId1}}"
+												"{{routeId1UserSemPermissão}}"
 											]
 										}
 									},
@@ -6470,7 +6100,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT005 Trocar responsavel e limpar responsaveis antigos\",\n  \"users\": [\n    { \"uid\": \"{{userUid3}}\", \"isAccountable\": false },\n    { \"uid\": \"{{userUid4}}\", \"isAccountable\": true }\n  ]\n}"
+											"raw": "{\n  \"name\": \"CT005 Trocar responsavel e limpar responsaveis antigos\",\n  \"users\": [\n    { \"uid\": \"{{userUid3}}\", \"isAccountable\": false }\n  ]\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
@@ -6522,7 +6152,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT006 Atualizar Com Usuarios Com Papel Executor\",\n  \"users\": [\n    { \"uid\": \"{{executorUser1}}\", \"isAccountable\": true },\n    { \"uid\": \"{{executorUser2}}\", \"isAccountable\": false }\n  ]\n}"
+											"raw": "{\n  \"name\": \"CT006 Atualizar Com Usuarios Com Papel Executor\",\n  \"users\": [\n    { \"uid\": \"{{executorUser1}}\", \"isAccountable\": true }\n  ]\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
@@ -6626,7 +6256,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"name\": \"CT008 Trocar de time e gerar auditoria\",\n  \"team\": {\n    \"id\": \"{{teamId2}}\",\n    \"accountableUid\": \"{{userUid1FromTeam2}}\"\n  }\n}"
+											"raw": "{\n  \"name\": \"CT008 Trocar de time e gerar auditoria\",\n  \"team\": {\n    \"id\": \"{{teamId1}}\",\n    \"accountableUid\": \"{{userUid1FromTeam1}}\"\n  }\n}"
 										},
 										"url": {
 											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{routeId1}}",
@@ -6646,7 +6276,7 @@
 									"response": []
 								},
 								{
-									"name": "CT101 Erro time nao encontrado",
+									"name": "CT009 Erro time nao encontrado",
 									"event": [
 										{
 											"listen": "test",
@@ -6701,7 +6331,7 @@
 									"response": []
 								},
 								{
-									"name": "CT102 Erro usuario sem papel executor",
+									"name": "CT010 Erro usuario sem papel executor",
 									"event": [
 										{
 											"listen": "test",
@@ -6756,7 +6386,7 @@
 									"response": []
 								},
 								{
-									"name": "CT103 Erro multiplos Responsaveis",
+									"name": "CT011 Erro multiplos Responsaveis",
 									"event": [
 										{
 											"listen": "test",
@@ -6811,7 +6441,7 @@
 									"response": []
 								},
 								{
-									"name": "CT104 Erro usuario inexistente",
+									"name": "CT012 Erro usuario inexistente",
 									"event": [
 										{
 											"listen": "test",
@@ -6866,7 +6496,7 @@
 									"response": []
 								},
 								{
-									"name": "CT106 Erro ao atribuir um time de outro workspace a rota",
+									"name": "CT013 Erro ao atribuir um time de outro workspace a rota",
 									"event": [
 										{
 											"listen": "test",
@@ -6921,7 +6551,7 @@
 									"response": []
 								},
 								{
-									"name": "CT107 Erro ao não enviar responsável ao adicionar um time existente",
+									"name": "CT014 Erro ao não enviar responsável ao adicionar um time existente",
 									"event": [
 										{
 											"listen": "test",
@@ -6976,7 +6606,7 @@
 									"response": []
 								},
 								{
-									"name": "CT108 Erro ao não enviar responsável ao adicionar um time autogerado",
+									"name": "CT015 Erro ao não enviar responsável ao adicionar um time autogerado",
 									"event": [
 										{
 											"listen": "test",
@@ -7027,76 +6657,6 @@
 											]
 										},
 										"description": "Precondição: usuário externo não possui papel na branch de workspaces. Resultado esperado: validação de roles falha — erro 403/404 conforme implementação."
-									},
-									"response": []
-								},
-								{
-									"name": "CT007 Criar versão adicionando time existente",
-									"id": "49865639-5905bcac-5ff7-4500-b5ab-184e29ea15ec",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "PATCH",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT007 Criar versão adicionando time\",\n    \"team\": {\n        \"id\": \"{{teamId1}}\",\n        \"accountableUid\": \"{{userUid1FromTeam1}}\"\n    },\n    \"assets\": [\n        {\n            \"id\": \"684997cea235ae152f80d62f\",\n            \"type\": \"machine\",\n            \"path\": \"/malicious-interaction-murder-32/tender-eggs-operate-73/important-football-jail-58/bad-wash-tear-67\",\n            \"title\": \"Bagel machine\",\n            \"parentId\": null,\n            \"sort\": null,\n            \"children\": [\n                {\n                    \"id\": \"684997cea235ae152f80d62f-checklistGroup\",\n                    \"type\": \"checklists\",\n                    \"path\": \"/malicious-interaction-murder-32/tender-eggs-operate-73/important-football-jail-58/bad-wash-tear-67\",\n                    \"title\": null,\n                    \"parentId\": \"684997cea235ae152f80d62f\",\n                    \"sort\": null,\n                    \"children\": [\n                        {\n                            \"id\": \"9342d9ca-6cdd-4cb9-b40c-cce88cd71763\",\n                            \"type\": \"checklist\",\n                            \"path\": \"/malicious-interaction-murder-32/tender-eggs-operate-73/important-football-jail-58/bad-wash-tear-67/manufacturing-boulevard\",\n                            \"title\": \"3923 - Manufacturing Boulevard\",\n                            \"parentId\": \"684997cea235ae152f80d62f-checklistGroup\",\n                            \"sort\": null,\n                            \"children\": []\n                        },\n                        {\n                            \"id\": \"badb6eef-748e-429c-b0ed-1a4813b1f940\",\n                            \"type\": \"checklist\",\n                            \"path\": \"/malicious-interaction-murder-32/tender-eggs-operate-73/important-football-jail-58/bad-wash-tear-67/manual-measurement-reavaluation-teste\",\n                            \"title\": \"3925 - Manual Measurement Reavaluation Teste\",\n                            \"parentId\": \"684997cea235ae152f80d62f-checklistGroup\",\n                            \"sort\": null,\n                            \"children\": []\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}"
-										},
-										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{newRouteId}}",
-											"host": [
-												"{{urlpss}}"
-											],
-											"path": [
-												"v1",
-												"workspaces",
-												"{{WKid}}",
-												"routes",
-												"{{newRouteId}}"
-											]
-										},
-										"description": "Pré: rota possui respostas. Atualizando assets + team deve gerar nova versão. Resultado: nova versão criada; substitutos existentes preservados exceto os promovidos pelo payload."
-									},
-									"response": []
-								},
-								{
-									"name": "CT007 Criar versão adicionando time auto gerado",
-									"id": "49865639-21af7157-57f3-4ced-9c17-c501deb6a1fd",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "PATCH",
-										"header": [
-											{
-												"key": "Content-Type",
-												"value": "application/json"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"name\": \"CT007 Criar versão adicionando time\",\n    \"team\": {\n        \"id\": \"{{teamId2}}\",\n        \"accountableUid\": \"{{userUid1FromTeam2}}\"\n    },\n    \"assets\": [\n        {\n            \"id\": \"684997cea235ae152f80d62f\",\n            \"type\": \"machine\",\n            \"path\": \"/malicious-interaction-murder-32/tender-eggs-operate-73/important-football-jail-58/bad-wash-tear-67\",\n            \"title\": \"Bagel machine\",\n            \"parentId\": null,\n            \"sort\": null,\n            \"children\": [\n                {\n                    \"id\": \"684997cea235ae152f80d62f-checklistGroup\",\n                    \"type\": \"checklists\",\n                    \"path\": \"/malicious-interaction-murder-32/tender-eggs-operate-73/important-football-jail-58/bad-wash-tear-67\",\n                    \"title\": null,\n                    \"parentId\": \"684997cea235ae152f80d62f\",\n                    \"sort\": null,\n                    \"children\": [\n                        {\n                            \"id\": \"9342d9ca-6cdd-4cb9-b40c-cce88cd71763\",\n                            \"type\": \"checklist\",\n                            \"path\": \"/malicious-interaction-murder-32/tender-eggs-operate-73/important-football-jail-58/bad-wash-tear-67/manufacturing-boulevard\",\n                            \"title\": \"3923 - Manufacturing Boulevard\",\n                            \"parentId\": \"684997cea235ae152f80d62f-checklistGroup\",\n                            \"sort\": null,\n                            \"children\": []\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}"
-										},
-										"url": {
-											"raw": "{{urlpss}}/v1/workspaces/{{WKid}}/routes/{{newRouteId}}",
-											"host": [
-												"{{urlpss}}"
-											],
-											"path": [
-												"v1",
-												"workspaces",
-												"{{WKid}}",
-												"routes",
-												"{{newRouteId}}"
-											]
-										},
-										"description": "Pré: rota possui respostas. Atualizando assets + team deve gerar nova versão. Resultado: nova versão criada; substitutos existentes preservados exceto os promovidos pelo payload."
 									},
 									"response": []
 								}
@@ -8288,7 +7848,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"client\": \"ios\",\n    \"version\": \"4.8.0\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistRolls}}\",\n            \"quizId\": \"{{quizRolls}}\",\n            \"questionId\": \"{{questionRolls}}\",\n            \"alternativeId\": \"{{alternativeRolls}}\",\n            \"answeredAt\": \"2025-12-02T10:00:00Z\",\n            \"answeredStartAt\": \"2025-12-02T15:06:42.836Z\",\n            \"criticality\": null,\n            \"note\": \"Teste atualizando checklist tipo espessura\",\n            \"latitude\": -5.7814846757552765,\n            \"longitude\": -50.51680831768066,\n            \"roll\": 1,\n            \"rollerFailureMode\": null\n        }\n    ]\n}",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"client\": \"ios\",\n    \"version\": \"4.8.0\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistRolls}}\",\n            \"quizId\": \"{{quizRolls}}\",\n            \"questionId\": \"{{questionRolls}}\",\n            \"alternativeId\": \"{{alternativeRolls}}\",\n            \"answeredAt\": \"2025-08-05T00:00:00Z\",\n            \"answeredStartAt\": \"2025-08-05T15:06:42.836Z\",\n            \"criticality\": null,\n            \"note\": \"Teste atualizando checklist tipo espessura\",\n            \"latitude\": -5.7814846757552765,\n            \"longitude\": -50.51680831768066,\n            \"roll\": 1,\n            \"rollerFailureMode\": null\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -8438,7 +7998,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"client\": \"ios\",\n    \"version\": \"4.8.0\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistBeltThickness}}\",\n            \"quizId\": \"{{quizBeltThickness}}\",\n            \"questionId\": \"{{questionBeltThickness}}\",\n            \"alternativeId\": \"{{alternativeBeltThickness}}\",\n            \"answeredAt\": \"2025-08-05T10:00:00Z\",\n            \"answeredStartAt\": \"2025-08-05T15:06:42.836Z\",\n            \"criticality\": null,\n            \"note\": \"Teste Cleison BeltThickness\",\n            \"latitude\": -5.7814846757552765,\n            \"longitude\": -50.51680831768066,\n            \"roll\": null,\n            \"rollerFailureMode\": null\n        }\n    ]\n}",
+													"raw": "{\n    \"mode\": \"checklist_answered\",\n    \"client\": \"ios\",\n    \"version\": \"teste\",\n    \"answers\": [\n        {\n            \"routeId\": \"{{routeId1}}\",\n            \"checklistId\": \"{{checklistBeltThickness}}\",\n            \"quizId\": \"{{quizBeltThickness}}\",\n            \"questionId\": \"{{questionBeltThickness}}\",\n            \"alternativeId\": \"{{alternativeBeltThickness}}\",\n            \"answeredAt\": \"2025-08-15T10:00:00Z\",\n            \"answeredStartAt\": \"2025-08-15T15:06:42.836Z\",\n            \"criticality\": null,\n            \"note\": \"Teste Cleison BeltThickness\",\n            \"latitude\": -5.7814846757552765,\n            \"longitude\": -50.51680831768066,\n            \"roll\": null,\n            \"rollerFailureMode\": null\n        }\n    ]\n}",
 													"options": {
 														"raw": {
 															"language": "json"
