@@ -44,7 +44,7 @@
 					"response": []
 				},
 				{
-					"name": "POST route",
+					"name": "PUT  route",
 					"id": "49865639-c177cecb-f03c-4fd1-afe1-26ace235e921",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
